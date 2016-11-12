@@ -1,0 +1,109 @@
+html {
+    
+}
+body {
+	margin: 0px;
+	font-size: 10px;
+	background-color: #c4c1a0; /* Pantone 453 */
+	overflow: hidden;
+}
+#bookwrap {
+}
+#wrapper {
+	height: 100vh;
+}
+#top {
+	height: 10px;
+}
+#flexcont {
+	display: flex;
+}
+#bookwrap {
+	flex: 2;
+}
+#tabslist {
+	flex: 1;
+	background-color: aqua;
+}
+.tab {
+	margin: 10px;
+	width: 80%;
+	height: 50px;
+	background-color: black;
+	color: white;
+}
+.gameselector {
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.game {
+	width: 200px;
+	height: 300px;
+	margin: 0px;
+	display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.game:hover, .game:focus, .game:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+	-webkit-transform: translate(0px, -200px);
+  transform: translate(0px, -200px);
+}
+
+::-webkit-scrollbar-track
+{
+	border: 1px solid black;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #000000;	
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+}
+
+/* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
+div.panel.show {
+    display: block;
+}
