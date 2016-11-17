@@ -1,0 +1,28 @@
+#right {
+	color: black;
+}
+
+#right h1 {
+	padding: 0px;
+	margin-top: 14px;
+	margin-bottom: 14px;
+	font-size: 28px;
+	/* Extra Cool Attributes
+	font-family: some font;
+	font
+	
+	*/
+}
+#right p {
+	font-size: 12px;
+}
+#right .image1 {
+	border: 0;
+	float: right;
+}
+#right .sectionTitle {
+	font-size: 20px;
+}
+
+
+
