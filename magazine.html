@@ -8,7 +8,7 @@
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	
 	<!--CSS-->
-	<link rel="stylesheet" type="text/css" href="css/magazine-test.css">
+	<link rel="stylesheet" type="text/css" href="css/magazine.css">
 	<link rel="stylesheet" type="text/css" href="css/navbar.css">
 
 	<!--JQuery-->
@@ -24,16 +24,13 @@
 </head> 
 <body>
 	<div id="navbar">
-		<ul>
-			<li>
-				<a href="magazine.html">To Magazine</a>
-			</li>
-		</ul>
+		<div id="title">Apple A Day Makes the Doctor Go Away - Magazine</div>
+		<div id="tomag"><a href="magazine.html">To Game</a></div>
 	</div>
 	<div id="wrapper">
 		<div id="bookwrap">
 			<div id="mybook">
-				<div><img src="assets/Softline_1982_01_jp2/Softline_1982_01_0000.jpg" height="100%" width="100%"></div>
+				<div id="page1"><img src="assets/Softline_1982_01_jp2/Softline_1982_01_0000.jpg" height="100%" width="100%"></div>
 				<div><img src="assets/Softline_1982_01_jp2/Softline_1982_01_0001.jpg" height="100%" width="100%"></div>
 				<div><img src="assets/Softline_1982_01_jp2/Softline_1982_01_0002.jpg" height="100%" width="100%"></div>
 				<div><img src="assets/Softline_1982_01_jp2/Softline_1982_01_0003.jpg" height="100%" width="100%"></div>
@@ -47,15 +44,65 @@
 		<div id="gamewrap">
 			<button class="accordion">Game 1</button>
 			<div class="panel">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<div class="contentFlip" id="goto1">
+					<p>Review of Game</p>
+				</div>
+				<div class="contentFlip" id="goto2">
+					<p>Ad for Game</p>
+				</div>
+				<div class="contentFlip" id="goto3">
+					<p>Reader Letter about Game</p>
+				</div>
+				<div class="buttonWrap">
+					<div class="gameSelect">
+						<a class="action-button shadow animate blue">Hello</a>
+					</div>
+				</div>
 			</div>
 			<button class="accordion">Game 2</button>
 			<div class="panel">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<div class="contentFlip" id="goto4">
+					<p>Review of Game</p>
+				</div>
+				<div class="contentFlip" id="goto5">
+					<p>Ad for Game</p>
+				</div>
+				<div class="contentFlip" id="goto6">
+					<p>Reader Letter about Game</p>
+				</div>
+				<div class="buttonWrap">
+					<div class="check"></div>
+				</div>
 			</div>
 			<button class="accordion">Game 3</button>
 			<div class="panel">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<div class="contentFlip" id="goto7">
+					<p>Review of Game</p>
+				</div>
+				<div class="contentFlip" id="goto8">
+					<p>Ad for Game</p>
+				</div>
+				<div class="contentFlip" id="goto9">
+					<p>Reader Letter about Game</p>
+				</div>
+				<div class="buttonWrap">
+					<div class="check"></div>
+				</div>
+			</div>
+			<button class="accordion">Extras</button>
+			<div class="panel">
+				<div class="contentFlip" id="goto10">
+					<p>Funny Article</p>
+				</div>
+				<div class="contentFlip" id="goto11">
+					<p>Cool Code</p>
+				</div>
+				<div class="contentFlip" id="goto12">
+					<p>Great AD</p>
+				</div>
+				<div class="buttonWrap">
+					<div class="check"></div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -75,8 +122,8 @@
 					//single book
 					$('#mybook').booklet({ 
 						speed: 300,
-						width: 1000,
-						height: 650,
+						width: 1150,
+						height: 750,
 						manuel: false,
 						hoverWidth: 100,
 						close: true,
