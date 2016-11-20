@@ -20,128 +20,54 @@
 	<script src="booklet/jquery.easing.1.3.js"></script>
 	<script src="booklet/jquery.booklet.latest.min.js"></script>
 	<link href="booklet/jquery.booklet.latest.css" type="text/css" rel="stylesheet" media="screen, projection, tv">
+	
+	<!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
 
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 </head> 
 <body>
-	<div id="navbar">
-		<div id="title">Apple A Day Makes the Doctor Go Away - Magazine</div>
-		<div id="tomag"><a href="magazine.html">To Game</a></div>
-	</div>
+	<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Apple A Day Makes the Doctor Go Away - Magazine</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="game.html">To Game</a></li>
+      </ul>
+    </div>
+  </nav>
 	<div id="wrapper">
 		<div id="bookwrap">
-			<div id="mybook">
-				<div id="page1"><img src="assets/Softline_1982_01_jp2/Softline_1982_01_0000.jpg" height="100%" width="100%"></div>
-				<div><img src="assets/Softline_1982_01_jp2/Softline_1982_01_0001.jpg" height="100%" width="100%"></div>
-				<div><img src="assets/Softline_1982_01_jp2/Softline_1982_01_0002.jpg" height="100%" width="100%"></div>
-				<div><img src="assets/Softline_1982_01_jp2/Softline_1982_01_0003.jpg" height="100%" width="100%"></div>
-				<div><img src="assets/Softline_1982_01_jp2/Softline_1982_01_0004.jpg" height="100%" width="100%"></div>
-				<div><img src="assets/Softline_1982_01_jp2/Softline_1982_01_0005.jpg" height="100%" width="100%"></div>
-				<div><img src="assets/Softline_1982_01_jp2/Softline_1982_01_0006.jpg" height="100%" width="100%"></div>
-				<div><img src="assets/Softline_1982_01_jp2/Softline_1982_01_0007.jpg" height="100%" width="100%"></div>
-				<div><img src="assets/Softline_1982_01_jp2/Softline_1982_01_0008.jpg" height="100%" width="100%"></div>
-			</div>
+			<iframe src="https://archive.org/stream/Softline_1984_01_02?ui=embed#mode/2up" width="100%" height="95%" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 		</div>
 		<div id="gamewrap">
-			<button class="accordion">Game 1</button>
-			<div class="panel">
-				<div class="contentFlip" id="goto1">
-					<p>Review of Game</p>
-				</div>
-				<div class="contentFlip" id="goto2">
-					<p>Ad for Game</p>
-				</div>
-				<div class="contentFlip" id="goto3">
-					<p>Reader Letter about Game</p>
-				</div>
-				<div class="buttonWrap">
-					<div class="gameSelect">
-						<a class="action-button shadow animate blue">Hello</a>
+			<ul class="collapsible" data-collapsible="accordion">
+				<li>
+					<div class="collapsible-header"><i class="material-icons">games</i>Ultima</div>
+					<div class="collapsible-body">
+						<p class="content">Review of Game</p>
 					</div>
-				</div>
-			</div>
-			<button class="accordion">Game 2</button>
-			<div class="panel">
-				<div class="contentFlip" id="goto4">
-					<p>Review of Game</p>
-				</div>
-				<div class="contentFlip" id="goto5">
-					<p>Ad for Game</p>
-				</div>
-				<div class="contentFlip" id="goto6">
-					<p>Reader Letter about Game</p>
-				</div>
-				<div class="buttonWrap">
-					<div class="check"></div>
-				</div>
-			</div>
-			<button class="accordion">Game 3</button>
-			<div class="panel">
-				<div class="contentFlip" id="goto7">
-					<p>Review of Game</p>
-				</div>
-				<div class="contentFlip" id="goto8">
-					<p>Ad for Game</p>
-				</div>
-				<div class="contentFlip" id="goto9">
-					<p>Reader Letter about Game</p>
-				</div>
-				<div class="buttonWrap">
-					<div class="check"></div>
-				</div>
-			</div>
-			<button class="accordion">Extras</button>
-			<div class="panel">
-				<div class="contentFlip" id="goto10">
-					<p>Funny Article</p>
-				</div>
-				<div class="contentFlip" id="goto11">
-					<p>Cool Code</p>
-				</div>
-				<div class="contentFlip" id="goto12">
-					<p>Great AD</p>
-				</div>
-				<div class="buttonWrap">
-					<div class="check"></div>
-				</div>
-			</div>
+				</li>
+				<li>
+					<div class="collapsible-header"><i class="material-icons">games</i>Other Game</div>
+					<div class="collapsible-body">
+						<p class="content">Review of Game</p>
+					</div>
+				</li>
+				<li>
+					<div class="collapsible-header"><i class="material-icons">games</i>Other Other Game</div>
+					<div class="collapsible-body">
+						<p class="content">Review of Game</p>
+					</div>
+				</li>
+				<li>
+					<div class="collapsible-header"><i class="material-icons">grade</i>Extra Cool Stuff</div>
+					<div class="collapsible-body">
+						<p class="content">Cool thing</p>
+					</div>
+				</li>
+  		</ul>
 		</div>
 	</div>
-	<script>
-		var acc = document.getElementsByClassName("accordion");
-		var i;
-
-		for (i = 0; i < acc.length; i++) {
-				acc[i].onclick = function(){
-						this.classList.toggle("active");
-						this.nextElementSibling.classList.toggle("show");
-			}
-		}
-	</script>
-		<script type="text/javascript">
-				$(function() {
-					//single book
-					$('#mybook').booklet({ 
-						speed: 300,
-						width: 1150,
-						height: 750,
-						manuel: false,
-						hoverWidth: 100,
-						close: true,
-						closed: true,
-						keyboard: false
-					});
-					//tabs
-					//clicks
-					$('#goto1').click(function(e){
-						$('#mybook').booklet("gotopage", 2);
-					});
-					$('#goto2').click(function(e){
-						$('#mybook').booklet("gotopage", 3);
-					});
-					$('#goto3').click(function(e){
-						$('#mybook').booklet("gotopage", 4);
-					});
-				});
-		</script>
 </body>
 </html>
