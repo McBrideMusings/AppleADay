@@ -99,13 +99,17 @@ padding-top: 6px;
 }
 
 #left {
+	width: 66%;
 	margin: 0;
 }
 #right {
 	width: 34%;
 	overflow-y: scroll;
 	height: 96%;
-	border: 1px solid #ddd;
+	border: 6px inset #f0edd0;
+  border-radius: 10px;
+	padding-left: 16px;
+	padding-right: 16px;
 }
 
 
@@ -125,30 +129,9 @@ padding-top: 6px;
 	width: 80%;
 	height: 800px;
 */
-#left #case {
-	border-top-left-radius: 20px;
-	border-top-right-radius: 20px;
-	height: 600px;
-	width: 300px;
-	background-color: #EEDDD0;
-}
-#left #outercase {
-	position: relative;
-	background-color: #EEDDD0;
-	margin-left: -10px;
-	margin-right: auto;
-	width: 320px;
-	height: 420px;
-	border-radius: 20px;
-	border-radius: 20px;
-}
-#left #innercase {
-	position: relative;
-	top: 3%;
-  width: 95%;
-  height: 50%;
+#left #gamedisplay {
 	margin: auto;
-	background-color: #E0CABC;
+	width: 614px;
 }
 #left #logos {
 	
@@ -170,29 +153,43 @@ padding-top: 6px;
 	font-weight: normal;
 }
 #left #displayouter {
+	vertical-align: middle;
+	
+	/*
 	position: relative;
-  width: 95%;
-  height: 80%;
+  width: 570px;
+  height: 395px;
 	margin-top: 0;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 20px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
 	background-color: #493B34;
+	*/
 }
 #left #overscan {
 	margin: auto;
+  position: relative;
+  background-color: black;
+ 	padding: 16px;
+  width: 560px;
+  height: 384px;
+  border: 6px inset #f0edd0;
+  border-radius: 10px;
+	/*
+	margin: auto;
 	position: relative;
 	top: 5%;
-	width: 80%;
-	height: 75%;
+	left: 5%;
+	width: 565px;
+	height: 390px;
 	background-color: black;
 	padding: 16px;
 	border: 6px inset #f0edd0;
 	border-radius: 10px;
+	*/
 }
 #left #display {
-	width: 100%;
-	height: 100%;
+	width: 560px;
+	height: 384px;
 }
 #left .inset {
 	width: 100;
