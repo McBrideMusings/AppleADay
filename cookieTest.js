@@ -22,7 +22,6 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-    console.log("It works!")
     var choice1 = getCookie("choice1");
     var choice2 = getCookie("choice2");
     var choice3 = getCookie("choice3");
@@ -41,15 +40,24 @@ function checkCookie() {
 }
 function checkCookieStatus(cvalue){
     if(cvalue===1){
-    document.getElementById("choice2").style.visibility = "hidden";
-    document.getElementById("choice3").style.visibility = "hidden";
+    document.getElementById("game").className = "btn-flat"
+    document.getElementById("game").href="https://www.google.com/";
+    document.getElementById("decision1").innerHTML = "You chose this game!";
+    document.getElementById("decision2").style.visibility = "hidden";
+    document.getElementById("decision3").style.visibility = "hidden";
     }
     if(cvalue===2){
-    document.getElementById("choice1").style.visibility = "hidden";
-    document.getElementById("choice3").style.visibility = "hidden";
+    document.getElementById("game").className = "btn-flat"
+    document.getElementById("game").href="https://www.google.com/";
+    document.getElementById("decision1").style.visibility = "hidden";
+    document.getElementById("decision2").innerHTML = "You chose this game!";
+    document.getElementById("decision3").style.visibility = "hidden";
     }
     if(cvalue===3){
-    document.getElementById("choice1").style.visibility = "hidden";
-    document.getElementById("choice2").style.visibility = "hidden";
+    document.getElementById("game").className = "btn-flat"
+    document.getElementById("game").href="https://www.google.com/";
+    document.getElementById("decision1").style.visibility = "hidden";
+    document.getElementById("decision2").style.visibility = "hidden";
+    document.getElementById("decision3").innerHTML = "You chose this game!";
     }
 }

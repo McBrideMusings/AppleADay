@@ -14,9 +14,11 @@
 	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/mint-choc/jquery-ui.css">
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <!--Script for Cookies-->
+    <script src="cookieTest.js"></script>
           
 </head> 
-<body>
+<body onload="checkCookie()">
 	<nav>
     <div class="nav-wrapper">
       <ul id="nav-mobile" class="hide-on-med-and-down">
@@ -48,8 +50,8 @@
 									Review of Game - <span class="pagenum">Pg 12</span>
 								</p>
 							</div>
-							<div class="decision">
-								<a class="waves-effect waves-teal btn" href="#modal1">Pick this game?</a>
+							<div class="decision" id="decision1">
+								<a class="waves-effect waves-teal btn" href="#choice1">Pick this game?</a>
 							</div>
 						</div>
 						<div class="right">
@@ -66,8 +68,8 @@
 									Review of Game - <span class="pagenum">Pg 12</span>
 								</p>
 							</div>
-							<div class="decision">
-								<a class="waves-effect waves-teal btn" href="#modal1">Pick this game?</a>
+							<div class="decision" id="decision2">
+								<a class="waves-effect waves-teal btn" href="#choice2">Pick this game?</a>
 							</div>
 						</div>
 						<div class="right">
@@ -84,8 +86,8 @@
 									Review of Game - <span class="pagenum">Pg 12</span>
 								</p>
 							</div>
-							<div class="decision">
-								<a class="waves-effect waves-teal btn" href="#modal1">Pick this game?</a>
+							<div class="decision" id="decision3">
+								<a class="waves-effect waves-teal btn" href="#choice3">Pick this game?</a>
 							</div>
 						</div>
 						<div class="right">
@@ -106,16 +108,38 @@
   		</ul>
 		</div>
 	</div>
-	<div id="modal1" class="modal">
+	<div id="choice1" class="modal">
     <div class="modal-content">
       <h4>Are You Sure?</h4>
       <p>You can only pick one game, does this one sound like fun?</p>
     </div>
     <div class="modal-footer">
 			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">No!</a>
-    	<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Yes!</a>
+    	<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" onclick="setCookie('chosenGame1', 1, 3000)">Yes!</a>
 		</div>
   </div>
+  <div id="choice2" class="modal">
+    <div class="modal-content">
+      <h4>Are You Sure?</h4>
+      <p>You can only pick one game, does this one sound like fun?</p>
+    </div>
+    <div class="modal-footer">
+			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">No!</a>
+    	<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" onclick="setCookie('chosenGame2', 2, 3000)">Yes!</a>
+		</div>
+  </div>
+  <div id="choice3" class="modal">
+    <div class="modal-content">
+      <h4>Are You Sure?</h4>
+      <p>You can only pick one game, does this one sound like fun?</p>
+    </div>
+    <div class="modal-footer">
+			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">No!</a>
+    	<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" onclick="setCookie('chosenGame3', 3, 3000)">Yes!</a>
+		</div>
+  </div>
+    
+    
 	<script>
 		$(document).ready(function(){
 			// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
