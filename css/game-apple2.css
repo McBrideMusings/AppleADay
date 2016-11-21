@@ -1,5 +1,5 @@
 /* Modified by Pierce McBride */
-/* background: #c4c29e; Pantone 453 */
+/* background-color: #c4c29e; Pantone 453 */
 
 html {
   font-family: "Roboto", sans-serif;
@@ -10,6 +10,7 @@ body {
 	margin: 0px;
 	font-size: 10px;
 	background-color: #fff;
+	background-color: #c4c29e;
 }
 
 
