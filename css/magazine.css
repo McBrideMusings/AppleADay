@@ -221,7 +221,13 @@ nav #game {
 	width: 50%;
 }
 .collapsible-body .right img{
-	height: 100%;
+	display: block;
+ 	margin: auto;
+	height: auto;
+	width: 85%;
+	text-align: center;
+	border-radius: 20px;
+	border: 8px solid #ddd; 
 }
 
 .z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .side-nav {
