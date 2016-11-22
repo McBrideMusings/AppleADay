@@ -1,48 +1,46 @@
 function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+//    var d = new Date();
+//    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+//    var expire = "expires="+d.toUTCString();
+//    document.cookie = name = cname; value = cvalue; expires=expire; ";path=/";
     checkCookieStatus(cvalue);
+    var expiration_date = new Date();
+    var cookie_string = '';
+    expiration_date.setFullYear(expiration_date.getTime() + 31536000000);
+    // Build the set-cookie string:
+    document.cookie = name=cname; "path=/; expires=" + expiration_date.toUTCString();
+    console.log(document.cookie);
 }
 
-function getCookie(cname) {
-    var name = cname + "=";
+function getCookie() {
     var ca = document.cookie.split(';');
-    for(var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
+    console.log(ca);
+    return ca;
 }
 
 function checkCookie() {
-    var choice1 = getCookie("choice1");
-    var choice2 = getCookie("choice2");
-    var choice3 = getCookie("choice3");
-    if (choice1 != "") {
+    var choice = getCookie();
+    console.log(choice);
+    var test1 = ["chosenGame1"]
+    var test2 = ["chosenGame2"]
+    var test3 = ["chosenGame3"]
+    if (choice[0] === test1[0]) {
         checkCookieStatus(1);
     }
-    else if (choice2 != "") {
+    else if (choice[0] === test2[0]) {
         checkCookieStatus(2);
     }
-    else if (choice3 != "") {
-        checkCookieStatus(1);
+    else if (choice[0] === test3[0]) {
+        checkCookieStatus(3);
     }
     else{
         return;
     }
 }
-/*
 function checkCookieStatus(cvalue){
     if(cvalue===1){
     document.getElementById("game").className = "btn-flat"
-    document.getElementById("game").href="/games/";
+    document.getElementById("game").href="https://www.google.com/";
     document.getElementById("decision1").innerHTML = "You chose this game!";
     document.getElementById("decision2").style.visibility = "hidden";
     document.getElementById("decision3").style.visibility = "hidden";
@@ -62,4 +60,3 @@ function checkCookieStatus(cvalue){
     document.getElementById("decision3").innerHTML = "You chose this game!";
     }
 }
-*/
