@@ -14,14 +14,17 @@
 	*/
 }
 #right p {
-	font-size: 12px;
+	font-size: 14px;
 }
 #right .image1 {
 	border: 0;
 	float: right;
+    width: 50%;
+    margin: 10px;
 }
 #right .sectionTitle {
 	font-size: 20px;
+    font-weight: bold;
 }
 
 
