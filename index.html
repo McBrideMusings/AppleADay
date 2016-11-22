@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="https://use.typekit.net/lss5ifw.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	
 	<!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -14,26 +16,32 @@
 	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/mint-choc/jquery-ui.css">
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-    <!--Script for Cookies-->
-    <script src="cookieTest.js"></script>
-          
+  <!--Script for Cookies-->
+  <script src="cookieTest.js"></script>
+<!--
+
+<nav>
+<div class="nav-wrapper">
+	<ul id="nav-mobile" class="hide-on-med-and-down">
+		<li><a href="about.html"><i class="material-icons" id="brand">shop</i></a></li>
+		<li><h1 id="title" href="brand.html">Volume 4 Jan-Feb 1984</h1></li>
+		<li><a class="btn-flat" id="magazine" href="magazine.html">Magazine</a></li>
+		<li><a class="btn-flat disabled" id="game" href="game.html">Game</a></li>
+	</ul>
+</div>
+</nav>
+-->
 </head> 
 <body onload="checkCookie()">
 	<nav>
-    <div class="nav-wrapper">
-      <ul id="nav-mobile" class="hide-on-med-and-down">
-				<div class="bigflex">
-					<div class="littleflexbrand">
-						<li><a href="about.html"><i class="material-icons" id="brand">shop</i></a></li>
-					</div>
-					<div class="littleflexrest">
-						<li><a class="btn-flat" id="magazine" href="magazine.html">Magazine</a></li>
-						<li><h1 id="title" href="brand.html">Volume 4 Jan-Feb 1984</h1></li>
-						<li><a class="btn-flat disabled" id="game" href="game.html">Game</a></li>
-					</div>
-				</div>
-      </ul>
-    </div>
+		<div class="nav-wrapper">
+			<i class="material-icons" id="brand">shop</i>
+			<a href="#" class="brand-logo">Volume 4 Jan-Feb 1984</a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a id="game" class="btn-flat disabled" href="game-computerdiv.html">Game</a></li>
+				<li><a class="btn-flat" href="index.html">Magazine</a></li>
+			</ul>
+		</div>
   </nav>
 	<div id="wrapper">
 		<div id="bookwrap">
@@ -138,6 +146,15 @@
     	<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" onclick="setCookie('chosenGame3', 3, 3000)">Yes!</a>
 		</div>
   </div>
+	<div id="mobilewarn" class="modal">
+    <div class="modal-content">
+      <h4>Hey! This isn't great on mobile!</h4>
+      <p>Technically it will load, but the magazines are hard to read and the games are unplayable without a keyboard. We suggest you come back on a computer browser later. Don't worry the link will still be here!</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Got it</a>
+    </div>
+  </div>
     
     
 	<script>
@@ -145,6 +162,9 @@
 			// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
 			$('.modal').modal();
 		});
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			$('#mobilewarn').modal();
+		}
 	</script>
 </body>
 </html>
