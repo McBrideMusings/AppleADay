@@ -38,10 +38,11 @@ function checkCookie() {
         return;
     }
 }
+/*
 function checkCookieStatus(cvalue){
     if(cvalue===1){
     document.getElementById("game").className = "btn-flat"
-    document.getElementById("game").href="https://www.google.com/";
+    document.getElementById("game").href="/games/";
     document.getElementById("decision1").innerHTML = "You chose this game!";
     document.getElementById("decision2").style.visibility = "hidden";
     document.getElementById("decision3").style.visibility = "hidden";
@@ -61,3 +62,4 @@ function checkCookieStatus(cvalue){
     document.getElementById("decision3").innerHTML = "You chose this game!";
     }
 }
+*/
