@@ -6,10 +6,11 @@
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	
 	<!--CSS-->
-	<link rel="stylesheet" type="text/css" href="../css/game-apple2-computerdiv.css">
+	<link rel="stylesheet" type="text/css" href="../css/game-apple2.css">
 	<link rel="stylesheet" type="text/css" href="../css/game-history.css">
+	<link rel="stylesheet" type="text/css" href="../css/waves.css">
 
-		<!--JQuery-->
+	<!--JQuery-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/mint-choc/jquery-ui.css">
@@ -18,45 +19,52 @@
 	
 </head>
 <body>
-	<nav>
+	<nav class="z-depth-2">
 		<div class="nav-wrapper">
 			<i class="material-icons" id="brand">games</i>
-			<a href="../magazine-jan1982.html" class="brand-logo">Softline - January 1982</a>
+			<a href="../magazine-jan1982.html" class="brand-logo">Week 2 - March 1982</a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a id="game" class="btn-flat" href="game-softporn.html">This Month's Game</a></li>
+				<li><a id="game" class="btn-flat" href="game-softporn.html">Magazine</a></li>
 			</ul>
 		</div>
   </nav>
 	<div id="wrapper">
 		<div id="left">
-			<div id="gamecase">
-				<div id="outercase">
-					<div id="innercase">
-						<div id="logos">
-							<img src="../img/badge.jpg" id="badge" />
-							<a href="https://archive.org/details/softwarelibrary_apple"><span id="subtitle">Games provided by Archive.org</span></a>
+			<div id="monitor" class="z-depth-2">
+				<div id="innercase">
+					<div id="overscan" >
+						<div id="display">
+							<iframe src="https://archive.org/embed/a2_Borg_1981_Sirius_Software_cr_Worm" width="560" height="384" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 						</div>
-						<div id="displayouter">
-							<div id="overscan">
-								<div id="display">
-									<iframe src="https://archive.org/embed/a2_Borg_1981_Sirius_Software_cr_Worm" width="560" height="384" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
-								</div>
-							</div>
-						</div>
-						<div id="diskdrive"></div>
-						<div id="button"></div>
 					</div>
 				</div>
-	  	</div>
+			</div>
 		</div>
-  	<div id="right" class="scrollbar">
-        <h1><i>Borg</i></h1>
-	   <p>
-            <span class="sectionTitle"><i>Game Play</i></span><br>Borg is an adventure game or at least it incorporates elements of adventure games, according to the Softline March 1982 issue. In Borg, you fight dragons armed with weapons that shoot bullets. The objective is to kill the “evil Grud", the game's namesake, lurking within one of the castle’s ten rooms.<br><br>
-            <img class="image1" src="../img/keyart/Borg_March_82.png">
-            <span class="sectionTitle"><i>Impact</i></span><br>Borg is described as challenging enough even though it is simple in nature. The art is “amusing and diverting” where the dragons are “cartoonish and look like silly goons, wagging their heads, running into walls, and shooting each other” (Softline March 1983). The room design and mazes/puzzles are described as first-rate.<br><br>
-            <span class="sectionTitle"><i>Production History</i> </span><br>Borg was created in 1982. It was created by Dan Thompson and Jeff Allen. Borg was published by Sirius Software, also known for Space Eggs, and a victim of the “Shakeout”. During the Shakeout in the mid-1980s, games failed because of the failure of companies that made the platforms for the games. Microcomputers and consoles like the Commodore VIC and Atari stopped being made and game makers were left with unsellable games and losses that could not be recouped from the manufacturing of games created for the defunct consoles.
-	    </p>
+		<div id="right" class="scrollbar">
+			<div id="titlewrap">
+				<h1><i>Borg</i></h1>
+			</div>
+			<hr>
+			<div id="gameplay">
+				Borg is an adventure game or at least it incorporates elements of adventure games, according to the Softline March 1982 issue. In Borg, you fight dragons armed with weapons that shoot bullets. The objective is to kill the “evil Grud", the game's namesake, lurking within one of the castle’s ten rooms.
+			</div>
+			<div id="extragameinfo" class="valign-wrapper">
+				<div id="highscore">
+					<h3><i>High Score pg60</i></h3>
+					<h4 id="score">5100</h4>
+				</div>
+				<div id="manual">
+					No Manual Found
+				</div>
+			</div>
+			<hr>
+			<div id="history">
+				<p>
+					<span class="sectionTitle"><i>Impact</i></span><br>Borg is described as challenging enough even though it is simple in nature. The art is “amusing and diverting” where the dragons are “cartoonish and look like silly goons, wagging their heads, running into walls, and shooting each other” (Softline March 1983). The room design and mazes/puzzles are described as first-rate.
+					<img class="image1" src="../img/keyart/Borg_March_82.png">
+					<span class="sectionTitle"><br><br><i>Production History</i> </span><br>Borg was created in 1982. It was created by Dan Thompson and Jeff Allen. Borg was published by Sirius Software, also known for Space Eggs, and a victim of the “Shakeout”. During the Shakeout in the mid-1980s, games failed because of the failure of companies that made the platforms for the games. Microcomputers and consoles like the Commodore VIC and Atari stopped being made and game makers were left with unsellable games and losses that could not be recouped from the manufacturing of games created for the defunct consoles.
+				</p>
+			</div>  
   	</div>
   </div>
 </body>

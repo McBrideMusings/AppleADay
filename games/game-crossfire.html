@@ -6,10 +6,11 @@
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	
 	<!--CSS-->
-	<link rel="stylesheet" type="text/css" href="../css/game-apple2-computerdiv.css">
+	<link rel="stylesheet" type="text/css" href="../css/game-apple2.css">
 	<link rel="stylesheet" type="text/css" href="../css/game-history.css">
+	<link rel="stylesheet" type="text/css" href="../css/waves.css">
 
-		<!--JQuery-->
+	<!--JQuery-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/mint-choc/jquery-ui.css">
@@ -18,45 +19,52 @@
 	
 </head>
 <body>
-	<nav>
+	<nav class="z-depth-2">
 		<div class="nav-wrapper">
 			<i class="material-icons" id="brand">games</i>
-			<a href="../magazine-jan1982.html" class="brand-logo">Softline - January 1982</a>
+			<a class="brand-logo">Week 1 - January 1982</a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a id="game" class="btn-flat" href="game-softporn.html">This Month's Game</a></li>
+				<li><a id="game" class="btn-flat" href="game-softporn.html">Magazine</a></li>
 			</ul>
 		</div>
   </nav>
 	<div id="wrapper">
 		<div id="left">
-			<div id="gamecase">
-				<div id="outercase">
-					<div id="innercase">
-						<div id="logos">
-							<img src="../img/badge.jpg" id="badge" />
-							<a href="https://archive.org/details/softwarelibrary_apple"><span id="subtitle">Games provided by Archive.org</span></a>
+			<div id="monitor" class="z-depth-2">
+				<div id="innercase">
+					<div id="overscan" >
+						<div id="display">
+							<iframe src="https://archive.org/embed/a2_Crossfire_1981_On_Line_Systems" width="100%" height="100%" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 						</div>
-						<div id="displayouter">
-							<div id="overscan">
-								<div id="display">
-									<iframe src="https://archive.org/embed/a2_Crossfire_1981_On_Line_Systems" width="100%" height="100%" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
-								</div>
-							</div>
-						</div>
-						<div id="diskdrive"></div>
-						<div id="button"></div>
 					</div>
 				</div>
-	  	</div>
+			</div>
 		</div>
   	<div id="right" class="scrollbar">
-        <h1><i>Crossfire</i></h1>
-	    <p>
-            <span class="sectionTitle"><i>Game Play</i></span><br>Crossfire was a game made for the “dedicated and persevering gamester”. The January 1982 Softline review described it as challenging and time-consuming where perhaps a “third, supercoordinated appendage” is needed. The player uses the IJKL keys on the keyboard to control the ship and ESDF keys to shoot left, right, up, and down. A lack of a pause button contributes to the game’s difficulty.<br><br>
-            <img class="image1" src="../img/keyart/Crossfire_January_82.jpg">
-            <span class="sectionTitle"><i>Impact</i></span><br>Despite being described as very difficult in Softline, the game is also touted as “a new twist at arcade games with delightfully colorful beasties and smooth animation”. However, the game was not rated in Softalk in January or February of 1982.<br><br>
-            <span class="sectionTitle"><i>Production History</i> </span><br>Crossfire was released in 1981. It was created by Jay Sullivan and published by On-line Systems (now and more commonly known as Sierra On-line). Softline stated that Jay Sullivan provided a game that offered hours of challenge and enjoyment.
-	    </p>
+			<div id="titlewrap">
+				<h1><i>Crossfire</i></h1>
+			</div>
+			<hr>
+			<div id="gameplay">
+				Crossfire was a game made for the “dedicated and persevering gamester”. The January 1982 Softline review described it as challenging and time-consuming where perhaps a “third, supercoordinated appendage” is needed. The player uses the IJKL keys on the keyboard to control the ship and ESDF keys to shoot left, right, up, and down. A lack of a pause button contributes to the game’s difficulty.
+			</div>
+			<div id="extragameinfo" class="valign-wrapper">
+				<div id="highscore">
+					<h3><i>High Score</i></h3>
+					<h4 id="score">241,800</h4>
+				</div>
+				<div id="manual">
+					<a class="waves-effect waves-light btn" href="http://www.gamesdatabase.org/Media/SYSTEM/Atari_8_bit/manual/Formated/Crossfire_-_1981_-_Sierra_On-Line.pdf" target="_blank">Manual<br><small>(Atari Version)</small></a>
+				</div>
+			</div>
+			<hr>
+			<div id="history">
+				<p>
+					<span class="sectionTitle"><i>Impact</i></span><br>Despite being described as very difficult in Softline, the game is also touted as “a new twist at arcade games with delightfully colorful beasties and smooth animation”. However, the game was not rated in Softalk in January or February of 1982.
+					<img class="image1" src="../img/keyart/Crossfire_January_82.jpg">
+					<span class="sectionTitle"><br><br><i>Production History</i> </span><br>Crossfire was released in 1981. It was created by Jay Sullivan and published by On-line Systems (now and more commonly known as Sierra On-line). Softline stated that Jay Sullivan provided a game that offered hours of challenge and enjoyment.
+				</p>
+			</div>  
   	</div>
   </div>
 </body>

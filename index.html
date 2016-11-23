@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<script src="https://use.typekit.net/lss5ifw.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
-	
-	<!--Import Google Icon Font-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Our Playful Pasts</title>
+
+  <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	
 	<!--CSS-->
-	<link rel="stylesheet" type="text/css" href="css/magazine.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
 
 	<!--JQuery-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -16,155 +17,106 @@
 	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/mint-choc/jquery-ui.css">
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-  <!--Script for Cookies-->
-  <script src="cookieTest.js"></script>
-<!--
+	
+</head>
+<body>
+	<div id="cutout">
+  	<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Our Playful Pasts</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">A trip through out the early of history of games, delivered right into your inbox</h5>
+      </div>
+      <div class="row center">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email" data-error="wrong" data-success="right">Email</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  	<div class="container">
+    <div class="section">
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Read Full Issues of Softline</h5>
 
-<nav>
-<div class="nav-wrapper">
-	<ul id="nav-mobile" class="hide-on-med-and-down">
-		<li><a href="about.html"><i class="material-icons" id="brand">shop</i></a></li>
-		<li><h1 id="title" href="brand.html">Volume 4 Jan-Feb 1984</h1></li>
-		<li><a class="btn-flat" id="magazine" href="magazine.html">Magazine</a></li>
-		<li><a class="btn-flat disabled" id="game" href="game.html">Game</a></li>
-	</ul>
-</div>
-</nav>
--->
-</head> 
-<body onload="checkCookie()">
-	<nav>
-		<div class="nav-wrapper">
-			<i class="material-icons" id="brand">shop</i>
-			<a href="#" class="brand-logo">Volume 4 Jan-Feb 1984</a>
-			<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a id="game" class="btn-flat disabled" href="game-computerdiv.html">Game</a></li>
-				<li><a class="btn-flat" href="index.html">Magazine</a></li>
-			</ul>
-		</div>
-  </nav>
-	<div id="wrapper">
-		<div id="bookwrap">
-			<iframe src="https://archive.org/stream/Softline_1984_01_02?ui=embed#mode/2up" width="100%" height="100%" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
-		</div>
-		<div id="gamewrap">
-			<ul class="collapsible" data-collapsible="accordion">
-				<li>
-					<div class="collapsible-header"><i class="material-icons">games</i>Ultima</div>
-					<div class="collapsible-body">
-						<div class="left">
-							<div class="content">
-								<p>
-									Review of Game - <span class="pagenum">Pg 12</span>
-								</p>
-							</div>
-							<div class="decision" id="decision1">
-								<a class="waves-effect waves-teal btn" href="#choice1">Pick this game?</a>
-							</div>
-						</div>
-						<div class="right">
-							<img src="img/castlewolfenstein.jpg">
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="collapsible-header"><i class="material-icons">games</i>Ultima</div>
-					<div class="collapsible-body">
-						<div class="left">
-							<div class="content">
-								<p>
-									Review of Game - <span class="pagenum">Pg 12</span>
-								</p>
-							</div>
-							<div class="decision" id="decision2">
-								<a class="waves-effect waves-teal btn" href="#choice2">Pick this game?</a>
-							</div>
-						</div>
-						<div class="right">
-							<img src="img/castlewolfenstein.jpg">
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="collapsible-header"><i class="material-icons">games</i>Ultima</div>
-					<div class="collapsible-body">
-						<div class="left">
-							<div class="content">
-								<p>
-									Review of Game - <span class="pagenum">Pg 12</span>
-								</p>
-							</div>
-							<div class="decision" id="decision3">
-								<a class="waves-effect waves-teal btn" href="#choice3">Pick this game?</a>
-							</div>
-						</div>
-						<div class="right">
-							<img src="img/castlewolfenstein.jpg">
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="collapsible-header"><i class="material-icons">grade</i>Extra Cool Stuff</div>
-					<div class="collapsible-body">
-							<div class="coolcontent">
-								<p>
-									Cool Interview - <span class="pagenum">Pg 12</span>
-								</p>
-							</div>
-					</div>
-				</li>
-  		</ul>
-		</div>
-	</div>
-	<div id="choice1" class="modal">
-    <div class="modal-content">
-      <h4>Are You Sure?</h4>
-      <p>You can only pick one game, does this one sound like fun?</p>
+            <p class="light">Each email will have an entire issue of Softline to see</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">Play A Game From The Issue</h5>
+
+            <p class="light">You can pick one game per issue</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Experiance History Over Time</h5>
+
+            <p class="light">We think history is best understood at a pace that it can be enjoyed.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="modal-footer">
-			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">No!</a>
-    	<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" onclick="setCookie('chosenGame1', 1, 3000)">Yes!</a>
-		</div>
-  </div>
-  <div id="choice2" class="modal">
-    <div class="modal-content">
-      <h4>Are You Sure?</h4>
-      <p>You can only pick one game, does this one sound like fun?</p>
-    </div>
-    <div class="modal-footer">
-			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">No!</a>
-    	<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" onclick="setCookie('chosenGame2', 2, 3000)">Yes!</a>
-		</div>
-  </div>
-  <div id="choice3" class="modal">
-    <div class="modal-content">
-      <h4>Are You Sure?</h4>
-      <p>You can only pick one game, does this one sound like fun?</p>
-    </div>
-    <div class="modal-footer">
-			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">No!</a>
-    	<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" onclick="setCookie('chosenGame3', 3, 3000)">Yes!</a>
-		</div>
-  </div>
-	<div id="mobilewarn" class="modal">
-    <div class="modal-content">
-      <h4>Hey! This isn't great on mobile!</h4>
-      <p>Technically it will load, but the magazines are hard to read and the games are unplayable without a keyboard. We suggest you come back on a computer browser later. Don't worry the link will still be here!</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Got it</a>
+    <br><br>
+
+    <div class="section">
+
     </div>
   </div>
-    
-    
-	<script>
-		$(document).ready(function(){
-			// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-			$('.modal').modal();
-		});
-		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-			$('#mobilewarn').modal();
-		}
-	</script>
-</body>
+	</div>	
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
 </html>

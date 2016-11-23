@@ -6,10 +6,11 @@
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	
 	<!--CSS-->
-	<link rel="stylesheet" type="text/css" href="../css/game-apple2-computerdiv.css">
+	<link rel="stylesheet" type="text/css" href="../css/game-apple2.css">
 	<link rel="stylesheet" type="text/css" href="../css/game-history.css">
+	<link rel="stylesheet" type="text/css" href="../css/waves.css">
 
-		<!--JQuery-->
+	<!--JQuery-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/mint-choc/jquery-ui.css">
@@ -18,45 +19,52 @@
 	
 </head>
 <body>
-	<nav>
+	<nav class="z-depth-2">
 		<div class="nav-wrapper">
 			<i class="material-icons" id="brand">games</i>
-			<a href="../magazine-jan1982.html" class="brand-logo">Softline - January 1982</a>
+			<a href="../magazine-jan1982.html" class="brand-logo">Week 2 - March 1982</a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a id="game" class="btn-flat" href="game-softporn.html">This Month's Game</a></li>
+				<li><a id="game" class="btn-flat" href="game-softporn.html">Magazine</a></li>
 			</ul>
 		</div>
   </nav>
 	<div id="wrapper">
 		<div id="left">
-			<div id="gamecase">
-				<div id="outercase">
-					<div id="innercase">
-						<div id="logos">
-							<img src="../img/badge.jpg" id="badge" />
-							<a href="https://archive.org/details/softwarelibrary_apple"><span id="subtitle">Games provided by Archive.org</span></a>
+			<div id="monitor" class="z-depth-2">
+				<div id="innercase">
+					<div id="overscan" >
+						<div id="display">
+							<iframe src="https://archive.org/embed/a2_Horizon_V_1981_Gebelli_Software_cr_Super_Twinkies" width="100%" height="100%" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 						</div>
-						<div id="displayouter">
-							<div id="overscan">
-								<div id="display">
-									<iframe src="https://archive.org/embed/a2_Horizon_V_1981_Gebelli_Software_cr_Super_Twinkies" width="100%" height="100%" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
-								</div>
-							</div>
-						</div>
-						<div id="diskdrive"></div>
-						<div id="button"></div>
 					</div>
 				</div>
-	  	</div>
+			</div>
 		</div>
-  	<div id="right" class="scrollbar">
-        <h1><i>Horizon V</i></h1>
-	   <p>
-            <span class="sectionTitle"><i>Game Play</i></span><br>Horizon V places you on a planet “swarming” with malicious aliens. You will need to refuel your ship and periodically then continue “frying” more aliens. Softline’s March 1982 issue was not very favorable of the game claiming that Nasir Gebelli (the creator) should have spent more time on it and incorporated more elements.<br><br>
-            <img class="image1" src="../img/keyart/Nasir_March_82.jpg">
-            <span class="sectionTitle"><i>Impact</i></span><br>While Softline did not favorably review Horizon V, a letter to the editor in the March 1982 issue (same issue as the review) had very positive remarks about the game, claiming Nasir really outdid himself. Nasir was praised by Softline as being a top name in game development, making the editors much more critical of a game they saw as lacking.<br><br>
-            <span class="sectionTitle"><i>Production History</i> </span><br>Horizon V was created in 1982. It was created by Nasir Gebelli. Horizon V was published by Gebelli Software.
-	    </p>
+		<div id="right" class="scrollbar">
+			<div id="titlewrap">
+				<h1><i>Horizon V</i></h1>
+			</div>
+			<hr>
+			<div id="gameplay">
+				Horizon V places you on a planet “swarming” with malicious aliens. You will need to refuel your ship and periodically then continue “frying” more aliens. Softline’s March 1982 issue was not very favorable of the game claiming that Nasir Gebelli (the creator) should have spent more time on it and incorporated more elements.
+			</div>
+			<div id="extragameinfo" class="valign-wrapper">
+				<div id="highscore">
+					<h3><i>High Score pg60</i></h3>
+					<h4 id="score">46,100</h4>
+				</div>
+				<div id="manual">
+					No Manual Found
+				</div>
+			</div>
+			<hr>
+			<div id="history">
+				<p>
+					<span class="sectionTitle"><i>Impact</i></span><br>While Softline did not favorably review Horizon V, a letter to the editor in the March 1982 issue (same issue as the review) had very positive remarks about the game, claiming Nasir really outdid himself. Nasir was praised by Softline as being a top name in game development, making the editors much more critical of a game they saw as lacking.
+					<img class="image1" src="../img/keyart/Nasir_March_82.jpg">
+					<span class="sectionTitle"><br><br><i>Production History</i> </span><br>Horizon V was created in 1982. It was created by Nasir Gebelli. Horizon V was published by Gebelli Software.
+				</p>
+			</div>  
   	</div>
   </div>
 </body>

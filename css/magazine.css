@@ -4,50 +4,44 @@
   src: url("../fonts/roboto/Roboto-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Thin.woff2") format("woff2"), url("../fonts/roboto/Roboto-Thin.woff") format("woff"), url("../fonts/roboto/Roboto-Thin.ttf") format("truetype");
   font-weight: 200;
 }
-
 @font-face {
   font-family: "Roboto";
   src: local(Roboto Light), url("../fonts/roboto/Roboto-Light.eot");
   src: url("../fonts/roboto/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Light.woff2") format("woff2"), url("../fonts/roboto/Roboto-Light.woff") format("woff"), url("../fonts/roboto/Roboto-Light.ttf") format("truetype");
   font-weight: 300;
 }
-
 @font-face {
   font-family: "Roboto";
   src: local(Roboto Regular), url("../fonts/roboto/Roboto-Regular.eot");
   src: url("../fonts/roboto/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Regular.woff2") format("woff2"), url("../fonts/roboto/Roboto-Regular.woff") format("woff"), url("../fonts/roboto/Roboto-Regular.ttf") format("truetype");
   font-weight: 400;
 }
-
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/roboto/Roboto-Medium.eot");
   src: url("../fonts/roboto/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Medium.woff2") format("woff2"), url("../fonts/roboto/Roboto-Medium.woff") format("woff"), url("../fonts/roboto/Roboto-Medium.ttf") format("truetype");
   font-weight: 500;
 }
-
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/roboto/Roboto-Bold.eot");
   src: url("../fonts/roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/roboto/Roboto-Bold.woff") format("woff"), url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: 700;
 }
-
-
-
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Libre+Franklin|Montserrat:400,700|PT+Sans');
 
 html {
-  font-family: "Adobe Garamond Pro",Garamond,Times;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.87);
 }
 body {
 	margin: 0px;
 	padding: 0px;
-	background-color: #f2e9e3;
+	background-color: #fcfcfc;
 	overflow: hidden;
 }
 p {
+	font-family: "Adobe Garamond Pro",Garamond,Times;
 	display: block;
 	margin: 0;
 	padding: 0;
@@ -58,23 +52,25 @@ p {
 
 
 nav {
-	font-weight: bold;
-  color: #181f18;
+	font-weight: 700;
+	font-family: 'Catamaran', sans-serif;
+  background-color: #EEDDD0;
   width: 100%;
-  height: 44px;
+  height: 46px;
 	line-height: 44px;
 }
 nav a {
   color: #181f18;
 }
-nav i.material-icons {
+nav img {
   display: block;
-	padding-left: 10px;
-	padding-right: 10px;
+	margin-right: 10px;
   font-size: 2rem;
 	float: left;
-  height: 44px;
+  height: 46px;
   line-height: 44px;
+	border-bottom-right-radius: 4px;
+	border-top-right-radius: 5px;
 }
 nav .brand-logo {
 	text-decoration: none;
@@ -90,9 +86,6 @@ nav ul li {
   transition: background-color .3s;
   float: right;
 }
-nav ul li.active {
-  background-color: rgba(0, 0, 0, 0.1);
-}
 nav ul a {
   transition: background-color .3s;
   color: #fff;
@@ -105,10 +98,6 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
   margin-left: 15px;
   margin-right: 15px;
 	font-size: 1.0rem;
-}
-nav .input-field input:focus, nav .input-field input[type=text]:valid, nav .input-field input[type=password]:valid, nav .input-field input[type=email]:valid, nav .input-field input[type=url]:valid, nav .input-field input[type=date]:valid {
-  border: none;
-  box-shadow: none;
 }
 
 
@@ -130,13 +119,6 @@ nav .input-field input:focus, nav .input-field input[type=text]:valid, nav .inpu
 	height: 100%;
 }
 
-/*
-	border-top: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-	border-left: 1px solid #ddd;
-*/
-
 
 
 
@@ -147,6 +129,7 @@ nav .input-field input:focus, nav .input-field input[type=text]:valid, nav .inpu
 	border: none;
 	list-style-type: none;
 	color: #181f18;
+	border-top: 2px solid #9F9F9F;
 }
 .collapsible li {
 	border-bottom: 2px solid #9F9F9F;
@@ -210,23 +193,11 @@ nav .input-field input:focus, nav .input-field input[type=text]:valid, nav .inpu
 	width: 85%;
 	text-align: center;
 	border-radius: 5px;
-	border: 3px solid #9F9F9F; 
+	border: 3px solid #9F9F9F;
+	margin-bottom: 15px;
 }
-.z-depth-1, nav, #gamewrap, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .side-nav {
+.z-depth-1, nav, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .side-nav {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-}
-.hoverable {
-  transition: box-shadow .25s;
-  box-shadow: 0;
-}
-.hoverable:hover {
-  transition: box-shadow .25s;
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.fade-in {
-  opacity: 0;
-  -webkit-transform-origin: 0 50%;
-          transform-origin: 0 50%;
 }
 
 @media all and (max-width: 700px) {
@@ -246,22 +217,19 @@ nav .input-field input:focus, nav .input-field input[type=text]:valid, nav .inpu
 
 
 
-.btn, .btn-large,
+
+.btn,
 .btn-flat {
   border: none;
   border-radius: 2px;
   display: inline-block;
-  height: 36px;
   line-height: 36px;
   padding: 0 2rem;
   text-transform: uppercase;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
 }
-
-.btn.disabled, .disabled.btn-large,
-.btn-floating.disabled,
-.btn-large.disabled,
+.btn.disabled,
 .btn-flat.disabled,
 .btn:disabled,
 .btn-large:disabled,
@@ -269,9 +237,6 @@ nav .input-field input:focus, nav .input-field input[type=text]:valid, nav .inpu
 .btn-large:disabled,
 .btn-flat:disabled,
 .btn[disabled],
-[disabled].btn-large,
-.btn-floating[disabled],
-.btn-large[disabled],
 .btn-flat[disabled] {
   pointer-events: none;
   background-color: #DFDFDF !important;
@@ -279,59 +244,40 @@ nav .input-field input:focus, nav .input-field input[type=text]:valid, nav .inpu
   color: #9F9F9F !important;
   cursor: default;
 }
-
-.btn.disabled:hover, .disabled.btn-large:hover,
-.btn-floating.disabled:hover,
-.btn-large.disabled:hover,
+.btn.disabled:hover, 
 .btn-flat.disabled:hover,
 .btn:disabled:hover,
-.btn-large:disabled:hover,
-.btn-floating:disabled:hover,
-.btn-large:disabled:hover,
 .btn-flat:disabled:hover,
 .btn[disabled]:hover,
-[disabled].btn-large:hover,
-.btn-floating[disabled]:hover,
 .btn-large[disabled]:hover,
 .btn-flat[disabled]:hover {
   background-color: #DFDFDF !important;
   color: #9F9F9F !important;
 }
-
-.btn, .btn-large,
-.btn-floating,
-.btn-large,
+.btn,
 .btn-flat {
   outline: 0;
 }
-
-.btn i, .btn-large i,
-.btn-floating i,
-.btn-large i,
+.btn i,
 .btn-flat i {
   font-size: 1.3rem;
   line-height: inherit;
 }
-
-.btn:focus, .btn-large:focus,
-.btn-floating:focus {
-  background-color: #509626;
+.btn:focus {
+  background-color: #1d7d74;
 }
-
 .btn, .btn-large {
   text-decoration: none;
   color: #fff;
-  background-color: #509626;
+  background-color: #26a69a;
   text-align: center;
   letter-spacing: .5px;
   transition: .2s ease-out;
   cursor: pointer;
 }
-
 .btn:hover, .btn-large:hover {
-  background-color: #6fd333;
+  background-color: #2bbbad;
 }
-
 .btn-flat {
   box-shadow: none;
   background-color: transparent;
@@ -339,34 +285,23 @@ nav .input-field input:focus, nav .input-field input[type=text]:valid, nav .inpu
   cursor: pointer;
   transition: background-color .2s;
 }
-
 .btn-flat:focus, .btn-flat:active {
   background-color: transparent;
 }
-
 .btn-flat:focus, .btn-flat:hover {
   background-color: rgba(0, 0, 0, 0.1);
   box-shadow: none;
 }
-
 .btn-flat:active {
   background-color: rgba(0, 0, 0, 0.2);
 }
-
 .btn-flat.disabled {
   background-color: transparent !important;
   color: #b3b3b3 !important;
   cursor: default;
 }
 
-.btn-large {
-  height: 54px;
-  line-height: 54px;
-}
 
-.btn-large i {
-  font-size: 1.6rem;
-}
 
 
 
@@ -384,25 +319,20 @@ nav .input-field input:focus, nav .input-field input[type=text]:valid, nav .inpu
   border-radius: 2px;
   will-change: top, opacity;
 }
-
 @media only screen and (max-width: 992px) {
   .modal {
     width: 80%;
   }
 }
-
 .modal h1, .modal h2, .modal h3, .modal h4 {
   margin-top: 0;
 }
-
 .modal .modal-content {
   padding: 24px;
 }
-
 .modal .modal-close {
   cursor: pointer;
 }
-
 .modal .modal-footer {
   border-radius: 0 0 2px 2px;
   background-color: #fafafa;
@@ -410,12 +340,10 @@ nav .input-field input:focus, nav .input-field input[type=text]:valid, nav .inpu
   height: 56px;
   width: 100%;
 }
-
 .modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-flat {
   float: right;
   margin: 6px 0;
 }
-
 .modal-overlay {
   position: fixed;
   z-index: 999;
@@ -429,12 +357,10 @@ nav .input-field input:focus, nav .input-field input[type=text]:valid, nav .inpu
   display: none;
   will-change: opacity;
 }
-
 .modal.modal-fixed-footer {
   padding: 0;
   height: 70%;
 }
-
 .modal.modal-fixed-footer .modal-content {
   position: absolute;
   height: calc(100% - 56px);
@@ -442,13 +368,11 @@ nav .input-field input:focus, nav .input-field input[type=text]:valid, nav .inpu
   width: 100%;
   overflow-y: auto;
 }
-
 .modal.modal-fixed-footer .modal-footer {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   position: absolute;
   bottom: 0;
 }
-
 .modal.bottom-sheet {
   top: auto;
   bottom: -100%;
@@ -457,130 +381,4 @@ nav .input-field input:focus, nav .input-field input[type=text]:valid, nav .inpu
   max-height: 45%;
   border-radius: 0;
   will-change: bottom, opacity;
-}
-
-
-
-
-/*!
- * Waves v0.6.0
- * http://fian.my.id/Waves
- *
- * Copyright 2014 Alfiana E. Sibuea and other contributors
- * Released under the MIT license
- * https://github.com/fians/Waves/blob/master/LICENSE
- */
-.waves-effect {
-  position: relative;
-  cursor: pointer;
-  display: inline-block;
-  overflow: hidden;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-  vertical-align: middle;
-  z-index: 1;
-  will-change: opacity, transform;
-  transition: .3s ease-out;
-}
-
-.waves-effect .waves-ripple {
-  position: absolute;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  margin-top: -10px;
-  margin-left: -10px;
-  opacity: 0;
-  background: rgba(0, 0, 0, 0.2);
-  transition: all 0.7s ease-out;
-  transition-property: opacity, -webkit-transform;
-  transition-property: transform, opacity;
-  transition-property: transform, opacity, -webkit-transform;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  pointer-events: none;
-}
-
-.waves-effect.waves-light .waves-ripple {
-  background-color: rgba(255, 255, 255, 0.45);
-}
-
-.waves-effect.waves-red .waves-ripple {
-  background-color: rgba(244, 67, 54, 0.7);
-}
-
-.waves-effect.waves-yellow .waves-ripple {
-  background-color: rgba(255, 235, 59, 0.7);
-}
-
-.waves-effect.waves-orange .waves-ripple {
-  background-color: rgba(255, 152, 0, 0.7);
-}
-
-.waves-effect.waves-purple .waves-ripple {
-  background-color: rgba(156, 39, 176, 0.7);
-}
-
-.waves-effect.waves-green .waves-ripple {
-  background-color: rgba(76, 175, 80, 0.7);
-}
-
-.waves-effect.waves-teal .waves-ripple {
-  background-color: rgba(0, 150, 136, 0.7);
-}
-
-.waves-effect input[type="button"], .waves-effect input[type="reset"], .waves-effect input[type="submit"] {
-  border: 0;
-  font-style: normal;
-  font-size: inherit;
-  text-transform: inherit;
-  background: none;
-}
-
-.waves-effect img {
-  position: relative;
-  z-index: -1;
-}
-
-.waves-notransition {
-  transition: none !important;
-}
-
-.waves-circle {
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
-}
-
-.waves-input-wrapper {
-  border-radius: 0.2em;
-  vertical-align: bottom;
-}
-
-.waves-input-wrapper .waves-button-input {
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.waves-circle {
-  text-align: center;
-  width: 2.5em;
-  height: 2.5em;
-  line-height: 2.5em;
-  border-radius: 50%;
-  -webkit-mask-image: none;
-}
-
-.waves-block {
-  display: block;
-}
-
-/* Firefox Bug: link not triggered */
-.waves-effect .waves-ripple {
-  z-index: -1;
 }

@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="https://use.typekit.net/lss5ifw.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
-	
 	<!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	
 	<!--CSS-->
 	<link rel="stylesheet" type="text/css" href="css/magazine.css">
+	<link rel="stylesheet" type="text/css" href="css/waves.css">
 
 	<!--JQuery-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -18,27 +16,14 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
   <!--Script for Cookies-->
   <script src="localstorage.js"></script>
-<!--
-
-<nav>
-<div class="nav-wrapper">
-	<ul id="nav-mobile" class="hide-on-med-and-down">
-		<li><a href="about.html"><i class="material-icons" id="brand">shop</i></a></li>
-		<li><h1 id="title" href="brand.html">Volume 4 Jan-Feb 1984</h1></li>
-		<li><a class="btn-flat" id="magazine" href="magazine.html">Magazine</a></li>
-		<li><a class="btn-flat disabled" id="game" href="game.html">Game</a></li>
-	</ul>
-</div>
-</nav>
--->
 </head> 
 <body onload="checkCookie()">
 	<nav>
 		<div class="nav-wrapper">
-			<i class="material-icons" id="brand">shop</i>
-			<a href="magazine-jan1982.html" class="brand-logo">Volume 4 Jan-Feb 1984</a>
+			<img src="img/PlayfulPasts_Logo.jpg">
+			<a class="brand-logo">Week 1 - January 1982</a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a id="game" class="btn-flat disabled" href="#" target="_blank">Games</a></li>
+				<li><a id="game" class="btn-flat disabled" href="#" target="_blank">To Game</a></li>
 			</ul>
 		</div>
   </nav>
@@ -49,7 +34,7 @@
 		<div id="gamewrap">
 			<ul class="collapsible" data-collapsible="accordion">
 				<li>
-					<div class="collapsible-header"><i class="material-icons">games</i>Crossfire</div>
+					<div class="collapsible-header"><i class="material-icons">subject</i>Crossfire</div>
 					<div class="collapsible-body">
 						<div class="left">
 							<div class="content">
@@ -67,7 +52,7 @@
 					</div>
 				</li>
 				<li>
-					<div class="collapsible-header"><i class="material-icons">games</i>Dark Forest</div>
+					<div class="collapsible-header"><i class="material-icons">subject</i>Dark Forest</div>
 					<div class="collapsible-body">
 						<div class="left">
 							<div class="content">
@@ -85,7 +70,7 @@
 					</div>
 				</li>
 				<li>
-					<div class="collapsible-header"><i class="material-icons">games</i>SoftPorn</div>
+					<div class="collapsible-header"><i class="material-icons">subject</i>SoftPorn</div>
 					<div class="collapsible-body">
 						<div class="left">
 							<div class="content">
@@ -165,28 +150,28 @@
 			$('#mobilewarn').modal();
 		};
 		function checkCookieStatus(cvalue){
-    if(cvalue===1){
-    document.getElementById("game").className = "btn-flat"
-    document.getElementById("game").href="games/game-crossfire.html";
-    document.getElementById("decision1").innerHTML = "You chose this game!";
-    document.getElementById("decision2").style.visibility = "hidden";
-    document.getElementById("decision3").style.visibility = "hidden";
-    }
-    if(cvalue===2){
-    document.getElementById("game").className = "btn-flat"
-    document.getElementById("game").href="games/game-darkforest.html";
-    document.getElementById("decision1").style.visibility = "hidden";
-    document.getElementById("decision2").innerHTML = "You chose this game!";
-    document.getElementById("decision3").style.visibility = "hidden";
-    }
-    if(cvalue===3){
-    document.getElementById("game").className = "btn-flat"
-    document.getElementById("game").href="games/game-softporn.html";
-    document.getElementById("decision1").style.visibility = "hidden";
-    document.getElementById("decision2").style.visibility = "hidden";
-    document.getElementById("decision3").innerHTML = "You chose this game!";
-    }
-}
+			if(cvalue===1){
+			document.getElementById("game").className = "btn-flat"
+			document.getElementById("game").href="games/game-crossfire.html";
+			document.getElementById("decision1").innerHTML = "You chose this game!";
+			document.getElementById("decision2").style.visibility = "hidden";
+			document.getElementById("decision3").style.visibility = "hidden";
+			}
+			if(cvalue===2){
+			document.getElementById("game").className = "btn-flat"
+			document.getElementById("game").href="games/game-darkforest.html";
+			document.getElementById("decision1").style.visibility = "hidden";
+			document.getElementById("decision2").innerHTML = "You chose this game!";
+			document.getElementById("decision3").style.visibility = "hidden";
+			}
+			if(cvalue===3){
+			document.getElementById("game").className = "btn-flat"
+			document.getElementById("game").href="games/game-softporn.html";
+			document.getElementById("decision1").style.visibility = "hidden";
+			document.getElementById("decision2").style.visibility = "hidden";
+			document.getElementById("decision3").innerHTML = "You chose this game!";
+			}
+		}
 	</script>
 </body>
 </html>

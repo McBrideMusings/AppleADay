@@ -6,10 +6,11 @@
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	
 	<!--CSS-->
-	<link rel="stylesheet" type="text/css" href="../css/game-apple2-computerdiv.css">
+	<link rel="stylesheet" type="text/css" href="../css/game-apple2.css">
 	<link rel="stylesheet" type="text/css" href="../css/game-history.css">
+	<link rel="stylesheet" type="text/css" href="../css/waves.css">
 
-		<!--JQuery-->
+	<!--JQuery-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/mint-choc/jquery-ui.css">
@@ -18,46 +19,52 @@
 	
 </head>
 <body>
-	<nav>
+	<nav class="z-depth-2">
 		<div class="nav-wrapper">
 			<i class="material-icons" id="brand">games</i>
-			<a href="../magazine-jan1982.html" class="brand-logo">Softline - January 1982</a>
+			<a href="../magazine-jan1982.html" class="brand-logo">Week 1 - January 1982</a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a id="game" class="btn-flat" href="game-softporn.html">This Month's Game</a></li>
+				<li><a id="game" class="btn-flat" href="game-softporn.html">Magazine</a></li>
 			</ul>
 		</div>
   </nav>
 	<div id="wrapper">
 		<div id="left">
-			<div id="gamecase">
-				<div id="outercase">
-					<div id="innercase">
-						<div id="logos">
-							<img src="../img/badge.jpg" id="badge" />
-							<a href="https://archive.org/details/softwarelibrary_apple"><span id="subtitle">Games provided by Archive.org</span></a>
+			<div id="monitor" class="z-depth-2">
+				<div id="innercase">
+					<div id="overscan" >
+						<div id="display">
+							<iframe src="https://archive.org/embed/a2_Softporn_Adventure_1981_Blue_Sky" width="100%" height="100%" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 						</div>
-						<div id="displayouter">
-							<div id="overscan">
-								<div id="display">
-									<iframe src="https://archive.org/embed/a2_Softporn_Adventure_1981_Blue_Sky" width="100%" height="100%" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
-								</div>
-							</div>
-						</div>
-						<div id="diskdrive"></div>
-						<div id="button"></div>
 					</div>
 				</div>
-	  	</div>
+			</div>
 		</div>
-  	<div id="right" class="scrollbar">
-        <h1><i>Softporn</i></h1>
-	    <p>
-            <span class="sectionTitle"><i>Game Play</i></span><br>Softporn Adventure (for adults only!) is a different kind of adventure game where instead of slaying dragons, players gamble and make attempts at the art of seduction. The object of the game is to find and seduce three girls (“the parser does not recognize the word woman”) with the help of money won at the casino (Softline January 1982). There are three major locations in the Softporn Adventure world: the bar, a disco, and a casino. All can be reached by taxi using the command “Hail taxi!”.<br><br>
-            <img class="image1" src="../img/keyart/Softporn_January_82.jpg">
-            <span class="sectionTitle"><i>Impact</i></span><br>Softporn Adventure is the first commercially sold erotic game. While erotic content had circulated freely on mainframes and minicomputers previously, it had not been marketed on a commercial basis. Described as addictive by the January 1982 Softline issue, it was also criticized for its sexism: it’s a “shame that [Benton] didn’t take the time to make his program a bit classier”.<br><br>
-            <span class="sectionTitle"><i>Production History</i> </span><br>Softporn Adventure was created in 1981. It was created by Chuck Benton and Blue Sky Software for the Apple II. Softporn Adventure was published by On-line Systems (now and more commonly known as Sierra On-line).
-	    </p>
-  	</div>
+		<div id="right" class="scrollbar">
+			<div id="titlewrap">
+				<h1><i>Softporn</i></h1>
+			</div>
+			<hr>
+			<div id="gameplay">
+				Softporn Adventure (for adults only!) is a different kind of adventure game where instead of slaying dragons, players gamble and make attempts at the art of seduction. The object of the game is to find and seduce three girls (“the parser does not recognize the word woman”) with the help of money won at the casino (Softline January 1982). There are three major locations in the Softporn Adventure world: the bar, a disco, and a casino. All can be reached by taxi using the command “Hail taxi!”.
+			</div>
+			<div id="extragameinfo" class="valign-wrapper">
+				<div id="highscore">
+					No High Score
+				</div>
+				<div id="manual">
+					No Manual Found
+				</div>
+			</div>
+			<hr>
+			<div id="history">
+				<p>
+					<span class="sectionTitle"><i>Impact</i></span><br>Softporn Adventure is the first commercially sold erotic game. While erotic content had circulated freely on mainframes and minicomputers previously, it had not been marketed on a commercial basis. Described as addictive by the January 1982 Softline issue, it was also criticized for its sexism: it’s a “shame that [Benton] didn’t take the time to make his program a bit classier”.
+					<img class="image1" src="../img/keyart/Softporn_January_82.jpg">
+					<span class="sectionTitle"><br><br><i>Production History</i> </span><br>Softporn Adventure was created in 1981. It was created by Chuck Benton and Blue Sky Software for the Apple II. Softporn Adventure was published by On-line Systems (now and more commonly known as Sierra On-line).
+				</p>
+			</div>  
+		</div>
   </div>
 </body>
 </html>

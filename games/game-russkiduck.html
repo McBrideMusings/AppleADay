@@ -6,10 +6,11 @@
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	
 	<!--CSS-->
-	<link rel="stylesheet" type="text/css" href="../css/game-apple2-computerdiv.css">
+	<link rel="stylesheet" type="text/css" href="../css/game-apple2.css">
 	<link rel="stylesheet" type="text/css" href="../css/game-history.css">
+	<link rel="stylesheet" type="text/css" href="../css/waves.css">
 
-		<!--JQuery-->
+	<!--JQuery-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/mint-choc/jquery-ui.css">
@@ -18,45 +19,52 @@
 	
 </head>
 <body>
-	<nav>
+	<nav class="z-depth-2">
 		<div class="nav-wrapper">
 			<i class="material-icons" id="brand">games</i>
-			<a href="../magazine-jan1982.html" class="brand-logo">Softline - January 1982</a>
+			<a href="../magazine-jan1982.html" class="brand-logo">Week 2 - March 1982</a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a id="game" class="btn-flat" href="game-softporn.html">This Month's Game</a></li>
+				<li><a id="game" class="btn-flat" href="game-softporn.html">Magazine</a></li>
 			</ul>
 		</div>
   </nav>
 	<div id="wrapper">
 		<div id="left">
-			<div id="gamecase">
-				<div id="outercase">
-					<div id="innercase">
-						<div id="logos">
-							<img src="../img/badge.jpg" id="badge" />
-							<a href="https://archive.org/details/softwarelibrary_apple"><span id="subtitle">Games provided by Archive.org</span></a>
-						</div>
-						<div id="displayouter">
-							<div id="overscan">
-								<div id="display">
+			<div id="monitor" class="z-depth-2">
+				<div id="innercase">
+					<div id="overscan" >
+						<div id="display">
 									<iframe src="https://archive.org/embed/a2_Russki_Duck_1982_Gebelli_Software_cr_Mr._Xerox" width="100%" height="100%" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
-								</div>
-							</div>
 						</div>
-						<div id="diskdrive"></div>
-						<div id="button"></div>
 					</div>
 				</div>
-	  	</div>
+			</div>
 		</div>
-  	<div id="right" class="scrollbar">
-        <h1><i>Russki Duck</i></h1>
-	   <p>
-            <span class="sectionTitle"><i>Game Play</i></span><br>In Russki Duck, you are an agent for the CIA with a mission to recover stolen missile plans hidden in a “fake duck” in a shipping crate. To find the duck, you need to search through rooms in buildings picking up objects along the way needed to recover the plans. Objects must be hidden as only one can be carried at a time.<br><br>
-            <img class="image1" src="../img/keyart/RusskiDuck_March_82.jpg">
-            <span class="sectionTitle"><i>Impact</i></span><br>Despite a positive review in Softline’s March 1982 issue, the March 1983 issue ranked Russki Duck number 6 in a top ten list “for badness in computer games” based on reader submissions for the Dog of the Year Award.<br><br>
-            <span class="sectionTitle"><i>Production History</i> </span><br>Russki Duck was created in 1982. It was created by Eric Knopp and Alan Merrell. Russki Duck was published by Gebelli Software.
-	    </p>
+		<div id="right" class="scrollbar">
+			<div id="titlewrap">
+				<h1><i>Russki Duck</i></h1>
+			</div>
+			<hr>
+			<div id="gameplay">
+				In Russki Duck, you are an agent for the CIA with a mission to recover stolen missile plans hidden in a “fake duck” in a shipping crate. To find the duck, you need to search through rooms in buildings picking up objects along the way needed to recover the plans. Objects must be hidden as only one can be carried at a time.
+			</div>
+			<div id="extragameinfo" class="valign-wrapper">
+				<div id="highscore">
+					<h3><i>High Score pg60</i></h3>
+					<h4 id="score">241,000</h4>
+				</div>
+				<div id="manual">
+					No Manual Found
+				</div>
+			</div>
+			<hr>
+			<div id="history">
+				<p>
+					<span class="sectionTitle"><i>Impact</i></span><br>Despite a positive review in Softline’s March 1982 issue, the March 1983 issue ranked Russki Duck number 6 in a top ten list “for badness in computer games” based on reader submissions for the Dog of the Year Award.
+					<img class="image1" src="../img/keyart/RusskiDuck_March_82.png">
+					<span class="sectionTitle"><br><br><i>Production History</i> </span><br>Russki Duck was created in 1982. It was created by Eric Knopp and Alan Merrell. Russki Duck was published by Gebelli Software.
+				</p>
+			</div>  
   	</div>
   </div>
 </body>
