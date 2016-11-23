@@ -30,19 +30,19 @@
   </nav>
 	<div id="wrapper">
 		<div id="bookwrap">
-			<iframe src="https://archive.org/stream/Softline_1982_01?ui=embed#mode/2up" width="100%" height="100%" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+			<iframe src="https://archive.org/stream/Softline_1982_03?ui=embed#mode/2up" width="100%" height="100%" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 		</div>
 		<div id="gamewrap">
 			<ul class="collapsible" data-collapsible="accordion">
 				<li>
-					<div class="collapsible-header"><i class="material-icons">subject</i>Crossfire</div>
+					<div class="collapsible-header"><i class="material-icons">subject</i>Russki Duck</div>
 					<div class="collapsible-body">
 						<div class="left">
 							<div class="content">
 								<p>
-									Review on <span class="pagenum">Pg 15</span><br>
-									Ad on <span class="pagenum">Pg 23</span><br>
-									Mentioned on <span class="pagenum">Pg 32</span>
+									Review on <span class="pagenum">Pg 18</span><br>
+									Gebelli Ad on <span class="pagenum">Pg 27</span><br>
+									Sunrise Software Ad on <span class="pagenum">Pg 34</span>
 								</p>
 							</div>
 							<div class="decision" id="decision1">
@@ -50,17 +50,19 @@
 							</div>
 						</div>
 						<div class="right">
-							<img src="img/keyart/Crossfire_January_82.jpg">
+							<img src="img/keyart/RusskiDuck_March_82.png">
 						</div>
 					</div>
 				</li>
 				<li>
-					<div class="collapsible-header"><i class="material-icons">subject</i>Dark Forest</div>
+					<div class="collapsible-header"><i class="material-icons">subject</i>Horizon V</div>
 					<div class="collapsible-body">
 						<div class="left">
 							<div class="content">
 								<p>
-									Review on <span class="pagenum">Pg 15-16</span><br>
+									Review on <span class="pagenum">Pg 20</span><br>
+									Gebelli Ad on <span class="pagenum">Pg 27</span><br>
+									Letter on <span class="pagenum">Pg 8</span><br>
 								</p>
 							</div>
 							<div class="decision" id="decision2">
@@ -68,17 +70,18 @@
 							</div>
 						</div>
 						<div class="right">
-							<img src="img/keyart/DarkForest_January_82.jpg">
+							<img src="img/keyart/Nasir_March_82.jpg">
 						</div>
 					</div>
 				</li>
 				<li>
-					<div class="collapsible-header"><i class="material-icons">subject</i>SoftPorn</div>
+					<div class="collapsible-header"><i class="material-icons">subject</i>Borg</div>
 					<div class="collapsible-body">
 						<div class="left">
 							<div class="content">
 								<p>
-									Review on <span class="pagenum">Pg 33</span><br>
+									Review on <span class="pagenum">Pg 52</span><br>
+									Mentioned on <span class="pagenum">Pg 41/Pg 49</span><br>
 								</p>
 							</div>
 							<div class="decision" id="decision3">
@@ -86,7 +89,7 @@
 							</div>
 						</div>
 						<div class="right">
-							<img src="img/keyart/Softporn_January_82.jpg">
+							<img src="img/keyart/Borg_March_82.png">
 						</div>
 					</div>
 				</li>
@@ -155,21 +158,21 @@
 		function checkCookieStatus(cvalue){
 			if(cvalue===1){
 			document.getElementById("game").className = "btn-flat"
-			document.getElementById("game").href="games/game-crossfire.html";
+			document.getElementById("game").href="games/game-russkiduck.html";
 			document.getElementById("decision1").innerHTML = "You chose this game!";
 			document.getElementById("decision2").style.visibility = "hidden";
 			document.getElementById("decision3").style.visibility = "hidden";
 			}
 			if(cvalue===2){
 			document.getElementById("game").className = "btn-flat"
-			document.getElementById("game").href="games/game-darkforest.html";
+			document.getElementById("game").href="games/game-horizonV.html";
 			document.getElementById("decision1").style.visibility = "hidden";
 			document.getElementById("decision2").innerHTML = "You chose this game!";
 			document.getElementById("decision3").style.visibility = "hidden";
 			}
 			if(cvalue===3){
 			document.getElementById("game").className = "btn-flat"
-			document.getElementById("game").href="games/game-softporn.html";
+			document.getElementById("game").href="games/game-borg.html";
 			document.getElementById("decision1").style.visibility = "hidden";
 			document.getElementById("decision2").style.visibility = "hidden";
 			document.getElementById("decision3").innerHTML = "You chose this game!";
