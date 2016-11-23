@@ -26,6 +26,26 @@ p {
 
 
 
+#cutout #extend {
+	display: block;
+	position: relative;
+  font-size: 2rem;
+	float: left;
+	left: -145px;
+  height: 100px;
+	width: 400px;
+  line-height: 44px;
+}
+#cutout #logo {
+  display: block;
+	position: relative;
+  font-size: 2rem;
+	left: -150px;
+  height: 100px;
+  line-height: 44px;
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 20px;
+}
 
 
 
