@@ -93,6 +93,19 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 	height: 100%;
 	margin: 0;
 }
+#emu {
+	top: 10%;
+	position: relative;
+	width: 730px;
+	margin: auto;
+}
+#loadbutton {
+	width: 100%;
+}
+#diskload1 {
+	height: 40px;
+	margin: auto;
+}
 #right {
 	width: 34%;
 	overflow-y: scroll;
@@ -106,9 +119,6 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 }
 
 #left #monitor {
-	position: relative;
-	top: 5%;
-	left: 7%;
 	background-color: #EEDDD0;
 	border-radius: 10px;
 	width: 730px;
@@ -163,6 +173,7 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 	#right {
 		margin: auto;
 		width: 95%;
+		overflow-y: visible;
 	}
 	#left #monitor {
 		top: 5%;
