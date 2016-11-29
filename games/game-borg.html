@@ -85,7 +85,7 @@
 				<div id="loadbutton">
 					<button id="diskload1" class="diskload" value="Load"
 									onclick="openLoad(1, event);">
-							Loadthis
+							Load
 					</button>
 					<form action="#">
       <input type="file" id="local_file" />
@@ -120,5 +120,71 @@
 			</div>  
   	</div>
   </div>
+        <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-describedby="http_load" aria-labelledby="ui-id-6" style="display: none; position: absolute;">
+            <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+                <span id="ui-id-6" class="ui-dialog-title">Load URL</span>
+                <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" aria-disabled="false" title="close">
+                    <span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span>
+                    <span class="ui-button-text">close</span>
+                </button>
+            </div>
+            <div id="http_load" class="ui-dialog-content ui-widget-content">
+                <form action="#">
+                    <input type="text" id="http_url" style="width: 500px">
+                </form>
+            </div>
+            <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+                <div class="ui-dialog-buttonset">
+                    <button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false">
+                        <span class="ui-button-text">Cancel</span>
+                    </button>
+                    <button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false">
+                        <span class="ui-button-text">OK</span>
+                    </button>
+                </div>
+            </div>
+                <div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div>
+                <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div>
+                <div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div>
+                <div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div>
+                <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div>
+                <div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div>
+                <div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div>
+                <div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div>
+        </div>
+        <div id="load" class="ui-dialog-content ui-widget-content" style="width: auto; min-height: 56px; max-height: none; height: auto;">
+            <table>
+              <tbody>
+                  <tr>
+                        <td>
+                            <select id="category_select" multiple="multiple" class="ui-widget ui-state-default" onchange="selectCategory(event)">
+                                <option value="13 Sector">13 Sector</option>
+                                <option value="Blank">Blank</option>
+                                <option value="Demo">Demo</option>
+                                <option value="Diagnostics">Diagnostics</option>
+                                <option value="Educational">Educational</option>
+                                <option value="Game">Game</option>
+                                <option value="Graphics">Graphics</option>
+                                <option value="Interactive Fiction">Interactive Fiction</option>
+                                <option value="Misc">Misc</option>
+                                <option value="Music Video">Music Video</option>
+                                <option value="Personal">Personal</option>
+                                <option value="Programming">Programming</option>
+                                <option value="System">System</option>
+                                <option value="Utility">Utility</option>
+                                <option>Local Saves</option>
+                            </select>
+                        </td>
+                        <td>
+                          <select id="disk_select" multiple="multiple" class="ui-widget ui-state-default" onchange="selectDisk(event)" ondblclick="clickDisk(event)">
+                          </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        <form action="#">
+            <input type="file" id="local_file">
+        </form>
+        </div>
 </body>
 </html>

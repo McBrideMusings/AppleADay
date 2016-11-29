@@ -85,11 +85,14 @@ function openLoad(drive, event)
     _loadDrive = drive;
     if (event.metaKey) {
         openLoadHTTP(drive);
+        console.log("Load on");
     } else {
         if (disk_cur_cat[drive]) {
             $('#category_select').val(disk_cur_cat[drive]).change();
+            console.log("else");
         }
         $('#load').dialog('open');
+        console.log("else1");
     }
 }
 
@@ -275,6 +278,7 @@ function doLoadHTTP(_url) {
 function openLoadHTTP(drive) {
     _saveDrive = drive;
     $('#http_load').dialog('open');
+    console.log("HTTP is on");
 }
 
 function openSaveLocal(drive) {
