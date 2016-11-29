@@ -72,13 +72,24 @@
   </nav>
 	<div id="wrapper">
 		<div id="left">
-			<div id="monitor" class="z-depth-2">
+			<div id="emu">
+				<div id="monitor" class="z-depth-2">
 				<div id="innercase">
 					<div id="overscan" >
 						<div id="display">
 							<canvas id="screen" width="560" height="384"></canvas>
 						</div>
 					</div>
+				</div>
+			</div>
+				<div id="loadbutton">
+					<button id="diskload1" class="diskload" value="Load"
+									onclick="openLoad(1, event);">
+							Load
+					</button>
+					<form action="#">
+      <input type="file" id="local_file" />
+    </form>
 				</div>
 			</div>
 		</div>
