@@ -124,6 +124,8 @@ function loadAjax(url) {
 }
 
 function doLoad() {
+	doLoadLocal();
+	/*
     var urls = $('#disk_select').val(), url;
     if (urls && urls.length) {
         if (typeof(urls) == 'string') {
@@ -154,7 +156,7 @@ function doLoad() {
             }
             loadAjax(url);
         }
-    }
+    }*/
 }
 
 function doSave() {
@@ -170,6 +172,7 @@ function doDelete(name) {
 }
 
 function doLoadLocal() {
+	console.log("doLoadLocal");
     var files = $('#local_file').prop('files');
     if (files.length == 1) {
         var file = files[0];
@@ -187,6 +190,7 @@ function doLoadLocal() {
 }
 
 function doLoadLocalDisk(file) {
+	console.log("doLoadLocalDisk");
     var fileReader = new FileReader();
     fileReader.onload = function() {
         var parts = file.name.split('.');
@@ -201,6 +205,7 @@ function doLoadLocalDisk(file) {
 }
 
 function doLoadLocalTape(file) {
+	console.log("doLoadTape");
     // Audio Buffer Source
     var context;
     if (typeof window.AudioContext != 'undefined') {
