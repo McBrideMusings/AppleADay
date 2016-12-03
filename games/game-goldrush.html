@@ -14,8 +14,39 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/mint-choc/jquery-ui.css">
-
+	
+	<!--Materialize-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+	
+	<!--AppleJS-->
+	<!--jQuery(Older because of dependencies from Apple2JS-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js">
+	</script>
+	<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js">
+	</script>
+	<!-- Emulator Scripts -->
+	<script type="text/javascript" src="../apple2js/js/util.js"></script>
+	<script type="text/javascript" src="../apple2js/js/prefs.js"></script>
+	<script type="text/javascript" src="../apple2js/js/ram.js"></script>
+	<script type="text/javascript" src="../apple2js/js/langcard.js"></script>
+	<script type="text/javascript" src="../apple2js/js/fpbasic.js"></script>
+	<script type="text/javascript" src="../apple2js/js/apple2char.js"></script>
+	<script type="text/javascript" src="../apple2js/js/applesoft/decompiler.js"></script>
+	<script type="text/javascript" src="../apple2js/js/canvas2.js"></script>
+	<script type="text/javascript" src="../apple2js/js/apple2io.js"></script>
+	<script type="text/javascript" src="../apple2js/js/parallel.js"></script>
+	<script type="text/javascript" src="../apple2js/js/disk2.js"></script>
+	<script type="text/javascript" src="../apple2js/js/ramfactor.js"></script>
+	<script type="text/javascript" src="../apple2js/js/thunderclock.js"></script>
+	<script type="text/javascript" src="../apple2js/js/cpu6502.js"></script>
+	<script type="text/javascript" src="../apple2js/js/base64.js"></script>
+	<script type="text/javascript" src="../apple2js/js/ui/audio.js"></script>
+	<script type="text/javascript" src="../apple2js/js/ui/keyboard2.js"></script>
+	<script type="text/javascript" src="../apple2js/js/ui/gamepad.js"></script>
+	<script type="text/javascript" src="../apple2js/js/ui/printer.js"></script>
+	<!-- Disk Index -->
+	<script type="text/javascript" src="../apple2js/json/disks/index.js"></script>
+	<script type="text/javascript" src="../apple2js/js/main2.js"></script>
 	
 </head>
 <body>
@@ -31,11 +62,35 @@
   </nav>
 	<div id="wrapper">
 		<div id="left">
-			<div id="monitor" class="z-depth-2">
+			<div id="emu" class="z-depth-2">
+				<div id="monitor" >
 				<div id="innercase">
-					<div id="overscan" >
+					<div id="overscan">
 						<div id="display">
-							<iframe src="https://archive.org/embed/a2_asimov_mating_zone_etc" width="100%" height="100%" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+							<canvas id="screen" width="560" height="384"></canvas>
+						</div>
+					</div>
+					<div class="inset">
+						<div class="disk" id="disk1">&nbsp;</div>
+						<div id="khz" onclick="showFPS = !showFPS">0KHz</div>
+						<span id="disklabel1" class="disklabel">No Disk Inserted</span>
+						<div id="buttondiv">
+							<button id="diskload1" class="diskload" value="Load"	onclick="document.getElementById('local_file').click(); return false;">
+							Load Disk
+							</button>
+						</div>
+						<button id="resetGame" onclick="resetCheck();">
+							Reset
+						</button>
+						<form id="uploaddsk" action="#">
+							<input type="file" id="local_file" accept=".dsk" onchange="loadStart();" style="visibility: hidden;"/>
+						</form>
+						<label class="toggle">
+							Green Screen
+  						<input type="checkbox" id="green_screen"
+								 onclick="updateScreen()" checked="checked">
+  						<div class="togglebtn"></div>
+						</label>
 						</div>
 					</div>
 				</div>

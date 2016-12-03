@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Libre+Franklin|Montserrat:400,700|PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin');
 
+/*==================Overall===================*/
 html {
   font-family: "Adobe Garamond Pro",Garamond,Times;
   font-weight: normal;
@@ -16,13 +17,13 @@ p {
 	margin: 0;
 	padding: 0;
 }
+/*=========================================== */
 
 
-
-
+/*==================Navbar=================== */
 nav {
 	font-weight: 700;
-	font-family: 'Catamaran', sans-serif;
+	font-family: 'Libre Franklin', sans-serif;
   background-color: #EEDDD0;
   width: 100%;
   height: 46px;
@@ -76,12 +77,12 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 	font-size: 1.0rem;
 	color: #0096d3;
 }
+/*=========================================== */
 
 
 
 
-
-
+/*==================Wrapper=================== */
 #wrapper {
 	display: flex;
 	justify-content: space-around;
@@ -92,8 +93,6 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 	height: 100%;
 	margin: 0;
 }
-
-
 #right {
 	width: 34%;
 	overflow-y: scroll;
@@ -105,26 +104,47 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 	list-style-type: none;
 	color: #fff;
 }
+/*============================================= */
 
+
+
+/*==================Emulator=================== */
 #left #emu {
 	top: 3%;
 	position: relative;
 	width: 730px;
-	height: 565px;
+	height: 604px;
 	margin: auto;
 	background-color: #EEDDD0;
 	border-radius: 10px;
 }
-
 #left #innercase {
 	position: relative;
-	top: 10px;
 	width: 700px;
 	height: 545px;
 	margin: auto;
 	background-color: #E0CABC;
 	border-radius: 10px;
 	box-shadow: inset 15px 15px 10px -10px rgba(0, 0, 0, 0.24);
+}
+#badgediv {
+	padding: 8px 17px 0px 17px;
+}
+img#badge {
+	width: 110px;
+	height: 33px;
+	cursor: pointer;
+}
+h1#subtitle {
+	display: flex;
+	float: right;
+  justify-content: flex-end;
+  align-items: flex-end;
+	color: black;
+	font-size: 0.8rem;
+	font-weight: normal;
+	height: 33px;
+	margin: 0px;
 }
 #left .inset {
 	display: flex;
@@ -254,8 +274,6 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 		overflow-y: visible;
 	}
 	#left #monitor {
-		top: 5%;
-		left: 1%;
 		margin: auto;
 		position: relative;
 	}
@@ -265,8 +283,12 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 		height: 97.5%;
 	}
 }
+/*============================================ */
 
 
+
+
+/*==================Buttons=================== */
 .btn,
 .btn-flat {
   border: none;
@@ -277,54 +299,9 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
 }
-.btn.disabled,
-.btn-flat.disabled,
-.btn:disabled,
-.btn-large:disabled,
-.btn-floating:disabled,
-.btn-large:disabled,
-.btn-flat:disabled,
-.btn[disabled],
-.btn-flat[disabled] {
-  pointer-events: none;
-  background-color: #DFDFDF !important;
-  box-shadow: none;
-  color: #9F9F9F !important;
-  cursor: default;
-}
-.btn.disabled:hover, 
-.btn-flat.disabled:hover,
-.btn:disabled:hover,
-.btn-flat:disabled:hover,
-.btn[disabled]:hover,
-.btn-large[disabled]:hover,
-.btn-flat[disabled]:hover {
-  background-color: #DFDFDF !important;
-  color: #9F9F9F !important;
-}
 .btn,
 .btn-flat {
   outline: 0;
-}
-.btn i,
-.btn-flat i {
-  font-size: 1.3rem;
-  line-height: inherit;
-}
-.btn:focus {
-  background-color: #1d7d74;
-}
-.btn, .btn-large {
-  text-decoration: none;
-  color: #fff;
-  background-color: #26a69a;
-  text-align: center;
-  letter-spacing: .5px;
-  transition: .2s ease-out;
-  cursor: pointer;
-}
-.btn:hover, .btn-large:hover {
-  background-color: #2bbbad;
 }
 .btn-flat {
   box-shadow: none;
@@ -348,50 +325,30 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
   color: #b3b3b3 !important;
   cursor: default;
 }
-.z-depth-0 {
-  box-shadow: none !important;
-}
- .z-depth-1{
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-}
-.z-depth-1-half, .btn:hover, .btn-large:hover, .btn-floating:hover {
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
-}
-.z-depth-2 {
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-}
-.z-depth-3 {
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
-}
-.z-depth-4, .modal {
-  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
-}
-.z-depth-5 {
-  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
-}
+/*=========================================== */
 
 
-/* Switch
-   ========================================================================== */
-.switch {
+/*==================Switch=================== */
+.toggle {
   position: relative;
   display: inline-block;
-  width: 80px;
+  width: 120px;
   height: 20px;
 	margin-right: 8px;
 	padding-top: 6px;
 	vertical-align: middle;
 }
-.switch input {
+.toggle input {
 	display: none;
 }
-.slider {
+.togglebtn {
 	cursor: pointer;
 	float: right;
 	vertical-align: middle;
 	background-color: black;
 	height: 15px;
 	width: 15px;
+	margin-top: -2px;
 	border-radius: 40%;
 	box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, -0.2), inset 0px 4px 1px 1px rgba(0, 0, 0, -0.3), inset 0px -3px 1px 1px rgba(0, 0, 0, .17);
 	position: relative;
@@ -401,8 +358,16 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 	border-width: 2px;
 }
 
-input:checked + .slider {
+input:checked + .togglebtn {
 	border-style: inset;
 	background-color: #a0978f;
 	box-shadow: inset 15px 15px 10px -10px rgba(0, 0, 0, 0.24);
+}
+/*============================================== */
+
+
+
+/*==================Utilities=================== */
+.z-depth-2 {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
 }

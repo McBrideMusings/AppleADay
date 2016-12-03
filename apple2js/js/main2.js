@@ -56,7 +56,6 @@ function DriveLights()
         label: function(drive, label) {
             if (label) {
                 $('#disklabel' + drive).text(label);
-								insertHistory(label);
             }
             return $('#disklabel' + drive).text();
         },

@@ -10,26 +10,14 @@
 	<link rel="stylesheet" type="text/css" href="../css/game-history.css">
 	<link rel="stylesheet" type="text/css" href="../css/waves.css">
 	
+	<!--JQuery-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	
 	<!--Materialize-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 	
-	<!--JQuery>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/mint-choc/jquery-ui.css"-->
-	
-	
 	<!--AppleJS-->
-	
-
-	<!--jQuery(Older because of dependencies from Apple2JS-->
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js">
-	</script>
-	<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js">
-	</script>
-	
-	
-	
 	<!-- Emulator Scripts -->
 	<script type="text/javascript" src="../apple2js/js/util.js"></script>
 	<script type="text/javascript" src="../apple2js/js/prefs.js"></script>
@@ -50,10 +38,8 @@
 	<script type="text/javascript" src="../apple2js/js/ui/keyboard2.js"></script>
 	<script type="text/javascript" src="../apple2js/js/ui/gamepad.js"></script>
 	<script type="text/javascript" src="../apple2js/js/ui/printer.js"></script>
-
 	<!-- Disk Index -->
 	<script type="text/javascript" src="../apple2js/json/disks/index.js"></script>
-
 	<script type="text/javascript" src="../apple2js/js/main2.js"></script>
 	
 </head>
@@ -61,7 +47,7 @@
 	<nav class="z-depth-2">
 		<div class="nav-wrapper">
 			<img id="extend" src="../img/PlayfulPasts_Logo_Extend.jpg">
-			<img id="logo" src="../img/PlayfulPasts_Logo.jpg">
+			<a href="../index.html" ><img id="logo" src="../img/PlayfulPasts_Logo.jpg"></a>
 			<a class="brand-logo">Week 2 - March 1982</a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 				<li><a id="game" class="btn-flat" href="../magazine-mar1982.html">Magazine</a></li>
@@ -71,6 +57,10 @@
 	<div id="wrapper">
 		<div id="left">
 			<div id="emu" class="z-depth-2">
+				<div id="badgediv">
+					<a href="about.html" target="_blank"><img src="../img/badge.png" id="badge" /></a>
+					<h1 id="subtitle">An Apple ][ Emulator in JavaScript</h1>
+				</div>
 				<div id="monitor" >
 				<div id="innercase">
 					<div id="overscan">
@@ -91,19 +81,13 @@
 							Reset
 						</button>
 						<form id="uploaddsk" action="#">
-							<input type="file" id="local_file" accept=".dsk" onchange="loadStart();" style="visibility: hidden;"/>
+							<input type="file" id="local_file" accept=".dsk" onchange="doLoadLocal();" style="visibility: hidden;"/>
 						</form>
-						<label class="switch">
-							Color
+						<label class="toggle">
+							Green Screen
   						<input type="checkbox" id="green_screen"
 								 onclick="updateScreen()" checked="checked">
-  						<div class="slider"></div>
-						</label>
-						<label class="switch">
-							Sound
-  						<input type="checkbox" id="enable_sound"
-               onclick="updateSound()" checked="checked">
-  						<div class="slider"></div>
+  						<div class="togglebtn"></div>
 						</label>
 						</div>
 					</div>
@@ -124,7 +108,7 @@
 					<h4 id="score">5,100</h4>
 				</div>
 				<div id="manual">
-					<h3><i id="quickstart">No Manual Found</i></h3>
+					<h3><i id="quickstart">What the hell are the controls?</i></h3>
 				</div>
 			</div>
 			<hr>
@@ -138,37 +122,9 @@
   	</div>
   </div>
 	<script>
-		var dataJSON;
-		var tempKeys;
-		$.getJSON("../gameHistory.json", function(json) {
-				dataJSON = json;
-				tempKeys = Object.keys(dataJSON);
-			});
-		
-		function resetCheck() {
+	function resetCheck() {
 			if (document.getElementById("disklabel1").innerHTML != "No Disk Inserted")
 				reset();
-		}
-		function loadStart() {
-			doLoadLocal();
-		}
-		function insertHistory(gameName) {
-			if(tempKeys.indexOf("BurgerTime") != -1) {
-				$("#titletext").text(dataJSON.BurgerTime.title);
-			}
-			else {
-				$("#titletext").text("Not Found");
-			}
-		}
-		function findObjectByAttribute (items, value) {
-			console.log(items);
-			console.log(value);
-			for (var i = 0; i < items.length; i++) {
-				if (items[i] === value) {
-					return items[i];
-				}
-			}
-  		return null;
 		}
 	</script>
 </body>
