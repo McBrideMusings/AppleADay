@@ -13,7 +13,6 @@
 	<!--JQuery-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/mint-choc/jquery-ui.css">
 	
 	<!--Materialize-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
@@ -63,6 +62,10 @@
 	<div id="wrapper">
 		<div id="left">
 			<div id="emu" class="z-depth-2">
+				<div id="badgediv">
+					<a href="about.html" target="_blank"><img src="../img/badge.png" id="badge" /></a>
+					<h1 id="subtitle">An Apple ][ Emulator in JavaScript</h1>
+				</div>
 				<div id="monitor" >
 				<div id="innercase">
 					<div id="overscan">
@@ -83,7 +86,7 @@
 							Reset
 						</button>
 						<form id="uploaddsk" action="#">
-							<input type="file" id="local_file" accept=".dsk" onchange="loadStart();" style="visibility: hidden;"/>
+							<input type="file" id="local_file" accept=".dsk" onchange="doLoadLocal();" style="visibility: hidden;"/>
 						</form>
 						<label class="toggle">
 							Green Screen

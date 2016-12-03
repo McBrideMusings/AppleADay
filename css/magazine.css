@@ -1,6 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Libre+Franklin|Montserrat:400,700|PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin');
 
+/*==================Overall===================*/
 html {
+	font-family: "Adobe Garamond Pro",Garamond,Times;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.87);
 }
@@ -11,19 +13,17 @@ body {
 	overflow: hidden;
 }
 p {
-	font-family: "Adobe Garamond Pro",Garamond,Times;
 	display: block;
 	margin: 0;
 	padding: 0;
 }
+/*=========================================== */
 
 
-
-
-
+/*==================Navbar=================== */
 nav {
 	font-weight: 700;
-	font-family: 'Catamaran', sans-serif;
+	font-family: 'Libre Franklin', sans-serif;
   background-color: #EEDDD0;
   width: 100%;
   height: 46px;
@@ -248,19 +248,19 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 .btn, .btn-large {
   text-decoration: none;
   color: #fff;
-  background-color: #26a69a;
+  background-color: #EEDDD0;
   text-align: center;
   letter-spacing: .5px;
   transition: .2s ease-out;
   cursor: pointer;
 }
 .btn:hover, .btn-large:hover {
-  background-color: #00abf0;
+  background-color: #EEDDD0;
 }
 .btn-flat {
   box-shadow: none;
   background-color: transparent;
-  color: #0096d3;
+  color: #EEDDD0;
   cursor: pointer;
   transition: background-color .2s;
 }

@@ -5,23 +5,25 @@
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	
 	<!--CSS-->
-	<link rel="stylesheet" type="text/css" href="css/magazine.css">
-	<link rel="stylesheet" type="text/css" href="css/waves.css">
+	<link rel="stylesheet" type="text/css" href="../css/magazine.css">
+	<link rel="stylesheet" type="text/css" href="../css/waves.css">
 
 	<!--JQuery-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/mint-choc/jquery-ui.css">
-
+	
+	<!--Magazine-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-  <!--Script for Cookies-->
+	
+  <!--JS-->
   <script src="localstorage.js"></script>
+	
 </head> 
 <body onload="checkCookie()">
 	<nav>
 		<div class="nav-wrapper">
-			<img id="extend" src="img/PlayfulPasts_Logo_Extend.jpg">
-			<img id="logo" src="img/PlayfulPasts_Logo.jpg">
+			<img id="extend" src="../img/PlayfulPasts_Logo_Extend.jpg">
+			<img id="logo" src="../img/PlayfulPasts_Logo.jpg">
 			<a class="brand-logo">Week 1 - January 1982</a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 				<li><a id="game" class="btn-flat disabled" href="#" target="_blank">To Game</a></li>
@@ -50,7 +52,7 @@
 							</div>
 						</div>
 						<div class="right">
-							<img src="img/keyart/Crossfire_January_82.jpg">
+							<img src="../img/keyart/Crossfire_January_82.jpg">
 						</div>
 					</div>
 				</li>
@@ -68,7 +70,7 @@
 							</div>
 						</div>
 						<div class="right">
-							<img src="img/keyart/DarkForest_January_82.jpg">
+							<img src="../img/keyart/DarkForest_January_82.jpg">
 						</div>
 					</div>
 				</li>
@@ -86,7 +88,7 @@
 							</div>
 						</div>
 						<div class="right">
-							<img src="img/keyart/Softporn_January_82.jpg">
+							<img src="../img/keyart/Softporn_January_82.jpg">
 						</div>
 					</div>
 				</li>
@@ -155,21 +157,21 @@
 		function checkCookieStatus(cvalue){
 			if(cvalue===1){
 			document.getElementById("game").className = "btn-flat"
-			document.getElementById("game").href="games/game-crossfire.html";
+			document.getElementById("game").href="../games/game-crossfire.html";
 			document.getElementById("decision1").innerHTML = "You chose this game!";
 			document.getElementById("decision2").style.visibility = "hidden";
 			document.getElementById("decision3").style.visibility = "hidden";
 			}
 			if(cvalue===2){
 			document.getElementById("game").className = "btn-flat"
-			document.getElementById("game").href="games/game-darkforest.html";
+			document.getElementById("game").href="../games/game-darkforest.html";
 			document.getElementById("decision1").style.visibility = "hidden";
 			document.getElementById("decision2").innerHTML = "You chose this game!";
 			document.getElementById("decision3").style.visibility = "hidden";
 			}
 			if(cvalue===3){
 			document.getElementById("game").className = "btn-flat"
-			document.getElementById("game").href="games/game-softporn.html";
+			document.getElementById("game").href="../games/game-softporn.html";
 			document.getElementById("decision1").style.visibility = "hidden";
 			document.getElementById("decision2").style.visibility = "hidden";
 			document.getElementById("decision3").innerHTML = "You chose this game!";
