@@ -1,3 +1,4 @@
+/*jslint browser: true*/ /*global  $*/
 /* globals debug: false, gup: false, hup: false
            CPU6502: false,
            RAM: false,
@@ -39,14 +40,15 @@ var disk_categories = {'Local Saves': []};
 var disk_sets = {};
 var disk_cur_name = [];
 var disk_cur_cat = [];
+//var green = false;
 
 function DriveLights()
 {
     return {
         driveLight: function(drive, on) {
             $('#disk' + drive).css('background-image',
-                                    on ? 'url(css/red-on-16.png)' :
-                                         'url(css/red-off-16.png)');
+                                    on ? 'url(../css/red-on-16.png)' :
+                                         'url(../css/red-off-16.png)');
         },
         dirty: function(drive, dirty) {
             $('#disksave' + drive).button('option', 'disabled', !dirty);
@@ -54,6 +56,7 @@ function DriveLights()
         label: function(drive, label) {
             if (label) {
                 $('#disklabel' + drive).text(label);
+								insertHistory(label);
             }
             return $('#disklabel' + drive).text();
         },
@@ -172,7 +175,6 @@ function doDelete(name) {
 }
 
 function doLoadLocal() {
-	console.log("doLoadLocal");
     var files = $('#local_file').prop('files');
     if (files.length == 1) {
         var file = files[0];
@@ -184,13 +186,12 @@ function doLoadLocal() {
             doLoadLocalTape(file);
         } else {
             window.alert('Unknown file type: ' + ext);
-            $('#load').dialog('close');
+            //$('#load').dialog('close');
         }
     }
 }
 
 function doLoadLocalDisk(file) {
-	console.log("doLoadLocalDisk");
     var fileReader = new FileReader();
     fileReader.onload = function() {
         var parts = file.name.split('.');
@@ -205,7 +206,6 @@ function doLoadLocalDisk(file) {
 }
 
 function doLoadLocalTape(file) {
-	console.log("doLoadTape");
     // Audio Buffer Source
     var context;
     if (typeof window.AudioContext != 'undefined') {
@@ -685,7 +685,8 @@ function _keyup(evt) {
 }
 
 function updateScreen() {
-    var green = $('#green_screen').prop('checked');
+		//green = !green;
+		var green = $('#green_screen').prop('checked');
 
     vm.green(green);
 }

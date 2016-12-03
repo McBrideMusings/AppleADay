@@ -95,7 +95,6 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 
 
 #right {
-	display: none;
 	width: 34%;
 	overflow-y: scroll;
 	height: 100%;
@@ -132,21 +131,35 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 	margin-top: 25px;
 	margin-left: 25px;
 	margin-right: 25px;
-	height: 30px;
+	height: 26px;
+}
+#left #uploaddsk {
+	width: 50px;
+}
+#left #resetGame {
+	width: 75px;
+	height: 100%;
 }
 #left .diskload {
-	height: 25px;
+	height: 100%;
+	width: 75px;
 	margin-right: 4px;
+}
+#left #colortoggle {
+	width: 200px;
+	height: 26px;
 }
 #left .disk {
 	background-image: url(red-off-16.png);
-	width: 24px;
-	height: 24px;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 100%;
+	margin-right: 4px;
 }
 #left .disklabel {
 	margin-right: 4px;
 	padding: 4px;
-	float: left;
 	font-family: Courier;
 	font-size: 12px;
 	width: 200px;
@@ -157,13 +170,10 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 	border: 2px inset #888;
 	border-radius: 4px;
 }
-#left #uploaddsk {
-	height: 24px;
-}
 #left #khz {
+	cursor: pointer;
 	margin-right: 4px;
 	padding: 4px;
-	float: left;
 	font-family: Courier;
 	font-size: 12px;
 	width: 100px;
@@ -200,6 +210,7 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 	background-color: black;
 }
 #left button{
+	cursor: pointer;
 	box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, -0.2), inset 0px 4px 1px 1px rgba(0, 0, 0, -0.3), inset 0px -3px 1px 1px rgba(0, 0, 0, .17);
 	float: left;
 	height: 40px;
@@ -227,8 +238,6 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 	background-image: linear-gradient(top, #EEDDD0, #ccbeb3);
 	box-shadow: 0 1px 2px 0 rgba(0,0,0,.2), inset 0px -3px 1px 1px rgba(0,0,0,.4);
 }
-#left 
-
 @media all and (max-width: 1200px) {
 	body { 
 		overflow-y: scroll;
@@ -359,4 +368,41 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 }
 .z-depth-5 {
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Switch
+   ========================================================================== */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 20px;
+	margin-right: 8px;
+	padding-top: 6px;
+	vertical-align: middle;
+}
+.switch input {
+	display: none;
+}
+.slider {
+	cursor: pointer;
+	float: right;
+	vertical-align: middle;
+	background-color: black;
+	height: 15px;
+	width: 15px;
+	border-radius: 40%;
+	box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, -0.2), inset 0px 4px 1px 1px rgba(0, 0, 0, -0.3), inset 0px -3px 1px 1px rgba(0, 0, 0, .17);
+	position: relative;
+	background-color: #EEDDD0;
+	border-style: outset;
+	border-color: #EEDDD0;
+	border-width: 2px;
+}
+
+input:checked + .slider {
+	border-style: inset;
+	background-color: #a0978f;
+	box-shadow: inset 15px 15px 10px -10px rgba(0, 0, 0, 0.24);
 }

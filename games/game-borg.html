@@ -12,7 +12,7 @@
 	
 	<!--Materialize-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-
+	
 	<!--JQuery>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
@@ -57,7 +57,7 @@
 	<script type="text/javascript" src="../apple2js/js/main2.js"></script>
 	
 </head>
-<body onload="setTimeout(function() { document.getElementById('local_file').submit() }, 200)">
+<body>
 	<nav class="z-depth-2">
 		<div class="nav-wrapper">
 			<img id="extend" src="../img/PlayfulPasts_Logo_Extend.jpg">
@@ -87,23 +87,36 @@
 							Load Disk
 							</button>
 						</div>
+						<button id="resetGame" onclick="resetCheck();">
+							Reset
+						</button>
 						<form id="uploaddsk" action="#">
-							<input type="file" id="local_file" accept=".dsk" onchange="doLoadLocal();" style="visibility: hidden;"/>
+							<input type="file" id="local_file" accept=".dsk" onchange="loadStart();" style="visibility: hidden;"/>
 						</form>
-        		<input type="checkbox" id="green_screen"
-               onclick="updateScreen()" />
-					</div>
+						<label class="switch">
+							Color
+  						<input type="checkbox" id="green_screen"
+								 onclick="updateScreen()" checked="checked">
+  						<div class="slider"></div>
+						</label>
+						<label class="switch">
+							Sound
+  						<input type="checkbox" id="enable_sound"
+               onclick="updateSound()" checked="checked">
+  						<div class="slider"></div>
+						</label>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div id="right" class="scrollbar">
 			<div id="titlewrap">
-				<h1><i>Borg</i></h1>
+				<h1><i id="titletext">Borg</i></h1>
 			</div>
 			<hr>
 			<div id="gameplay">
-				<p>Borg is an adventure game or at least it incorporates elements of adventure games, according to the Softline March 1982 issue. In Borg, you fight dragons armed with weapons that shoot bullets. The objective is to kill the “evil Grud", the game's namesake, lurking within one of the castle’s ten rooms.</p>
+				<p id="gameplaytext">Borg is an adventure game or at least it incorporates elements of adventure games, according to the Softline March 1982 issue. In Borg, you fight dragons armed with weapons that shoot bullets. The objective is to kill the “evil Grud", the game's namesake, lurking within one of the castle’s ten rooms.</p>
 			</div>
 			<div id="extragameinfo" class="valign-wrapper">
 				<div id="highscore">
@@ -111,84 +124,52 @@
 					<h4 id="score">5,100</h4>
 				</div>
 				<div id="manual">
-					<h3><i>No Manual Found</i></h3>
+					<h3><i id="quickstart">No Manual Found</i></h3>
 				</div>
 			</div>
 			<hr>
 			<div id="history">
 				<p>
-					<span class="sectionTitle"><i>Impact</i></span><br>Borg is described as challenging enough even though it is simple in nature. The art is “amusing and diverting” where the dragons are “cartoonish and look like silly goons, wagging their heads, running into walls, and shooting each other” (Softline March 1983). The room design and mazes/puzzles are described as first-rate.
+					<span class="sectionTitle"><i>Impact</i></span><br><span id="impacttext">Borg is described as challenging enough even though it is simple in nature. The art is “amusing and diverting” where the dragons are “cartoonish and look like silly goons, wagging their heads, running into walls, and shooting each other” (Softline March 1983). The room design and mazes/puzzles are described as first-rate.</span>
 					<img class="image1" src="../img/keyart/Borg_March_82.png">
-					<span class="sectionTitle"><br><br><i>Production History</i> </span><br>Borg was created in 1982. It was created by Dan Thompson and Jeff Allen. Borg was published by Sirius Software, also known for Space Eggs, and a victim of the “Shakeout”. During the Shakeout in the mid-1980s, games failed because of the failure of companies that made the platforms for the games. Microcomputers and consoles like the Commodore VIC and Atari stopped being made and game makers were left with unsellable games and losses that could not be recouped from the manufacturing of games created for the defunct consoles.
+					<span class="sectionTitle"><br><br><i>Production History</i> </span><br><span id="productiontext">Borg was created in 1982. It was created by Dan Thompson and Jeff Allen. Borg was published by Sirius Software, also known for Space Eggs, and a victim of the “Shakeout”. During the Shakeout in the mid-1980s, games failed because of the failure of companies that made the platforms for the games. Microcomputers and consoles like the Commodore VIC and Atari stopped being made and game makers were left with unsellable games and losses that could not be recouped from the manufacturing of games created for the defunct consoles.</span>
 				</p>
 			</div>  
   	</div>
   </div>
-        <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-describedby="http_load" aria-labelledby="ui-id-6" style="display: none; position: absolute;">
-            <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
-                <span id="ui-id-6" class="ui-dialog-title">Load URL</span>
-                <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" aria-disabled="false" title="close">
-                    <span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span>
-                    <span class="ui-button-text">close</span>
-                </button>
-            </div>
-            <div id="http_load" class="ui-dialog-content ui-widget-content">
-                <form action="#">
-                    <input type="text" id="http_url" style="width: 500px">
-                </form>
-            </div>
-            <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
-                <div class="ui-dialog-buttonset">
-                    <button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false">
-                        <span class="ui-button-text">Cancel</span>
-                    </button>
-                    <button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false">
-                        <span class="ui-button-text">OK</span>
-                    </button>
-                </div>
-            </div>
-                <div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div>
-                <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div>
-                <div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div>
-                <div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div>
-                <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div>
-                <div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div>
-                <div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div>
-                <div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div>
-        </div>
-        <div id="load" class="ui-dialog-content ui-widget-content" style="width: auto; min-height: 56px; max-height: none; height: auto;">
-            <table>
-              <tbody>
-                  <tr>
-                        <td>
-                            <select id="category_select" multiple="multiple" class="ui-widget ui-state-default" onchange="selectCategory(event)">
-                                <option value="13 Sector">13 Sector</option>
-                                <option value="Blank">Blank</option>
-                                <option value="Demo">Demo</option>
-                                <option value="Diagnostics">Diagnostics</option>
-                                <option value="Educational">Educational</option>
-                                <option value="Game">Game</option>
-                                <option value="Graphics">Graphics</option>
-                                <option value="Interactive Fiction">Interactive Fiction</option>
-                                <option value="Misc">Misc</option>
-                                <option value="Music Video">Music Video</option>
-                                <option value="Personal">Personal</option>
-                                <option value="Programming">Programming</option>
-                                <option value="System">System</option>
-                                <option value="Utility">Utility</option>
-                                <option>Local Saves</option>
-                            </select>
-                        </td>
-                        <td>
-                          <select id="disk_select" multiple="multiple" class="ui-widget ui-state-default" onchange="selectDisk(event)" ondblclick="clickDisk(event)">
-                          </select>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        <form action="#">
-            <input type="file" id="local_file">
-        </form>
-        </div>
+	<script>
+		var dataJSON;
+		var tempKeys;
+		$.getJSON("../gameHistory.json", function(json) {
+				dataJSON = json;
+				tempKeys = Object.keys(dataJSON);
+			});
+		
+		function resetCheck() {
+			if (document.getElementById("disklabel1").innerHTML != "No Disk Inserted")
+				reset();
+		}
+		function loadStart() {
+			doLoadLocal();
+		}
+		function insertHistory(gameName) {
+			if(tempKeys.indexOf("BurgerTime") != -1) {
+				$("#titletext").text(dataJSON.BurgerTime.title);
+			}
+			else {
+				$("#titletext").text("Not Found");
+			}
+		}
+		function findObjectByAttribute (items, value) {
+			console.log(items);
+			console.log(value);
+			for (var i = 0; i < items.length; i++) {
+				if (items[i] === value) {
+					return items[i];
+				}
+			}
+  		return null;
+		}
+	</script>
 </body>
 </html>

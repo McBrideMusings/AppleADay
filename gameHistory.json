@@ -1,0 +1,48 @@
+{
+    "BurgerTime": {
+        "title": [
+					"Borbuttzg"
+        ],
+        "gameplaytext": [
+            "Borg is an adventure game or at least it incorporates elements of adventure games, according to the Softline March 1982 issue. In Borg, you fight dragons armed with weapons that shoot bullets. The objective is to kill the 'evil Grud', the game's namesake, lurking within one of the castle’s ten rooms."
+        ],
+        "score": [
+            5100
+        ],
+        "quickstart": [
+            "DummyText"
+        ],
+				"imagepath": [
+					"../img/keyart/Borg_March_82.png"
+				],
+				"impacttext": [
+            "Borg is described as challenging enough even though it is simple in nature. The art is “amusing and diverting” where the dragons are “cartoonish and look like silly goons, wagging their heads, running into walls, and shooting each other” (Softline March 1983). The room design and mazes/puzzles are described as first-rate."
+        ],
+				"productiontext": [
+            "Borg was created in 1982. It was created by Dan Thompson and Jeff Allen. Borg was published by Sirius Software, also known for Space Eggs, and a victim of the “Shakeout”. During the Shakeout in the mid-1980s, games failed because of the failure of companies that made the platforms for the games. Microcomputers and consoles like the Commodore VIC and Atari stopped being made and game makers were left with unsellable games and losses that could not be recouped from the manufacturing of games created for the defunct consoles."
+        ]
+    },
+		"Buttzville": {
+        "title": [
+					"Borbuttzg"
+        ],
+        "gameplaytext": [
+            "Borg is an adventure game or at least it incorporates elements of adventure games, according to the Softline March 1982 issue. In Borg, you fight dragons armed with weapons that shoot bullets. The objective is to kill the 'evil Grud', the game's namesake, lurking within one of the castle’s ten rooms."
+        ],
+        "score": [
+            5100
+        ],
+        "quickstart": [
+            "DummyText"
+        ],
+				"imagepath": [
+					"../img/keyart/Borg_March_82.png"
+				],
+				"impacttext": [
+            "Borg is described as challenging enough even though it is simple in nature. The art is “amusing and diverting” where the dragons are “cartoonish and look like silly goons, wagging their heads, running into walls, and shooting each other” (Softline March 1983). The room design and mazes/puzzles are described as first-rate."
+        ],
+				"productiontext": [
+            "Borg was created in 1982. It was created by Dan Thompson and Jeff Allen. Borg was published by Sirius Software, also known for Space Eggs, and a victim of the “Shakeout”. During the Shakeout in the mid-1980s, games failed because of the failure of companies that made the platforms for the games. Microcomputers and consoles like the Commodore VIC and Atari stopped being made and game makers were left with unsellable games and losses that could not be recouped from the manufacturing of games created for the defunct consoles."
+        ]
+    }
+}
