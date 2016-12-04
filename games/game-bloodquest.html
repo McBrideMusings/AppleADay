@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
+	<!--CSS-->
+	<link rel="stylesheet" type="text/css" href="../css/game-apple2.css">
+	<link rel="stylesheet" type="text/css" href="../css/game-history.css">
+	<link rel="stylesheet" type="text/css" href="../css/waves.css">
+
+	<!--JQuery-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	
+	<!--Materialize-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+	
+	<!--AppleJS-->
+	<!-- Emulator Scripts -->
+	<script type="text/javascript" src="../apple2js/js/util.js"></script>
+	<script type="text/javascript" src="../apple2js/js/prefs.js"></script>
+	<script type="text/javascript" src="../apple2js/js/ram.js"></script>
+	<script type="text/javascript" src="../apple2js/js/langcard.js"></script>
+	<script type="text/javascript" src="../apple2js/js/fpbasic.js"></script>
+	<script type="text/javascript" src="../apple2js/js/apple2char.js"></script>
+	<script type="text/javascript" src="../apple2js/js/applesoft/decompiler.js"></script>
+	<script type="text/javascript" src="../apple2js/js/canvas2.js"></script>
+	<script type="text/javascript" src="../apple2js/js/apple2io.js"></script>
+	<script type="text/javascript" src="../apple2js/js/parallel.js"></script>
+	<script type="text/javascript" src="../apple2js/js/disk2.js"></script>
+	<script type="text/javascript" src="../apple2js/js/ramfactor.js"></script>
+	<script type="text/javascript" src="../apple2js/js/thunderclock.js"></script>
+	<script type="text/javascript" src="../apple2js/js/cpu6502.js"></script>
+	<script type="text/javascript" src="../apple2js/js/base64.js"></script>
+	<script type="text/javascript" src="../apple2js/js/ui/audio.js"></script>
+	<script type="text/javascript" src="../apple2js/js/ui/keyboard2.js"></script>
+	<script type="text/javascript" src="../apple2js/js/ui/gamepad.js"></script>
+	<script type="text/javascript" src="../apple2js/js/ui/printer.js"></script>
+	<!-- Disk Index -->
+	<script type="text/javascript" src="../apple2js/json/disks/index.js"></script>
+	<script type="text/javascript" src="../apple2js/js/main2.js"></script>
+	
+</head>
+<body>
+	<nav class="z-depth-2">
+		<div class="nav-wrapper">
+			<img id="extend" src="../img/PlayfulPasts_Logo_Extend.jpg">
+			<img id="logo" src="../img/PlayfulPasts_Logo.jpg">
+			<a class="brand-logo">Week 12 - November 1983</a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a id="game" class="btn-flat" href="../magazine-jan1982.html">Magazine</a></li>
+			</ul>
+		</div>
+  </nav>
+	<div id="wrapper">
+		<div id="left">
+			<div id="emu" class="z-depth-2">
+				<div id="badgediv">
+					<a href="about.html" target="_blank"><img src="../img/badge.png" id="badge" /></a>
+					<h1 id="subtitle">An Apple ][ Emulator in JavaScript</h1>
+				</div>
+				<div id="monitor" >
+				<div id="innercase">
+					<div id="overscan">
+						<div id="display">
+							<canvas id="screen" width="560" height="384"></canvas>
+						</div>
+					</div>
+					<div class="inset">
+						<div class="disk" id="disk1">&nbsp;</div>
+						<div id="khz" onclick="showFPS = !showFPS">0KHz</div>
+						<span id="disklabel1" class="disklabel">No Disk Inserted</span>
+						<div id="buttondiv">
+							<button id="diskload1" class="diskload" value="Load"	onclick="document.getElementById('local_file').click(); return false;">
+							Load Disk
+							</button>
+						</div>
+						<button id="resetGame" onclick="resetCheck();">
+							Reset
+						</button>
+						<form id="uploaddsk" action="#">
+							<input type="file" id="local_file" accept=".dsk" onchange="doLoadLocal();" style="visibility: hidden;"/>
+						</form>
+						<label class="toggle">
+							Green Screen
+  						<input type="checkbox" id="green_screen"
+								 onclick="updateScreen()" checked="checked">
+  						<div class="togglebtn"></div>
+						</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  	<div id="right" class="scrollbar">
+			<div id="titlewrap">
+				<h1><i>Blood Quest</i></h1>
+			</div>
+			<hr>
+			<div id="gameplay">
+				<p>In Blood Quest, your quest is to avenge the death of your great-aunt Phoebe. The setting of this adventure game changes abruptly from a maze to a desert to an ocean and more. Blood-Quest has a mind of its own!</p>
+			</div>
+			<div id="extragameinfo" class="valign-wrapper">
+				<div id="highscore">
+					<h3><i>No High Score Found</i></h3>
+				</div>
+				<div id="manual">
+					<h3><i>No Manual Found</i></h3>
+				</div>
+			</div>
+			<hr>
+			<div id="history"><img class="image1" src="../img/keyart/BloodQuest_November_83.png">
+				<p>
+					<span class="sectionTitle"><i>Impact</i></span><br>Blood Quest is an experimental full-paragraph parser from Brøderbund, the publisher. Softline’s November 1983 issue described it as breathtaking , strong-willed, and unforgiving. However, while you can’t get bored playing Blood Quest, “there is little you can get”.
+					<span class="sectionTitle"><br><br><i>Production History</i> </span><br>Blood Quest was created by Elroy N. Erdling in 1983. It was published by Brøderbund Software. Brøderbund, headed by Doug Carlston - who was one a member of the “brotherhood” of game makers in the early 1980s - was purchased by The Learning Company in 1998. However, the brand can still be seen on some original Brøderbund products.
+				</p>
+			</div>  
+  	</div>
+  </div>
+</body>
+</html>
