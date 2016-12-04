@@ -86,12 +86,11 @@
 							Reset
 						</button>
 						<form id="uploaddsk" action="#">
-							<input type="file" id="local_file" accept=".dsk" onchange="doLoadLocal();" style="visibility: hidden;"/>
+							<input type="file" id="local_file" accept=".dsk, .do, .po, nib, 2mg" onchange="doLoadLocal();" style="visibility: hidden;"/>
 						</form>
 						<label class="toggle">
 							Green Screen
-  						<input type="checkbox" id="green_screen"
-								 onclick="updateScreen()" checked="checked">
+  						<input type="checkbox" id="green_screen" accept=".dsk, .do, .po, .nib, .2mg" onclick="updateScreen()" checked="checked">
   						<div class="togglebtn"></div>
 						</label>
 						</div>
@@ -113,7 +112,7 @@
                     <h4>907,100</h4>
 				</div>
 				<div id="manual">
-					<h3><i>No Manual Found</i></h3>
+					<h3><i>A to Pick Gold Rush<br>Controls Printed On-Screen</i></h3>
 				</div>
 			</div>
 			<hr>
@@ -126,5 +125,11 @@
 			</div>  
   	</div>
   	</div>
+	<script type="text/javascript">
+		function resetCheck() {
+  			if (document.getElementById("disklabel1").innerHTML != "No Disk Inserted")
+  				reset();
+  		}
+	</script>
 </body>
 </html>

@@ -81,7 +81,7 @@
 							Reset
 						</button>
 						<form id="uploaddsk" action="#">
-							<input type="file" id="local_file" accept=".dsk" onchange="doLoadLocal();" style="visibility: hidden;"/>
+							<input type="file" id="local_file" accept=".dsk, .do, .po, nib, 2mg" onchange="doLoadLocal();" style="visibility: hidden;"/>
 						</form>
 						<label class="toggle">
 							Green Screen
@@ -120,5 +120,11 @@
 			</div>  
   	</div>
   </div>
+	<script type="text/javascript">
+		function resetCheck() {
+  			if (document.getElementById("disklabel1").innerHTML != "No Disk Inserted")
+  				reset();
+  		}
+	</script>
 </body>
 </html>

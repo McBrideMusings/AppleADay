@@ -85,8 +85,7 @@
 						</form>
 						<label class="toggle">
 							Green Screen
-  						<input type="checkbox" id="green_screen"
-								 onclick="updateScreen()" checked="checked">
+  						<input type="checkbox" id="green_screen" accept=".dsk, .do, .po, .nib, .2mg" onclick="updateScreen()" checked="checked">
   						<div class="togglebtn"></div>
 						</label>
 						</div>
@@ -107,7 +106,7 @@
 					<h3><i>No High Score Found</i></h3>
 				</div>
 				<div id="manual">
-					<h3><i>No Manual Found</i></h3>
+					<h3><i>Command Syntax is "Verb Object"<br>N, S, E, W Move</i></h3>
 				</div>
 			</div>
 			<hr>
@@ -120,5 +119,11 @@
 			</div>  
   	</div>
   	</div>
+	<script type="text/javascript">
+		function resetCheck() {
+  			if (document.getElementById("disklabel1").innerHTML != "No Disk Inserted")
+  				reset();
+  		}
+	</script>
 </body>
 </html>
