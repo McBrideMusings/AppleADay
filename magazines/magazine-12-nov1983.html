@@ -16,7 +16,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 	
   <!--JS-->
-  <script src="localstorage.js"></script>
+  <script src="../js/localstorage.js"></script>
 	
 </head> 
 <body onload="checkCookie()">
@@ -24,32 +24,33 @@
 		<div class="nav-wrapper">
 			<img id="extend" src="../img/PlayfulPasts_Logo_Extend.jpg">
 			<img id="logo" src="../img/PlayfulPasts_Logo.jpg">
-			<a class="brand-logo">Week 1 - January 1982</a>
+			<a class="brand-logo">Week 12 - November 1983</a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a id="game" class="btn-flat disabled" href="#" target="_blank">To Game</a></li>
+				<li><a id="game" class="btn-flat disabled" href="#" target="_blank">Game</a></li>
 			</ul>
 		</div>
   </nav>
 	<div id="wrapper">
 		<div id="bookwrap">
-			<iframe src="https://archive.org/stream/Softline_1982_01?ui=embed#mode/2up" width="100%" height="100%" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+			<iframe src="https://archive.org/stream/Softline_1983_11_12?ui=embed#mode/2up" width="100%" height="100%" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 		</div>
 		<div id="gamewrap">
 			<ul class="collapsible" data-collapsible="accordion">
 				<li>
-					<div class="collapsible-header"><i class="material-icons">subject</i>Crossfire</div>
+					<div class="collapsible-header"><i class="material-icons">subject</i><i><h1>Blood Quest</h1></i></div>
 					<div class="collapsible-body">
 						<div class="left">
 							<div class="content">
-								<p>
-									Review on <span class="pagenum">Pg 15</span><br>
-									Ad on <span class="pagenum">Pg 23</span><br>
-									Mentioned on <span class="pagenum">Pg 32</span>
-								</p>
+								<div class="authors"><i>Authors</i><br>
+								Elroy N. Erdling/Brøderbund</div>
+								<table>
+									<tr>
+										<td class="type">Review</td>
+										<td class="pagenum">Pg 21</td> 
+									</tr>
+								</table>
 							</div>
-							<div class="decision" id="decision1">
-								<a class="waves-effect waves-teal btn" href="#choice1">Pick this game?</a>
-							</div>
+							<a class="waves-effect waves-light btn" href="#choice1" id="decision1">Play this game?</a>
 						</div>
 						<div class="right">
 							<img src="../img/keyart/Crossfire_January_82.jpg">
@@ -57,17 +58,20 @@
 					</div>
 				</li>
 				<li>
-					<div class="collapsible-header"><i class="material-icons">subject</i>Dark Forest</div>
+					<div class="collapsible-header"><i class="material-icons">subject</i><i><h1>Stellar 7</h1></i></div>
 					<div class="collapsible-body">
 						<div class="left">
 							<div class="content">
-								<p>
-									Review on <span class="pagenum">Pg 15-16</span><br>
-								</p>
+								<div class="authors"><i>Authors</i><br>
+								Damon Slye/Software Entertainment Company</div>
+								<table>
+									<tr>
+										<td class="type">Review</td>
+										<td class="pagenum">Pg 23</td> 
+									</tr>
+								</table>
 							</div>
-							<div class="decision" id="decision2">
-								<a class="waves-effect waves-teal btn" href="#choice2">Pick this game?</a>
-							</div>
+							<a class="waves-effect waves-light btn" href="#choice2" id="decision2">Play this game?</a>
 						</div>
 						<div class="right">
 							<img src="../img/keyart/DarkForest_January_82.jpg">
@@ -75,24 +79,27 @@
 					</div>
 				</li>
 				<li>
-					<div class="collapsible-header"><i class="material-icons">subject</i>SoftPorn</div>
+					<div class="collapsible-header"><i class="material-icons">subject</i><i><h1>Knights of the Desert</h1></i></div>
 					<div class="collapsible-body">
 						<div class="left">
 							<div class="content">
-								<p>
-									Review on <span class="pagenum">Pg 33</span><br>
-								</p>
+								<div class="authors"><i>Authors</i><br>
+								Tactical Design Group/SSI</div>
+								<table>
+									<tr>
+										<td class="type">Review</td>
+										<td class="pagenum">Pg 23</td> 
+									</tr>
+								</table>
 							</div>
-							<div class="decision" id="decision3">
-								<a class="waves-effect waves-teal btn" href="#choice3">Pick this game?</a>
-							</div>
+							<a class="waves-effect waves-teal btn" href="#choice3" id="decision3">Play this game?</a>
 						</div>
 						<div class="right">
 							<img src="../img/keyart/Softporn_January_82.jpg">
 						</div>
 					</div>
 				</li>
-				<li>
+				<!--li>
 					<div class="collapsible-header"><i class="material-icons">grade</i>Interesting Reads</div>
 					<div class="collapsible-body">
 							<div class="coolcontent">
@@ -101,14 +108,14 @@
 								</p>
 							</div>
 					</div>
-				</li>
+				</li-->
   		</ul>
 		</div>
 	</div>
 	<div id="choice1" class="modal">
     <div class="modal-content">
       <h4>Are You Sure?</h4>
-      <p>You can only pick one game, does this one sound like fun?</p>
+      <p>You can only pick and play one game per issue. Are you sure you want this one?</p>
     </div>
     <div class="modal-footer">
 			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">No!</a>
@@ -118,7 +125,7 @@
   <div id="choice2" class="modal">
     <div class="modal-content">
       <h4>Are You Sure?</h4>
-      <p>You can only pick one game, does this one sound like fun?</p>
+      <p>You can only pick and play one game per issue. Are you sure you want this one?</p>
     </div>
     <div class="modal-footer">
 			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">No!</a>
@@ -128,7 +135,7 @@
   <div id="choice3" class="modal">
     <div class="modal-content">
       <h4>Are You Sure?</h4>
-      <p>You can only pick one game, does this one sound like fun?</p>
+      <p>You can only pick and play one game per issue. Are you sure you want this one?</p>
     </div>
     <div class="modal-footer">
 			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">No!</a>
@@ -155,26 +162,33 @@
 			$('#mobilewarn').modal();
 		};
 		function checkCookieStatus(cvalue){
+			console.log("in");
 			if(cvalue===1){
-			document.getElementById("game").className = "btn-flat"
-			document.getElementById("game").href="../games/game-crossfire.html";
-			document.getElementById("decision1").innerHTML = "You chose this game!";
-			document.getElementById("decision2").style.visibility = "hidden";
-			document.getElementById("decision3").style.visibility = "hidden";
+				console.log("case1");
+				document.getElementById("game").className = "btn-flat";
+				document.getElementById("game").href="../games/game-bloodquest.html";
+				document.getElementById("decision1").href = "../games/dsks/BloodQuest.dsk";
+				document.getElementById("decision1").innerHTML = "Download";
+				document.getElementById("decision2").setAttribute( "class", "btn disabled");
+				document.getElementById("decision3").setAttribute( "class", "btn disabled");
 			}
 			if(cvalue===2){
-			document.getElementById("game").className = "btn-flat"
-			document.getElementById("game").href="../games/game-darkforest.html";
-			document.getElementById("decision1").style.visibility = "hidden";
-			document.getElementById("decision2").innerHTML = "You chose this game!";
-			document.getElementById("decision3").style.visibility = "hidden";
+				console.log("case2");
+				document.getElementById("game").className = "btn-flat";
+				document.getElementById("game").href="../games/game-stellar7.html";
+				document.getElementById("decision1").setAttribute( "class", "btn disabled" );
+				document.getElementById("decision2").innerHTML = "Download";
+				document.getElementById("decision2").href = "../games/dsks/Stellar7.dsk";
+				document.getElementById("decision3").setAttribute( "class", "btn disabled" );
 			}
 			if(cvalue===3){
-			document.getElementById("game").className = "btn-flat"
-			document.getElementById("game").href="../games/game-softporn.html";
-			document.getElementById("decision1").style.visibility = "hidden";
-			document.getElementById("decision2").style.visibility = "hidden";
-			document.getElementById("decision3").innerHTML = "You chose this game!";
+				console.log("case3");
+				document.getElementById("game").className = "btn-flat";
+				document.getElementById("game").href="../games/game-knightsdesert.html";
+				document.getElementById("decision1").setAttribute( "class", "btn disabled" );
+				document.getElementById("decision2").setAttribute( "class", "btn disabled" );
+				document.getElementById("decision3").innerHTML = "Download";
+				document.getElementById("decision3").href = "../games/dsks/KnightsoftheDesert.dsk";
 			}
 		}
 	</script>

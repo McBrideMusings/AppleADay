@@ -83,17 +83,18 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 
 
 #wrapper {
-	display: flex;
+	display: block;
+	overflow-y: scroll;
 	height: 96vh;
 	padding: 0.5rem;
 }
 #bookwrap {
-	width: 66%;
+	width: 100%;
 	height: 96.9%;
 	padding-right: 0.5rem;
 }
 #gamewrap {
-	width: 34%;
+	width: 100%;
 	height: 100%;
 }
 
@@ -117,9 +118,13 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
   cursor: pointer;
   min-height: 3rem;
   line-height: 3rem;
-	font-size: 1.3rem;
 }
-.collapsible-header i {
+.collapsible-header h1 {
+	padding: 2px 0px 0px 0px;
+	margin: 0px;
+	font-size: 1.8rem;
+}
+.collapsible-header .material-icons {
   width: 3rem;
   font-size: 2.2rem;
   line-height: 3rem;
@@ -129,12 +134,18 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
   margin-right: 1rem;
 }
 .collapsible-body {
+	border-top: 2px solid #9F9F9F;
   display: flex;
-	font-size: 1rem
+	font-size: 1.2rem;
+	padding-top: 10px;
 }
 .collapsible-body .left {
 	width: 50%;
-	padding: 1rem;
+	padding: 10px;
+}
+.collapsible-body .type {
+	text-align: left;
+	width: 100px;
 }
 .collapsible-body .pagenum {
 	font-weight: 700;
@@ -144,17 +155,19 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 	width: 100%;
 	padding-bottom: 3rem;
 }
-.collapsible-body .decision {
-	margin: 0;
-	width: 100%;
+.collapsible-body .authors {
+	margin-bottom: 20px;
+}
+.collapsible-body .authors i{
+	
 }
 .collapsible-body .btn {
 	font-size: 0.8rem;
 	padding: 0;
-	width: 100%;
+	width: 50%;
 	text-align: center;
-	background-color: #0096d3;
-	
+	background-color: #c65252;
+	color: white;
 }
 .collapsible-body .coolcontent {
 	margin: 0;
@@ -169,7 +182,7 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 	display: block;
  	margin: auto;
 	height: auto;
-	width: 85%;
+	width: 35%;
 	text-align: center;
 	border-radius: 5px;
 	border: 3px solid #9F9F9F;
@@ -180,17 +193,22 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 }
 
 @media all and (max-width: 700px) {
-	#wrapper {
-		display: block;
-		overflow-y: scroll;
-	}
-	#bookwrap {
-		width: 100%;
-	}
 	#gamewrap {
 		width: 100%;
 		height: 100%;
 		border-left: 0px solid #9F9F9F;
+	}
+	nav .brand-logo {
+		font-size: 1.2rem;
+	}
+	nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul a.btn-floating {
+		width: 40px;
+		margin-left: 0px;
+		margin-right: 5px;
+		font-size: 0.8rem;
+	}
+	.collapsible-body .right img{
+		width: 75%;
 	}
 }
 
@@ -243,24 +261,23 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
   line-height: inherit;
 }
 .btn:focus {
-  background-color: #00abf0;
+  background-color: #c65252;
 }
 .btn, .btn-large {
   text-decoration: none;
   color: #fff;
-  background-color: #EEDDD0;
   text-align: center;
   letter-spacing: .5px;
   transition: .2s ease-out;
   cursor: pointer;
 }
 .btn:hover, .btn-large:hover {
-  background-color: #EEDDD0;
+  background-color: #ff7979;
 }
 .btn-flat {
   box-shadow: none;
   background-color: transparent;
-  color: #EEDDD0;
+  color: black;
   cursor: pointer;
   transition: background-color .2s;
 }

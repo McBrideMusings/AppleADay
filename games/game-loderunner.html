@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
+	<!--CSS-->
+	<link rel="stylesheet" type="text/css" href="../css/game-apple2.css">
+	<link rel="stylesheet" type="text/css" href="../css/game-history.css">
+	<link rel="stylesheet" type="text/css" href="../css/waves.css">
+
+	<!--JQuery-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	
+	<!--Materialize-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+	
+	<!--AppleJS-->
+	<!-- Emulator Scripts -->
+	<script type="text/javascript" src="../apple2js/js/util.js"></script>
+	<script type="text/javascript" src="../apple2js/js/prefs.js"></script>
+	<script type="text/javascript" src="../apple2js/js/ram.js"></script>
+	<script type="text/javascript" src="../apple2js/js/langcard.js"></script>
+	<script type="text/javascript" src="../apple2js/js/fpbasic.js"></script>
+	<script type="text/javascript" src="../apple2js/js/apple2char.js"></script>
+	<script type="text/javascript" src="../apple2js/js/applesoft/decompiler.js"></script>
+	<script type="text/javascript" src="../apple2js/js/canvas2.js"></script>
+	<script type="text/javascript" src="../apple2js/js/apple2io.js"></script>
+	<script type="text/javascript" src="../apple2js/js/parallel.js"></script>
+	<script type="text/javascript" src="../apple2js/js/disk2.js"></script>
+	<script type="text/javascript" src="../apple2js/js/ramfactor.js"></script>
+	<script type="text/javascript" src="../apple2js/js/thunderclock.js"></script>
+	<script type="text/javascript" src="../apple2js/js/cpu6502.js"></script>
+	<script type="text/javascript" src="../apple2js/js/base64.js"></script>
+	<script type="text/javascript" src="../apple2js/js/ui/audio.js"></script>
+	<script type="text/javascript" src="../apple2js/js/ui/keyboard2.js"></script>
+	<script type="text/javascript" src="../apple2js/js/ui/gamepad.js"></script>
+	<script type="text/javascript" src="../apple2js/js/ui/printer.js"></script>
+	<!-- Disk Index -->
+	<script type="text/javascript" src="../apple2js/json/disks/index.js"></script>
+	<script type="text/javascript" src="../apple2js/js/main2.js"></script>
+	
+</head>
+<body>
+	<nav class="z-depth-2">
+		<div class="nav-wrapper">
+			<img id="extend" src="../img/PlayfulPasts_Logo_Extend.jpg">
+			<img id="logo" src="../img/PlayfulPasts_Logo.jpg">
+			<a href="../magazine-jan1982.html" class="brand-logo">Week 2 - March 1982</a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a id="game" class="btn-flat" href="../magazines/magazine-10-july1983.html">Magazine</a></li>
+			</ul>
+		</div>
+  </nav>
+	<div id="wrapper">
+		<div id="left">
+			<div id="emu" class="z-depth-2">
+				<div id="badgediv">
+					<a href="about.html" target="_blank"><img src="../img/badge.png" id="badge" /></a>
+					<h1 id="subtitle">An Apple ][ Emulator in JavaScript</h1>
+				</div>
+				<div id="monitor" >
+				<div id="innercase">
+					<div id="overscan">
+						<div id="display">
+							<canvas id="screen" width="560" height="384"></canvas>
+						</div>
+					</div>
+					<div class="inset">
+						<div class="disk" id="disk1">&nbsp;</div>
+						<div id="khz" onclick="showFPS = !showFPS">0KHz</div>
+						<span id="disklabel1" class="disklabel">No Disk Inserted</span>
+						<div id="buttondiv">
+							<button id="diskload1" class="diskload" value="Load"	onclick="document.getElementById('local_file').click(); return false;">
+							Load Disk
+							</button>
+						</div>
+						<button id="resetGame" onclick="resetCheck();">
+							Reset
+						</button>
+						<form id="uploaddsk" action="#">
+							<input type="file" id="local_file" accept=".dsk" onchange="doLoadLocal();" style="visibility: hidden;"/>
+						</form>
+						<label class="toggle">
+							Green Screen
+  						<input type="checkbox" id="green_screen"
+								 onclick="updateScreen()" checked="checked">
+  						<div class="togglebtn"></div>
+						</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="right" class="scrollbar">
+			<div id="titlewrap">
+				<h1><i>Horizon V</i></h1>
+			</div>
+			<hr>
+			<div id="gameplay">
+				<p>Horizon V places you on a planet “swarming” with malicious aliens. You will need to refuel your ship and periodically then continue “frying” more aliens. Softline’s March 1982 issue was not very favorable of the game claiming that Nasir Gebelli (the creator) should have spent more time on it and incorporated more elements.</p>
+			</div>
+			<div id="extragameinfo" class="valign-wrapper">
+				<div id="highscore">
+					<h3><i>High Score</i></h3>
+					<h4 id="score">46,100</h4>
+				</div>
+				<div id="manual">
+					<h3><i>Start Game with B<br>Arrows Move, Space Shoots</i></h3>
+				</div>
+			</div>
+			<hr>
+			<div id="history">
+				<p>
+					<span class="sectionTitle"><i>Impact</i></span><br>While Softline did not favorably review Horizon V, a letter to the editor in the March 1982 issue (same issue as the review) had very positive remarks about the game, claiming Nasir really outdid himself. Nasir was praised by Softline as being a top name in game development, making the editors much more critical of a game they saw as lacking.
+					<img class="image1" src="../img/keyart/Nasir_March_82.jpg">
+					<span class="sectionTitle"><br><br><i>Production History</i> </span><br>Horizon V was created in 1982. It was created by Nasir Gebelli. Horizon V was published by Gebelli Software.
+				</p>
+			</div>  
+  	</div>
+  </div>
+</body>
+</html>
