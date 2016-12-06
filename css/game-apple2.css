@@ -92,6 +92,7 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 	width: 66%;
 	height: 100%;
 	margin: 0;
+	overflow-y: auto;
 }
 #right {
 	width: 34%;
@@ -112,16 +113,16 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 #left #emu {
 	top: 3%;
 	position: relative;
-	width: 730px;
-	height: 604px;
+	width: 700px;
+	height: 574px;
 	margin: auto;
 	background-color: #EEDDD0;
 	border-radius: 10px;
 }
 #left #innercase {
 	position: relative;
-	width: 700px;
-	height: 545px;
+	width: 670px;
+	height: 515px;
 	margin: auto;
 	background-color: #E0CABC;
 	border-radius: 10px;

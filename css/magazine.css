@@ -83,18 +83,18 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 
 
 #wrapper {
-	display: block;
+	display: flex;
 	overflow-y: scroll;
 	height: 96vh;
 	padding: 0.5rem;
 }
 #bookwrap {
-	width: 100%;
+	width: 66%;
 	height: 96.9%;
 	padding-right: 0.5rem;
 }
 #gamewrap {
-	width: 100%;
+	width: 34%;
 	height: 100%;
 }
 
@@ -164,7 +164,7 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 .collapsible-body .btn {
 	font-size: 0.8rem;
 	padding: 0;
-	width: 50%;
+	width: 100%;
 	text-align: center;
 	background-color: #c65252;
 	color: white;
@@ -182,7 +182,7 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 	display: block;
  	margin: auto;
 	height: auto;
-	width: 35%;
+	width: 100%;
 	text-align: center;
 	border-radius: 5px;
 	border: 3px solid #9F9F9F;

@@ -20,8 +20,8 @@
 	<nav>
 		<div class="nav-wrapper">
 			<img id="extend" src="../img/PlayfulPasts_Logo_Extend.jpg">
-			<img id="logo" src="../img/PlayfulPasts_Logo.jpg">
-			<a class="brand-logo">Week 11 - September 1983</a>
+			<a href="../index.html" target="_blank"><img id="logo" src="../img/PlayfulPasts_Logo.jpg"></a>
+			<a class="brand-logo">Issue 11 - September 1983</a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 				<li><a id="game" class="btn-flat disabled" href="#" target="_blank">Game</a></li>
 			</ul>
@@ -104,16 +104,16 @@
 						</div>
 					</div>
 				</li>
-				<!--li>
-					<div class="collapsible-header"><i class="material-icons">grade</i>Interesting Reads</div>
+				<li>
+					<div class="collapsible-header"><i><h1>Interesting Reads</h1></i></div>
 					<div class="collapsible-body">
 							<div class="coolcontent">
 								<p>
-									Cool Interview - <span class="pagenum">Pg 12</span>
+									Article on Writing Stories and Narratives - <span class="pagenum">Pg 30</span>
 								</p>
 							</div>
 					</div>
-				</li-->
+				</li>
   		</ul>
 		</div>
 	</div>
@@ -171,8 +171,8 @@
 			if(cvalue===1){
 				console.log("case1");
 				document.getElementById("game").className = "btn-flat";
-				document.getElementById("game").href="../games/game-crossfire.html";
-				document.getElementById("decision1").href = "../games/dsks/Crossfire.dsk";
+				document.getElementById("game").href="../games/game-mrcool.html";
+				document.getElementById("decision1").href = "../games/dsks/MrCool.dsk";
 				document.getElementById("decision1").innerHTML = "Download";
 				document.getElementById("decision2").setAttribute( "class", "btn disabled");
 				document.getElementById("decision3").setAttribute( "class", "btn disabled");
@@ -180,20 +180,20 @@
 			if(cvalue===2){
 				console.log("case2");
 				document.getElementById("game").className = "btn-flat";
-				document.getElementById("game").href="../games/game-darkforest.html";
+				document.getElementById("game").href="../games/game-dinoeggs.html";
 				document.getElementById("decision1").setAttribute( "class", "btn disabled" );
 				document.getElementById("decision2").innerHTML = "Download";
-				document.getElementById("decision2").href = "../games/dsks/DarkForest.dsk";
+				document.getElementById("decision2").href = "../games/dsks/DinoEggs.dsk";
 				document.getElementById("decision3").setAttribute( "class", "btn disabled" );
 			}
 			if(cvalue===3){
 				console.log("case3");
 				document.getElementById("game").className = "btn-flat";
-				document.getElementById("game").href="../games/game-softporn.html";
+				document.getElementById("game").href="../games/game-davidsmidnightmagic.html";
 				document.getElementById("decision1").setAttribute( "class", "btn disabled" );
 				document.getElementById("decision2").setAttribute( "class", "btn disabled" );
 				document.getElementById("decision3").innerHTML = "Download";
-				document.getElementById("decision3").href = "../games/dsks/SoftPorn.dsk";
+				document.getElementById("decision3").href = "../games/dsks/DavidsMidnightMagic.dsk";
 			}
 		}
 	</script>

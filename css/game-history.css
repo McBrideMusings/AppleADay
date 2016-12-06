@@ -16,12 +16,13 @@
 	padding-bottom: 5px;
 }
 #right #extragameinfo {
-	height: 30px;
+	height: 70px;
 	display: flex;
 	margin-bottom: 15px;
 }
 #right #highscore {
 	width: 50%;
+	height: 50px;
 	padding: auto;
 	text-align: center;
 }
@@ -35,6 +36,7 @@
 #right #manual {
 	padding: auto;
 	width: 50%;
+	height: 50px;
 	text-align: center;
 }
 #right .btn-flat {

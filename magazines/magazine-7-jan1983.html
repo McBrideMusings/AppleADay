@@ -20,8 +20,8 @@
 	<nav>
 		<div class="nav-wrapper">
 			<img id="extend" src="../img/PlayfulPasts_Logo_Extend.jpg">
-			<img id="logo" src="../img/PlayfulPasts_Logo.jpg">
-			<a class="brand-logo">Week 7 - January 1983</a>
+			<a href="../index.html" target="_blank"><img id="logo" src="../img/PlayfulPasts_Logo.jpg"></a>
+			<a class="brand-logo">Issue 7 - January 1983</a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 				<li><a id="game" class="btn-flat disabled" href="#" target="_blank">Game</a></li>
 			</ul>
@@ -56,27 +56,31 @@
 					</div>
 				</li>
 				<li>
-					<div class="collapsible-header"><i><h1>Repton</h1></i></div>
+					<div class="collapsible-header"><i><h1>Aztec</h1></i></div>
 					<div class="collapsible-body">
 						<div class="left">
 							<div class="content">
 								<div class="authors"><i>Authors</i><br>
-								Dan Thompson and Andrew Kaluzniacki/Sirius Software</div>
+								Paul Stephenson/Datamost</div>
 								<table>
 									<tr>
 										<td class="type">Review</td>
-										<td class="pagenum">Pg 42</td> 
+										<td class="pagenum">Pg 45</td> 
 									</tr>
 									<tr>
-										<td class="type">Article</td>
-										<td class="pagenum">Pg 53-54</td> 
+										<td class="type">Ad</td>
+										<td class="pagenum">Pg 20</td> 
+									</tr>
+									<tr>
+										<td class="type">Ad</td>
+										<td class="pagenum">Pg 32</td> 
 									</tr>
 								</table>
 							</div>
 							<a class="waves-effect waves-light btn" href="#choice2" id="decision2">Play this game?</a>
 						</div>
 						<div class="right">
-							<img src="../img/keyart/Repton_January_83.png">
+							<img src="../img/keyart/Aztec_January_83.png">
 						</div>
 					</div>
 				</li>
@@ -109,16 +113,16 @@
 						</div>
 					</div>
 				</li>
-				<!--li>
-					<div class="collapsible-header"><i class="material-icons">grade</i>Interesting Reads</div>
+				<li>
+					<div class="collapsible-header"><i><h1>Interesting Reads</h1></i></div>
 					<div class="collapsible-body">
 							<div class="coolcontent">
 								<p>
-									Cool Interview - <span class="pagenum">Pg 12</span>
+									Article on Computer Literacy - <span class="pagenum">Pg 21</span>
 								</p>
 							</div>
 					</div>
-				</li-->
+				</li>
   		</ul>
 		</div>
 	</div>
@@ -185,10 +189,10 @@
 			if(cvalue===2){
 				console.log("case2");
 				document.getElementById("game").className = "btn-flat";
-				document.getElementById("game").href="../games/game-repton.html";
+				document.getElementById("game").href="../games/game-aztec.html";
 				document.getElementById("decision1").setAttribute( "class", "btn disabled" );
 				document.getElementById("decision2").innerHTML = "Download";
-				document.getElementById("decision2").href = "../games/dsks/Repton.dsk";
+				document.getElementById("decision2").href = "../games/dsks/Aztec.dsk";
 				document.getElementById("decision3").setAttribute( "class", "btn disabled" );
 			}
 			if(cvalue===3){
