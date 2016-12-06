@@ -15,8 +15,12 @@
   <!--JS-->
   <script src="../js/localstorage.js"></script>
 	
+	<script>
+		var localstoragevar = "issue3";
+	</script>
+	
 </head> 
-<body onload="checkCookie()">
+<body onload="checkCookie(localstoragevar)">
 	<nav>
 		<div class="nav-wrapper">
 			<img id="extend" src="../img/PlayfulPasts_Logo_Extend.jpg">
@@ -46,7 +50,6 @@
 										<td class="pagenum">Pg 17</td> 
 									</tr>
 								</table>
-								</p>
 							</div>
 							<a class="waves-effect waves-light btn" href="#choice1" id="decision1">Play this game?</a>
 						</div>
@@ -122,7 +125,7 @@
     </div>
     <div class="modal-footer">
 			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">No!</a>
-    	<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" onclick="setStorage('chosenGame1', 1)">Yes!</a>
+    	<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" onclick="setStorage(localstoragevar, 1)">Yes!</a>
 		</div>
   </div>
   <div id="choice2" class="modal">
@@ -132,7 +135,7 @@
     </div>
     <div class="modal-footer">
 			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">No!</a>
-    	<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" onclick="setStorage('chosenGame2', 2)">Yes!</a>
+    	<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" onclick="setStorage(localstoragevar', 2)">Yes!</a>
 		</div>
   </div>
   <div id="choice3" class="modal">
@@ -142,7 +145,7 @@
     </div>
     <div class="modal-footer">
 			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">No!</a>
-    	<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" onclick="setStorage('chosenGame3', 3)">Yes!</a>
+    	<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" onclick="setStorage(localstoragevar, 3)">Yes!</a>
 		</div>
   </div>
 	<div id="mobilewarn" class="modal">
