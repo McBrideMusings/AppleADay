@@ -12,16 +12,6 @@ function getCookie(localstoragevar) {
 function checkCookie(localstoragevar) {
 	var choice = getCookie(localstoragevar);
 	console.log(choice);
-	/*
-	if (Number(choice) === 1) {
-		checkCookieStatus(1);
-	}
-	else if (Number(choice) === 2) {
-			checkCookieStatus(2);
-	}
-	else if (Number(choice) === 3) {
-			checkCookieStatus(3);
-	}*/
 	if (Number(choice) != null) {
 		checkCookieStatus(Number(choice));
 	}
