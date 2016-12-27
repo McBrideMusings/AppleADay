@@ -8,7 +8,6 @@
 	
 	<!--CSS-->
 	<link rel="stylesheet" type="text/css" href="../css/game-apple2.css">
-	<link rel="stylesheet" type="text/css" href="../css/game-history.css">
 	<link rel="stylesheet" type="text/css" href="../css/waves.css">
 
 	<!--JQuery-->
@@ -17,6 +16,7 @@
 	
 	<!--Materialize-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
 	
 	<!--AppleJS-->
 	<!-- Emulator Scripts -->
@@ -45,22 +45,26 @@
 	
 </head>
 <body>
-	<nav class="z-depth-2">
+	<nav>
 		<div class="nav-wrapper">
 			<img id="extend" src="../img/PlayfulPasts_Logo_Extend.jpg">
-			<a href="../index.html" target="_blank"><img id="logo" src="../img/PlayfulPasts_Logo.jpg"></a>
-			<a class="brand-logo">Issue 1 - January 1982</a>
-			<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a id="game" class="btn-flat" href="../magazines/magazine-1-jan1982.html">Magazine</a></li>
-			</ul>
+			<a href="../index.html" target="_blank"><img id="logo" src="../img/PlayfulPasts_Logo_2.jpg"></a>
+			<div id="breads">
+				<a class="breadcrumb"  href="">Issue 1 - January 1982</a>
+				<a class="breadcrumb" id="activelink" href="../games/game-darkforest.html" target="_blank">Crossfire</a>
+			</div>
+			<div id="rightside">
+				<a class="helpicon" href="#help"><i class="material-icons">&#xE887;</i></a>
+			</div>
+			<a class="waves-effect waves-light btn" href="#modal1">Modal</a>
 		</div>
-  </nav>
+	</nav>
 	<div id="wrapper">
 		<div id="left">
-			<div id="emu" class="z-depth-2">
+			<div id="emu" class="z-depth-1">
 				<div id="badgediv">
-					<a href="about.html" target="_blank"><img src="../img/badge.png" id="badge" /></a>
-					<h1 id="subtitle">An Apple ][ Emulator in JavaScript</h1>
+					<a href="https://www.scullinsteel.com/apple2/" target="_blank"><img src="../img/badge.png" id="badge" /></a>
+					<h1 id="subtitle">An Apple ][ Emulator in JavaScript written by&nbsp;<a href="https://www.scullinsteel.com/">Will Scullin</a></h1>
 				</div>
 				<div id="monitor" >
 				<div id="innercase">
@@ -86,7 +90,7 @@
 						</form>
 						<label class="toggle">
 							Green Screen
-  						<input type="checkbox" id="green_screen" accept=".dsk, .do, .po, .nib, .2mg"onclick="updateScreen()" checked="checked">
+  						<input type="checkbox" id="green_screen" accept=".dsk, .do, .po, .nib, .2mg" onclick="updateScreen()" checked="checked">
   						<div class="togglebtn"></div>
 						</label>
 						</div>
@@ -100,17 +104,13 @@
 			</div>
 			<hr>
 			<div id="gameplay">
-				<p>Crossfire was a game made for the “dedicated and persevering gamester”. The January 1982 Softline review described it as challenging and time-consuming where perhaps a “third, supercoordinated appendage” is needed. The player uses the IJKL keys on the keyboard to control the ship and ESDF keys to shoot left, right, up, and down. A lack of a pause button contributes to the game’s difficulty.</p>
+				<p>
+					Crossfire was a game made for the “dedicated and persevering gamester”. The January 1982 Softline review described it as challenging and time-consuming where perhaps a “third, supercoordinated appendage” is needed. A lack of a pause button contributes to the game’s difficulty.<br><br>
+					<span class="sectionTitle"><i>Quick Start</i></span><br>In Crossfire, press I,J,K and L to move Up, Down, Left and Right respectively. E, S, D and F shoots in said directions. Destroy as many enemies as possible and stay alive as long as possible to achive a high score.<br>
+					In the Janurary issue of Softline, the high score for Crossfire was 241,800.
+				</p>
 			</div>
-			<div id="extragameinfo" class="valign-wrapper">
-				<div id="highscore">
-					<h3><i>High Score</i></h3>
-					<h4 id="score">241,800</h4>
-				</div>
-				<div id="manual">
-					<h3><small>IJKL Moves<br>ESDF Shoots</small></h3>
-				</div>
-			</div>
+			
 			<hr>
 			<div id="history"><img class="image1" src="../img/keyart/Crossfire_January_82.jpg">
 				<p>
@@ -120,6 +120,48 @@
 			</div>  
   	</div>
   </div>
+	  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+	<div id="help" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Help</h4>
+      <p>
+				This is what the App is 
+			</p>
+			<p>
+				This is how the whole app does
+			</p>
+			<p>
+				To view the magazine do these things
+			</p>
+			<p>
+				To Zoom in do this
+			</p>
+			<p>
+				Each game has this infomration
+			</p>
+			<p>
+				View it's informaton this way
+			</p>
+			<p>
+				To select a game, do this
+			</p>
+			<p>
+				Once you pick a game, download it here
+			</p>
+			<a href="mailto:piercermcbride@gmail.com?Subject=Feedback" target="_top">Send Feedback</a>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Got it</a>
+    </div>
+	</div>
 	<script type="text/javascript">
 		function resetCheck() {
   			if (document.getElementById("disklabel1").innerHTML != "No Disk Inserted")

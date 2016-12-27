@@ -55,6 +55,19 @@ nav .brand-logo {
   font-size: 1.7rem;
 	margin-top: 1px;
 }
+nav .helpicon {
+	float: right;
+	height: 46px;
+	padding: 0px 10px 0px 10px;
+	margin: 0px;
+}
+nav .helpicon i {
+	font-size: 2.5rem;
+	vertical-align: middle;
+}
+nav .helpicon:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+}
 nav ul {
   margin: 0;
 	list-style-type: none;
@@ -68,6 +81,10 @@ nav ul a {
   color: #fff;
   cursor: pointer;
 }
+nav #rightside {
+	display: flex;
+	float: right;
+}
 nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul a.btn-floating {
 	width: 80px;
 	padding-top: 3px;
@@ -77,8 +94,48 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 	font-size: 1.0rem;
 	color: #0096d3;
 }
-/*=========================================== */
+.breadcrumb {
+	transition: background-color .3s;
+  font-size: 1.7rem;
+	height: 46px;
+	padding-left: 10px;
+	padding-right: 10px;
+	float: left;
+	text-decoration: under;
+	color: #009ce1;
+}
+.breadcrumb i,
+.breadcrumb [class^="mdi-"], .breadcrumb [class*="mdi-"],
+.breadcrumb i.material-icons {
+  display: inline-block;
+  float: left;
+  font-size: 24px;
+}
 
+.breadcrumb:before {
+  content: '\E5CC';
+  vertical-align: top;
+  display: inline-block;
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 25px;
+  -webkit-font-smoothing: antialiased;
+}
+.breadcrumb:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+.breadcrumb:last-child {
+	padding-left: 0px;
+}
+.breadcrumb:first-child:before {
+  display: none;
+}
+#activelink {
+	text-decoration: none;
+	color: black;
+}
+/*=========================================== */
 
 
 
@@ -107,6 +164,56 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 }
 /*============================================= */
 
+
+/*======================History======================= */
+#right {
+	color: black;
+}
+#right #titlewrap {
+	height: 30px;
+}
+#right h1 {
+	padding: 0px;
+	margin-top: 14px;
+	margin-bottom: 10px;
+	font-size: 2rem;
+}
+#right #gameplay {
+	height: auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#right #extragameinfo {
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+#right p {
+	font-size: 0.95rem;
+}
+#right .image1 {
+	border: 0;
+	float: right;
+  width: 50%;
+  margin: 10px;
+}
+#right .sectionTitle {
+	font-size: 1.2rem;
+  font-weight: bold;
+	line-height: 2rem;
+}
+#right .card-panel {
+	font-family: 'Libre Franklin', sans-serif;
+  transition: box-shadow .25s;
+  padding: 20px;
+  margin: 0.5rem 0 1rem 0;
+  border-radius: 2px;
+  background-color: #c65252;
+	color: white;
+}
+#right .paneltext {
+	font-size: 0.8rem;
+}
+/*============================================= */
 
 
 /*==================Emulator=================== */
@@ -287,7 +394,86 @@ h1#subtitle {
 /*============================================ */
 
 
-
+/*==================Modals===================*/
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #fafafa;
+  padding: 0;
+  max-height: 70%;
+  width: 30%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 2px;
+  will-change: top, opacity;
+}
+@media only screen and (max-width: 992px) {
+  .modal {
+    width: 80%;
+  }
+}
+.modal h1, .modal h2, .modal h3, .modal h4 {
+  margin-top: 0;
+}
+.modal .modal-content {
+  padding: 24px;
+}
+.modal .modal-close {
+  cursor: pointer;
+	left: -20px;
+}
+.modal .modal-footer {
+  border-radius: 0 0 2px 2px;
+  background-color: #fafafa;
+  padding: 4px 6px;
+  height: 56px;
+  width: 100%;
+}
+.modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-flat {
+  float: right;
+  margin: 6px 0;
+}
+.modal-overlay {
+  position: fixed;
+  z-index: 999;
+  top: -100px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 125%;
+  width: 100%;
+  background: #000;
+  display: none;
+  will-change: opacity;
+}
+.modal.modal-fixed-footer {
+  padding: 0;
+  height: 70%;
+}
+.modal.modal-fixed-footer .modal-content {
+  position: absolute;
+  height: calc(100% - 56px);
+  max-height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+.modal.modal-fixed-footer .modal-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 0;
+}
+.modal.bottom-sheet {
+  top: auto;
+  bottom: -100%;
+  margin: 0;
+  width: 100%;
+  max-height: 45%;
+  border-radius: 0;
+  will-change: bottom, opacity;
+}
+/*=========================================== */
 
 /*==================Buttons=================== */
 .btn,
@@ -367,8 +553,8 @@ input:checked + .togglebtn {
 /*============================================== */
 
 
-
-/*==================Utilities=================== */
-.z-depth-2 {
+/*==================Generic Classes===================*/
+.z-depth-1, .card-panel, nav, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .side-nav {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
 }
+/*=========================================== */
