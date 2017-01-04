@@ -179,6 +179,7 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 .card {
 	width: 230px;
 	height: 336px;
+	cursor: pointer;
 }
 .card .cover {
 	height: 100%;
@@ -432,7 +433,6 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
   width: 100%;
   background: #000;
   display: none;
-  will-change: opacity;
 }
 .modal.modal-fixed-footer {
   padding: 0;

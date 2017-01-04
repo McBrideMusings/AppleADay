@@ -446,7 +446,6 @@ h1#subtitle {
   width: 100%;
   background: #000;
   display: none;
-  will-change: opacity;
 }
 .modal.modal-fixed-footer {
   padding: 0;
@@ -473,7 +472,8 @@ h1#subtitle {
   border-radius: 0;
   will-change: bottom, opacity;
 }
-/*=========================================== */
+/*============================================ */
+
 
 /*==================Buttons=================== */
 .btn,
