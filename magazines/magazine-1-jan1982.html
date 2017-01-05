@@ -9,6 +9,7 @@
 	<!--CSS-->
 	<link rel="stylesheet" type="text/css" href="../css/magazine.css">
 	<link rel="stylesheet" type="text/css" href="../css/waves.css">
+	<link rel="stylesheet" type="text/css" href="../css/navbar.css">
 
 	<!--JQuery-->
 	<script type="text/javascript" src="../js/jquery.min.1.7.js"></script>
@@ -41,13 +42,13 @@
 				<a class="breadcrumb" id="activelink" href="">Issue 1 - January 1982</a>
 			</div>
 			<div id="rightside">
+				<a href="https://ia800502.us.archive.org/17/items/Softline_1982_01/Softline_1982_01.pdf" target="_blank" class="downloadicon"><i class="material-icons">&#xE884;</i></a>
 				<a class="helpicon" href="#help"><i class="material-icons">&#xE887;</i></a>
 			</div>
 		</div>
 	</nav>
 	<div id="wrapper">
 		<div id="canvas">
-			<a href="https://ia800502.us.archive.org/17/items/Softline_1982_01/Softline_1982_01.pdf" target="_blank" class="downloadicon"><i class="material-icons">&#xE884;</i></a>
 			<div class="magazine-viewport">
 				<div class="container">
 					<div class="magazine">
@@ -251,6 +252,7 @@
 					crumb.className = "breadcrumb";
 					crumb.href = "../games/game-crossfire.html";
 					crumb.innerHTML = "Crossfire";
+					crumb.target = "_blank";
 					document.getElementById("breads").appendChild(crumb);
 					document.getElementById("decision1").href = "../games/dsks/Crossfire.dsk";
 					document.getElementById("decision1").innerHTML = "Download";
@@ -259,8 +261,12 @@
 				}
 				if(cvalue===2){
 					console.log("case2");
-					document.getElementById("game").className = "btn-flat";
-					document.getElementById("game").href="../games/game-darkforest.html";
+					var crumb = document.createElement("a");
+					crumb.className = "breadcrumb";
+					crumb.href = "../games/game-darkforest.html";
+					crumb.innerHTML = "Dark Forest";
+					crumb.target = "_blank";
+					document.getElementById("breads").appendChild(crumb);
 					document.getElementById("decision1").setAttribute( "class", "btn disabled" );
 					document.getElementById("decision2").innerHTML = "Download";
 					document.getElementById("decision2").href = "../games/dsks/DarkForest.dsk";
@@ -268,8 +274,12 @@
 				}
 				if(cvalue===3){
 					console.log("case3");
-					document.getElementById("game").className = "btn-flat";
-					document.getElementById("game").href="../games/game-softporn.html";
+					var crumb = document.createElement("a");
+					crumb.className = "breadcrumb";
+					crumb.href = "../games/game-softporn.html";
+					crumb.innerHTML = "Softporn";
+					crumb.target = "_blank";
+					document.getElementById("breads").appendChild(crumb);
 					document.getElementById("decision1").setAttribute( "class", "btn disabled" );
 					document.getElementById("decision2").setAttribute( "class", "btn disabled" );
 					document.getElementById("decision3").innerHTML = "Download";

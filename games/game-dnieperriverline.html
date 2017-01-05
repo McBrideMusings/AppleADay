@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Dnieper River Line</title>
+	<title>Playful Pasts - Dnieper River Line</title>
 	<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
 	<!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	
 	<!--CSS-->
-	<link rel="stylesheet" type="text/css" href="../css/game-apple2.css">
-	<link rel="stylesheet" type="text/css" href="../css/game-history.css">
+	<link rel="stylesheet" type="text/css" href="../css/game.css">
+	<link rel="stylesheet" type="text/css" href="../css/navbar.css">
 	<link rel="stylesheet" type="text/css" href="../css/waves.css">
 
 	<!--JQuery-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-
+	
 	<!--Materialize-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-	
+
 	<!--AppleJS-->
 	<!-- Emulator Scripts -->
 	<script type="text/javascript" src="../apple2js/js/util.js"></script>
@@ -45,22 +45,26 @@
 	
 </head>
 <body>
-	<nav class="z-depth-2">
+	<nav>
 		<div class="nav-wrapper">
 			<img id="extend" src="../img/PlayfulPasts_Logo_Extend.jpg">
-			<a href="../index.html" target="_blank"><img id="logo" src="../img/PlayfulPasts_Logo.jpg"></a>
-			<a class="brand-logo">Issue 8 - March 1983</a>
-			<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a id="game" class="btn-flat" href="../magazines/magazine-8-mar1983.html">Magazine</a></li>
-			</ul>
+			<a href="../index.html" target="_blank"><img id="logo" src="../img/PlayfulPasts_Logo_2.jpg"></a>
+			<div id="breads">
+				<a class="breadcrumb" target="_blank" href="../magazines/magazine-8-mar1983.html">Issue 8 - March 1983</a>
+				<a class="breadcrumb" id="activelink" href="game-dnieperriverline.html">Dnieper River Line</a>
+			</div>
+			<div id="rightside">
+				<a href="dsks/DnieperRiverLine.do" target="_blank" class="downloadicon"><i class="material-icons">&#xE884;</i></a>
+				<a class="helpicon" href="#help"><i class="material-icons">&#xE887;</i></a>
+			</div>
 		</div>
-  </nav>
+	</nav>
 	<div id="wrapper">
 		<div id="left">
-			<div id="emu" class="z-depth-2">
+			<div id="emu" class="z-depth-1">
 				<div id="badgediv">
-					<a href="about.html" target="_blank"><img src="../img/badge.png" id="badge" /></a>
-					<h1 id="subtitle">An Apple ][ Emulator in JavaScript</h1>
+					<a href="https://www.scullinsteel.com/apple2/" target="_blank"><img src="../img/badge.png" id="badge" /></a>
+					<h1 id="subtitle">An Apple ][ Emulator in JavaScript written by&nbsp;<a href="https://www.scullinsteel.com/" target="_blank">Will Scullin</a></h1>
 				</div>
 				<div id="monitor" >
 				<div id="innercase">
@@ -100,25 +104,67 @@
 			</div>
 			<hr>
 			<div id="gameplay">
-				<p>Dnieper River Line, a cross between a board game and a computer game, is a strategy game about a standoff between German and Russian forces in the Southern Ukraine in late 1943. As the Germans, players must protect six possible objective squares. There are four levels of play: two different scenario beginnings, a meeting engagement, and a strategic offensive. A campaign takes between eight and twelve turns. The Russians win if they have control of two of three secret objectives.</p>
-			</div>
-			<div id="extragameinfo" class="valign-wrapper">
-				<div id="highscore">
-					<h3><i>No High Score Found</i></h3>
-				</div>
-				<div id="manual">
+				<p>
+					Dnieper River Line, a cross between a board game and a computer game, is a strategy game about a standoff between German and Russian forces in the Southern Ukraine in late 1943. As the Germans, players must protect six possible objective squares. There are four levels of play: two different scenario beginnings, a meeting engagement, and a strategic offensive. A campaign takes between eight and twelve turns. The Russians win if they have control of two of three secret objectives.
+					<br>
+					<br>
+					<span class="sectionTitle"><i>Quick Start</i></span><br>
 					<h3><i><a href="http://www.gamesdatabase.org/Media/SYSTEM/Atari_8_bit/manual/Formated/Dnieper_River_Line_-_1982_-_Avalon_Hill.pdf">PDF of Manual</a><br>You'll need it</i></h3>
-				</div>
+				</p>
 			</div>
+			
 			<hr>
 			<div id="history"><img class="image1" src="../img/keyart/DnieperRiverLine_March_83.jpg">
 				<p>
-					<span class="sectionTitle"><i>Impact</i></span><br>Softline’s March 1983 issue describes the game as excellent. It is a step up for Avalon Hill (the publisher), which had great board war games, but was “disappointing in its early computer fare”. Dnieper River Line was among rated games in Computer Gaming World’s 1983 game ratings for games from 1982 - 1983. It had an above average user rating of 6.71.
-					<span class="sectionTitle"><br><br><i>Production History</i> </span><br>Dnieper River Line was created in 1982. It was created by Bruce A. Ketchledge. Dnieper River Line was published by Microcomputer Games, a division of Avalon Hill. The Avalon Hill Game Company produced numerous strategy and role-playing games of many types. In the early to mid-1980s, Avalon Hill formed their Microcomputer Games division, which produced primarily strategy games for multiple computer platforms. Hasbro bought Avalon Hill in 1998.
+					<span class="sectionTitle"><i>Impact</i></span>
+					<br>
+					Softline’s March 1983 issue describes the game as excellent. It is a step up for Avalon Hill (the publisher), which had great board war games, but was “disappointing in its early computer fare”. Dnieper River Line was among rated games in Computer Gaming World’s 1983 game ratings for games from 1982 - 1983. It had an above average user rating of 6.71.
+					<span class="sectionTitle"><br><br><i>Production History</i> </span>
+					<br>
+					Dnieper River Line was created in 1982. It was created by Bruce A. Ketchledge. Dnieper River Line was published by Microcomputer Games, a division of Avalon Hill. The Avalon Hill Game Company produced numerous strategy and role-playing games of many types. In the early to mid-1980s, Avalon Hill formed their Microcomputer Games division, which produced primarily strategy games for multiple computer platforms. Hasbro bought Avalon Hill in 1998.
 				</p>
 			</div>  
   	</div>
   </div>
+	<div id="help" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Help</h4>
+      <p>
+				This is what the App is 
+			</p>
+			<p>
+				This is how the whole app does
+			</p>
+			<p>
+				To view the magazine do these things
+			</p>
+			<p>
+				To Zoom in do this
+			</p>
+			<p>
+				Each game has this infomration
+			</p>
+			<p>
+				View it's informaton this way
+			</p>
+			<p>
+				To select a game, do this
+			</p>
+			<p>
+				Once you pick a game, download it here
+			</p>
+			<a href="mailto:piercermcbride@gmail.com?Subject=Feedback" target="_top">Send Feedback</a>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Got it</a>
+    </div>
+	</div>
+	<script>
+		$(document).ready(function(){
+			// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+			$('.modal').modal();
+		});
+	</script>
 	<script type="text/javascript">
 		function resetCheck() {
   			if (document.getElementById("disklabel1").innerHTML != "No Disk Inserted")

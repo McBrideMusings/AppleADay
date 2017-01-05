@@ -1,124 +1,192 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-	<title>Our Playful Pasts - Issue 12</title>
+	<title>Playful Pasts - Issue 12</title>
+	<meta name="viewport" content="width = 1050, user-scalable = no" />
 	<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 	<!--CSS-->
 	<link rel="stylesheet" type="text/css" href="../css/magazine.css">
 	<link rel="stylesheet" type="text/css" href="../css/waves.css">
+	<link rel="stylesheet" type="text/css" href="../css/navbar.css">
 
 	<!--JQuery-->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.min.1.7.js"></script>
+	<script type="text/javascript" src="../js/modernizr.2.5.3.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-1.8.20.custom.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.flip.min.js"></script>
 	
-	<!--Magazine-->
+	<!--TurnJS-->
+	<script type="text/javascript" src="../js/hash.js"></script>
+	
+	<!--Materialize-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 	
-  <!--JS-->
+  <!--CustomJS-->
   <script src="../js/localstorage.js"></script>
 	
 	<script>
 		var localstoragevar = "issue12";
+		var magazinename = "mag12/";
 	</script>
 	
-</head> 
-<body onload="checkCookie(localstoragevar)">
+</head>
+<body onload="checkCookieStatus(localstoragevar)">
 	<nav>
 		<div class="nav-wrapper">
 			<img id="extend" src="../img/PlayfulPasts_Logo_Extend.jpg">
-			<a href="../index.html" target="_blank"><img id="logo" src="../img/PlayfulPasts_Logo.jpg"></a>
-			<a class="brand-logo">Issue 12 - November 1983</a>
-			<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a id="game" class="btn-flat disabled" href="#" target="_blank">Game</a></li>
-			</ul>
+			<a href="../index.html" target="_blank"><img id="logo" src="../img/PlayfulPasts_Logo_2.jpg"></a>
+			<div id="breads">
+				<!--a href="" class="brand-logo">Issue 1 - January 1982</a-->
+				<a class="breadcrumb" id="activelink" href="">Issue 12 - November 1983</a>
+			</div>
+			<div id="rightside">
+				<a href="https://ia801400.us.archive.org/10/items/Softline_1983_11_12/Softline_1983_11_12.pdf" target="_blank" class="downloadicon"><i class="material-icons">&#xE884;</i></a>
+				<a class="helpicon" href="#help"><i class="material-icons">&#xE887;</i></a>
+			</div>
 		</div>
-  </nav>
+	</nav>
 	<div id="wrapper">
-		<div id="bookwrap">
-			<iframe src="https://archive.org/stream/Softline_1983_11_12?ui=embed#mode/2up" width="100%" height="100%" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+		<div id="canvas">
+			<div class="magazine-viewport">
+				<div class="container">
+					<div class="magazine">
+						<!-- Next button -->
+						<div ignore="1" class="next-button"></div>
+						<!-- Previous button -->
+						<div ignore="1" class="previous-button"></div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div id="gamewrap">
-			<ul class="collapsible" data-collapsible="accordion">
-				<li>
-					<div class="collapsible-header"><i><h1>Blood Quest</h1></i></div>
-					<div class="collapsible-body">
-						<div class="left">
-							<div class="content">
-								<div class="authors"><i>Authors</i><br>
-								Elroy N. Erdling/Brøderbund</div>
-								<table>
-									<tr>
-										<td class="type">Review</td>
-										<td class="pagenum">Pg 21</td> 
-									</tr>
-								</table>
+		<div id="gameselect">
+			<div class="game">
+				<div class="card"> 
+					<div class="front"> 
+						<img class="cover" src="../img/keyart/BloodQuest_November_83.png">
+					</div>
+					<div class="back">
+						<div class="backtop">
+							<img class="applelogo" src="../img/applelogo.png">
+							<div class="title">Blood Quest</div>
+							<div class="author">
+								<i>Created By</i>
+								<br>
+								Elroy N. Erdling/Brøderbund
 							</div>
-							<a class="waves-effect waves-light btn" href="#choice1" id="decision1">Play this game?</a>
 						</div>
-						<div class="right">
-							<img src="../img/keyart/BloodQuest_November_83.png">
+						<div class="collection">
+							<a class="collection-item" id="game1link1">Review on Page 21</a>
 						</div>
 					</div>
-				</li>
-				<li>
-					<div class="collapsible-header"><i><h1>Stellar 7</h1></i></div>
-					<div class="collapsible-body">
-						<div class="left">
-							<div class="content">
-								<div class="authors"><i>Authors</i><br>
-								Damon Slye/Software Entertainment Company</div>
-								<table>
-									<tr>
-										<td class="type">Review</td>
-										<td class="pagenum">Pg 23</td> 
-									</tr>
-								</table>
+					<script>
+						$(function() {
+							$("#game1link1").click(function() {
+								$(".magazine").turn("page", 23);
+							});
+						});
+					</script>
+				</div>
+				<a class="waves-effect waves-teal btn" href="#choice1" id="decision1">Play this game?</a>
+			</div>
+			<div class="game">
+				<div class="card"> 
+					<div class="front"> 
+						<img class="cover" src="../img/keyart/Stellar7_November_83.jpg">
+					</div>
+					<div class="back">
+						<div class="backtop">
+							<img class="applelogo" src="../img/applelogo.png">
+							<div class="title">Stellar 7</div>
+							<div class="author">
+								<i>Created By</i>
+								<br>
+								Damon Slye/Software Entertainment Company
 							</div>
-							<a class="waves-effect waves-light btn" href="#choice2" id="decision2">Play this game?</a>
 						</div>
-						<div class="right">
-							<img src="../img/keyart/Stellar7_November_83.jpg">
+						<div class="collection">
+							<a class="collection-item" id="game2link1">Review on Page 23</a>
 						</div>
 					</div>
-				</li>
-				<li>
-					<div class="collapsible-header"><i><h1>Knights of the Desert</h1></i></div>
-					<div class="collapsible-body">
-						<div class="left">
-							<div class="content">
-								<div class="authors"><i>Authors</i><br>
-								Tactical Design Group/SSI</div>
-								<table>
-									<tr>
-										<td class="type">Review</td>
-										<td class="pagenum">Pg 23</td> 
-									</tr>
-								</table>
+					<script>
+						$(function() {
+							$("#game2link1").click(function() {
+								$(".magazine").turn("page", 25);
+							});
+						});
+					</script>
+				</div>
+				<a class="waves-effect waves-teal btn" href="#choice2" id="decision2">Play this game?</a>
+			</div>
+			<div class="game">
+				<div class="card"> 
+					<div class="front"> 
+						<img class="cover" src="../img/keyart/KnightsDesert_November_83.jpg">
+					</div>
+					<div class="back">
+						<div class="backtop">
+							<img class="applelogo" src="../img/applelogo.png">
+							<div class="title">Knights of the Desert</div>
+							<div class="author">
+								<i>Created By</i>
+								<br>
+								Tactical Design Group/SSI
 							</div>
-							<a class="waves-effect waves-teal btn" href="#choice3" id="decision3">Play this game?</a>
 						</div>
-						<div class="right">
-							<img src="../img/keyart/KnightsDesert_November_83.jpg">
+						<div class="collection">
+							<a class="collection-item" id="game3link1">Review on Page 23</a>
 						</div>
 					</div>
-				</li>
-				<li>
-					<div class="collapsible-header"><i><h1>Interesting Reads</h1></i></div>
-					<div class="collapsible-body">
-							<div class="coolcontent">
-								<p>
-									A profile of Lord British (Richard Garriott) - <span class="pagenum">Pg 12</span>
-								</p>
-							</div>
-					</div>
-				</li>
-  		</ul>
+					<script>
+						$(function() {
+							$("#game3link1").click(function() {
+								$(".magazine").turn("page", 25);
+							});
+						});
+					</script>
+				</div>
+				<a class="waves-effect waves-teal btn" href="#choice3" id="decision3">Play this game?</a>
+			</div>
 		</div>
 	</div>
+	<div id="help" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Help</h4>
+      <p>
+				This is what the App is 
+			</p>
+			<p>
+				This is how the whole app does
+			</p>
+			<p>
+				To view the magazine do these things
+			</p>
+			<p>
+				To Zoom in do this
+			</p>
+			<p>
+				Each game has this infomration
+			</p>
+			<p>
+				View it's informaton this way
+			</p>
+			<p>
+				To select a game, do this
+			</p>
+			<p>
+				Once you pick a game, download it here
+			</p>
+			<a href="mailto:piercermcbride@gmail.com?Subject=Feedback" target="_top">Send Feedback</a>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Got it</a>
+    </div>
+  </div>
 	<div id="choice1" class="modal">
     <div class="modal-content">
       <h4>Are You Sure?</h4>
-      <p>You can only pick and play one game per issue. Are you sure you want this one?</p>
+      <p>You can only pick and play one game per issue. Are you sure you want to play Blood Quest?</p>
     </div>
     <div class="modal-footer">
 			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">No!</a>
@@ -128,7 +196,7 @@
   <div id="choice2" class="modal">
     <div class="modal-content">
       <h4>Are You Sure?</h4>
-      <p>You can only pick and play one game per issue. Are you sure you want this one?</p>
+      <p>You can only pick and play one game per issue. Are you sure you want to play Stellar 7?</p>
     </div>
     <div class="modal-footer">
 			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">No!</a>
@@ -138,7 +206,7 @@
   <div id="choice3" class="modal">
     <div class="modal-content">
       <h4>Are You Sure?</h4>
-      <p>You can only pick and play one game per issue. Are you sure you want this one?</p>
+      <p>You can only pick and play one game per issue. Are you sure you want to play Knights of the Desert?</p>
     </div>
     <div class="modal-footer">
 			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">No!</a>
@@ -154,46 +222,392 @@
       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Got it</a>
     </div>
   </div>
-    
-    
-	<script>
-		$(document).ready(function(){
-			// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-			$('.modal').modal();
-		});
-		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-			$('#mobilewarn').modal();
-		};
-		function checkCookieStatus(cvalue){
-			console.log("in");
-			if(cvalue===1){
-				console.log("case1");
-				document.getElementById("game").className = "btn-flat";
-				document.getElementById("game").href="../games/game-bloodquest.html";
-				document.getElementById("decision1").href = "../games/dsks/BloodQuest.dsk";
-				document.getElementById("decision1").innerHTML = "Download";
-				document.getElementById("decision2").setAttribute( "class", "btn disabled");
-				document.getElementById("decision3").setAttribute( "class", "btn disabled");
-			}
-			if(cvalue===2){
-				console.log("case2");
-				document.getElementById("game").className = "btn-flat";
-				document.getElementById("game").href="../games/game-stellar7.html";
-				document.getElementById("decision1").setAttribute( "class", "btn disabled" );
-				document.getElementById("decision2").innerHTML = "Download";
-				document.getElementById("decision2").href = "../games/dsks/Stellar7.do";
-				document.getElementById("decision3").setAttribute( "class", "btn disabled" );
-			}
-			if(cvalue===3){
-				console.log("case3");
-				document.getElementById("game").className = "btn-flat";
-				document.getElementById("game").href="../games/game-knightsdesert.html";
-				document.getElementById("decision1").setAttribute( "class", "btn disabled" );
-				document.getElementById("decision2").setAttribute( "class", "btn disabled" );
-				document.getElementById("decision3").innerHTML = "Download";
-				document.getElementById("decision3").href = "../games/dsks/KnightsoftheDesert.dsk";
-			}
-		}
-	</script>
 </body>
+<footer>
+	<div id="mystuff">
+		<script>
+			$(document).ready(function(){
+				// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+				$('.modal').modal();
+			});
+			$(function($) {
+				$(".card").flip(); 
+			});
+			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+					$('#mobilewarn').modal();
+			};
+			function checkCookieStatus(cvalue){
+				console.log("in");
+				if(cvalue===1){
+					console.log("case1");
+					var crumb = document.createElement("a");
+					crumb.className = "breadcrumb";
+					crumb.href = "../games/game-bloodquest.html";
+					crumb.innerHTML = "Blood Quest";
+					crumb.target = "_blank";
+					document.getElementById("breads").appendChild(crumb);
+					document.getElementById("decision1").href = "../games/dsks/BloodQuest.dsk";
+					document.getElementById("decision1").innerHTML = "Download";
+					document.getElementById("decision2").setAttribute( "class", "btn disabled");
+					document.getElementById("decision3").setAttribute( "class", "btn disabled");
+				}
+				if(cvalue===2){
+					console.log("case2");
+					var crumb = document.createElement("a");
+					crumb.className = "breadcrumb";
+					crumb.href = "../games/game-stellar7.html";
+					crumb.innerHTML = "Stellar 7";
+					crumb.target = "_blank";
+					document.getElementById("breads").appendChild(crumb);
+					document.getElementById("decision1").setAttribute( "class", "btn disabled" );
+					document.getElementById("decision2").innerHTML = "Download";
+					document.getElementById("decision2").href = "../games/dsks/Stellar7.do";
+					document.getElementById("decision3").setAttribute( "class", "btn disabled" );
+				}
+				if(cvalue===3){
+					console.log("case3");
+					var crumb = document.createElement("a");
+					crumb.className = "breadcrumb";
+					crumb.href = "../games/game-knightsdesert.html";
+					crumb.innerHTML = "Knights of the Desert";
+					crumb.target = "_blank";
+					document.getElementById("breads").appendChild(crumb);
+					document.getElementById("decision1").setAttribute( "class", "btn disabled" );
+					document.getElementById("decision2").setAttribute( "class", "btn disabled" );
+					document.getElementById("decision3").innerHTML = "Download";
+					document.getElementById("decision3").href = "../games/dsks/KnightsoftheDesert.dsk";
+				}
+			}
+		</script>
+	</div>
+	<div id="turnjsstuff">
+		<script type="text/javascript">
+			function loadApp() {
+			$('#canvas').fadeIn(1000);
+			var flipbook = $('.magazine');
+			// Check if the CSS was already loaded
+			if (flipbook.width()==0 || flipbook.height()==0) {
+				setTimeout(loadApp, 10);
+				return;
+			}
+			// Create the flipbook
+			flipbook.turn({
+				// Magazine width
+				width: 922,
+				// Magazine height
+				height: 600,
+				// Duration in millisecond
+				duration: 1000,
+				// Hardware acceleration
+				acceleration: !isChrome(),
+				// Enables gradients
+				gradients: true,
+				// Auto center this flipbook
+				autoCenter: true,
+				// Elevation from the edge of the flipbook when turning a page
+				elevation: 50,
+				// The number of pages
+				pages: 40,
+				// Events
+				when: {
+					turning: function(event, page, view) {
+						var book = $(this),
+						currentPage = book.turn('page'),
+						pages = book.turn('pages');
+						// Update the current URI
+						Hash.go('page/' + page).update();
+						// Show and hide navigation buttons
+						disableControls(page);
+						$('.thumbnails .page-'+currentPage).
+							parent().
+							removeClass('current');
+						$('.thumbnails .page-'+page).
+							parent().
+							addClass('current');
+					},
+					turned: function(event, page, view) {
+						disableControls(page);
+						$(this).turn('center');
+						if (page==1) { 
+							$(this).turn('peel', 'br');
+						}
+					},
+					missing: function (event, pages) {
+						// Add pages that aren't in the magazine
+						for (var i = 0; i < pages.length; i++)
+							addPage(pages[i], $(this));
+					}
+				}
+			});
+
+			// Zoom.js
+
+			$('.magazine-viewport').zoom({
+			flipbook: $('.magazine'),
+
+			max: function() { 
+
+				return largeMagazineWidth()/$('.magazine').width();
+
+			}, 
+
+			when: {
+				swipeLeft: function() {
+					$(this).zoom('flipbook').turn('next');
+				},
+				swipeRight: function() {
+					$(this).zoom('flipbook').turn('previous');
+				},
+
+				resize: function(event, scale, page, pageElement) {
+
+					if (scale==1)
+						loadSmallPage(page, pageElement);
+					else
+						loadLargePage(page, pageElement);
+
+				},
+
+				zoomIn: function () {
+
+					$('.thumbnails').hide();
+					$('.made').hide();
+					$('.magazine').removeClass('animated').addClass('zoom-in');
+					$('.zoom-icon').removeClass('zoom-icon-in').addClass('zoom-icon-out');
+
+					if (!window.escTip && !$.isTouch) {
+						escTip = true;
+
+						$('<div />', {'class': 'exit-message'}).
+							html('<div>Press ESC to exit</div>').
+								appendTo($('body')).
+								delay(2000).
+								animate({opacity:0}, 500, function() {
+									$(this).remove();
+								});
+					}
+				},
+
+				zoomOut: function () {
+
+					$('.exit-message').hide();
+					$('.thumbnails').fadeIn();
+					$('.made').fadeIn();
+					$('.zoom-icon').removeClass('zoom-icon-out').addClass('zoom-icon-in');
+
+					setTimeout(function(){
+						$('.magazine').addClass('animated').removeClass('zoom-in');
+						resizeViewport();
+					}, 0);
+
+				}
+			}
+			});
+			// Zoom event
+			if ($.isTouch)
+				$('.magazine-viewport').bind('zoom.doubleTap', zoomTo);
+			else
+				$('.magazine-viewport').bind('zoom.tap', zoomTo);
+			// Using arrow keys to turn the page
+			$(document).keydown(function(e){
+			var previous = 37, next = 39, esc = 27;
+			switch (e.keyCode) {
+				case previous:
+
+					// left arrow
+					$('.magazine').turn('previous');
+					e.preventDefault();
+
+				break;
+				case next:
+
+					//right arrow
+					$('.magazine').turn('next');
+					e.preventDefault();
+
+				break;
+				case esc:
+
+					$('.magazine-viewport').zoom('zoomOut');	
+					e.preventDefault();
+
+				break;
+			}
+			});
+
+			// URIs - Format #/page/1 
+
+			Hash.on('^page\/([0-9]*)$', {
+			yep: function(path, parts) {
+				var page = parts[1];
+
+				if (page!==undefined) {
+					if ($('.magazine').turn('is'))
+						$('.magazine').turn('page', page);
+				}
+
+			},
+			nop: function(path) {
+
+				if ($('.magazine').turn('is'))
+					$('.magazine').turn('page', 1);
+			}
+			});
+
+
+			$(window).resize(function() {
+			resizeViewport();
+			}).bind('orientationchange', function() {
+			resizeViewport();
+			});
+
+			// Events for thumbnails
+
+			$('.thumbnails').click(function(event) {
+
+			var page;
+
+			if (event.target && (page=/page-([0-9]+)/.exec($(event.target).attr('class'))) ) {
+
+				$('.magazine').turn('page', page[1]);
+			}
+			});
+
+			$('.thumbnails li').
+			bind($.mouseEvents.over, function() {
+
+				$(this).addClass('thumb-hover');
+
+			}).bind($.mouseEvents.out, function() {
+
+				$(this).removeClass('thumb-hover');
+
+			});
+
+			if ($.isTouch) {
+
+			$('.thumbnails').
+				addClass('thumbanils-touch').
+				bind($.mouseEvents.move, function(event) {
+					event.preventDefault();
+				});
+
+			} else {
+
+			$('.thumbnails ul').mouseover(function() {
+
+				$('.thumbnails').addClass('thumbnails-hover');
+
+			}).mousedown(function() {
+
+				return false;
+
+			}).mouseout(function() {
+
+				$('.thumbnails').removeClass('thumbnails-hover');
+
+			});
+
+			}
+
+
+			// Regions
+
+			if ($.isTouch) {
+				$('.magazine').bind('touchstart', regionClick);
+			} else {
+				$('.magazine').click(regionClick);
+			}
+			// Events for the next button
+			$('.next-button').bind($.mouseEvents.over, function() {
+
+			$(this).addClass('next-button-hover');
+
+			}).bind($.mouseEvents.out, function() {
+
+			$(this).removeClass('next-button-hover');
+
+			}).bind($.mouseEvents.down, function() {
+
+			$(this).addClass('next-button-down');
+
+			}).bind($.mouseEvents.up, function() {
+
+			$(this).removeClass('next-button-down');
+
+			}).click(function() {
+
+			$('.magazine').turn('next');
+
+			});
+
+			// Events for the next button
+
+			$('.previous-button').bind($.mouseEvents.over, function() {
+
+			$(this).addClass('previous-button-hover');
+
+			}).bind($.mouseEvents.out, function() {
+
+			$(this).removeClass('previous-button-hover');
+
+			}).bind($.mouseEvents.down, function() {
+
+			$(this).addClass('previous-button-down');
+
+			}).bind($.mouseEvents.up, function() {
+
+			$(this).removeClass('previous-button-down');
+
+			}).click(function() {
+
+			$('.magazine').turn('previous');
+
+			});
+
+
+			resizeViewport();
+
+			$('.magazine').addClass('animated');
+
+			}
+
+			// Zoom icon
+
+			$('.zoom-icon').bind('mouseover', function() { 
+
+			if ($(this).hasClass('zoom-icon-in'))
+			$(this).addClass('zoom-icon-in-hover');
+
+			if ($(this).hasClass('zoom-icon-out'))
+			$(this).addClass('zoom-icon-out-hover');
+
+			}).bind('mouseout', function() { 
+
+			if ($(this).hasClass('zoom-icon-in'))
+			$(this).removeClass('zoom-icon-in-hover');
+
+			if ($(this).hasClass('zoom-icon-out'))
+			$(this).removeClass('zoom-icon-out-hover');
+
+			}).bind('click', function() {
+
+			if ($(this).hasClass('zoom-icon-in'))
+			$('.magazine-viewport').zoom('zoomIn');
+			else if ($(this).hasClass('zoom-icon-out'))	
+			$('.magazine-viewport').zoom('zoomOut');
+
+			});
+			$('#canvas').hide();
+			// Load the HTML4 version if there's not CSS transform
+			yepnope({
+			test : Modernizr.csstransforms,
+			yep: ['../js/turn.js'],
+			nope: ['../js/turn.html4.js'],
+			both: ['../js/zoom.js', '../js/magazine.js', '../css/turnmagazine.css'],
+			complete: loadApp
+			});
+		</script>
+	</div>
+</footer>
 </html>

@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Aztec</title>
+	<title>Playful Pasts - Aztec</title>
 	<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
 	<!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	
 	<!--CSS-->
-	<link rel="stylesheet" type="text/css" href="../css/game-apple2.css">
-	<link rel="stylesheet" type="text/css" href="../css/game-history.css">
+	<link rel="stylesheet" type="text/css" href="../css/game.css">
+	<link rel="stylesheet" type="text/css" href="../css/navbar.css">
 	<link rel="stylesheet" type="text/css" href="../css/waves.css">
 
 	<!--JQuery-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-
+	
 	<!--Materialize-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-	
+
 	<!--AppleJS-->
 	<!-- Emulator Scripts -->
 	<script type="text/javascript" src="../apple2js/js/util.js"></script>
@@ -45,22 +45,26 @@
 	
 </head>
 <body>
-	<nav class="z-depth-2">
+	<nav>
 		<div class="nav-wrapper">
 			<img id="extend" src="../img/PlayfulPasts_Logo_Extend.jpg">
-			<a href="../index.html" target="_blank"><img id="logo" src="../img/PlayfulPasts_Logo.jpg"></a>
-			<a class="brand-logo">Issue 7 - January 1983</a>
-			<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a id="game" class="btn-flat" href="../magazines/magazine-7-jan1983.html">Magazine</a></li>
-			</ul>
+			<a href="../index.html" target="_blank"><img id="logo" src="../img/PlayfulPasts_Logo_2.jpg"></a>
+			<div id="breads">
+				<a class="breadcrumb" target="_blank" href="../magazines/magazine-7-jan1983.html">Issue 7 - January 1983</a>
+				<a class="breadcrumb" id="activelink" href="game-aztec.html">Aztec</a>
+			</div>
+			<div id="rightside">
+				<a href="dsks/Aztec.dsk" target="_blank" class="downloadicon"><i class="material-icons">&#xE884;</i></a>
+				<a class="helpicon" href="#help"><i class="material-icons">&#xE887;</i></a>
+			</div>
 		</div>
-  </nav>
+	</nav>
 	<div id="wrapper">
 		<div id="left">
-			<div id="emu" class="z-depth-2">
+			<div id="emu" class="z-depth-1">
 				<div id="badgediv">
-					<a href="about.html" target="_blank"><img src="../img/badge.png" id="badge" /></a>
-					<h1 id="subtitle">An Apple ][ Emulator in JavaScript</h1>
+					<a href="https://www.scullinsteel.com/apple2/" target="_blank"><img src="../img/badge.png" id="badge" /></a>
+					<h1 id="subtitle">An Apple ][ Emulator in JavaScript written by&nbsp;<a href="https://www.scullinsteel.com/" target="_blank">Will Scullin</a></h1>
 				</div>
 				<div id="monitor" >
 				<div id="innercase">
@@ -82,12 +86,11 @@
 							Reset
 						</button>
 						<form id="uploaddsk" action="#">
-							<input type="file" id="local_file" accept=".dsk, .do, .po,  .nib, .2mg" onchange="doLoadLocal();" style="visibility: hidden;"/>
+							<input type="file" id="local_file" accept=".dsk, .do, .po, nib, 2mg" onchange="doLoadLocal();" style="visibility: hidden;"/>
 						</form>
 						<label class="toggle">
 							Green Screen
-  						<input type="checkbox" id="green_screen"
-								 onclick="updateScreen()" checked="checked">
+  						<input type="checkbox" id="green_screen" accept=".dsk, .do, .po, .nib, .2mg" onclick="updateScreen()" checked="checked">
   						<div class="togglebtn"></div>
 						</label>
 						</div>
@@ -101,31 +104,72 @@
 			</div>
 			<hr>
 			<div id="gameplay">
-				<p>Aztec combines arcade-style game skills with role-playing fantasy game quests and puzzles. The goal is to find the legendary golden idol, which is no easy feat as it is fraught with peril. The players movements are controlled with a keyboard. You walk through rooms (ancient of course), run, jump, place objects, and shoot or hack your way through obstacles.</p>
-			</div>
-			<div id="extragameinfo" class="valign-wrapper">
-				<div id="highscore">
-					<h3><i>High Score</i></h3>
-                    <h4>704,306</h4>
-				</div>
-				<div id="manual">
-					<h3><i>Press ESC To View<br>Controls</i></h3>
-				</div>
+				<p>
+					Aztec combines arcade-style game skills with role-playing fantasy game quests and puzzles. The goal is to find the legendary golden idol, which is no easy feat as it is fraught with peril. The players movements are controlled with a keyboard. You walk through rooms (ancient of course), run, jump, place objects, and shoot or hack your way through obstacles.
+					<br>
+					<br>
+					<span class="sectionTitle"><i>Quick Start</i></span><br>
+					The Game tells you how to play
+					<br>
+					in issue jan the high score was 704,306
+				</p>
 			</div>
 			<hr>
-			<div id="history"><img class="image1" src="../img/keyart/Aztec_January_83.png">
+			<img class="image1" src="../img/keyart/Aztec_January_83.png">
 				<p>
-					<span class="sectionTitle"><i>Impact</i></span><br>According to Softline’s January 1983 issue, Aztec has a strong resemblance to another earlier game, Raiders of the Lost Ark, however it is only “sort of coincidental”. Aztec was among rated games in Computer Gaming World’s 1983 game ratings for games from 1982 - 1983. It had a below average user rating of 5.79. Aztec was ranked 15 in Softalk’s January 1983 issue’s top thirty list.
-					<span class="sectionTitle"><br><br><i>Production History</i> </span><br>Aztec was created in 1982. It was created by Paul Stephenson. Aztec was published by Datamost, a potential victim of the “Shakeout”. During the Shakeout in the mid-1980s, games failed because of the failure of companies that made the platforms for the games. Microcomputers and consoles like the Commodore VIC and Atari stopped being made and game makers were left with unsellable games and losses that could not be recouped from the manufacturing of games created for the defunct consoles.
+					<span class="sectionTitle"><i>Impact</i></span>
+					<br>
+					According to Softline’s January 1983 issue, Aztec has a strong resemblance to another earlier game, Raiders of the Lost Ark, however it is only “sort of coincidental”. Aztec was among rated games in Computer Gaming World’s 1983 game ratings for games from 1982 - 1983. It had a below average user rating of 5.79. Aztec was ranked 15 in Softalk’s January 1983 issue’s top thirty list.
+					<span class="sectionTitle"><br><br><i>Production History</i></span>
+					<br>
+					Aztec was created in 1982. It was created by Paul Stephenson. Aztec was published by Datamost, a potential victim of the “Shakeout”. During the Shakeout in the mid-1980s, games failed because of the failure of companies that made the platforms for the games. Microcomputers and consoles like the Commodore VIC and Atari stopped being made and game makers were left with unsellable games and losses that could not be recouped from the manufacturing of games created for the defunct consoles.
 				</p>
 			</div>  
-  	</div>
   </div>
+	<div id="help" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Help</h4>
+      <p>
+				This is what the App is 
+			</p>
+			<p>
+				This is how the whole app does
+			</p>
+			<p>
+				To view the magazine do these things
+			</p>
+			<p>
+				To Zoom in do this
+			</p>
+			<p>
+				Each game has this infomration
+			</p>
+			<p>
+				View it's informaton this way
+			</p>
+			<p>
+				To select a game, do this
+			</p>
+			<p>
+				Once you pick a game, download it here
+			</p>
+			<a href="mailto:piercermcbride@gmail.com?Subject=Feedback" target="_top">Send Feedback</a>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Got it</a>
+    </div>
+	</div>
 	<script>
-	function resetCheck() {
-			if (document.getElementById("disklabel1").innerHTML != "No Disk Inserted")
-				reset();
-		}
+		$(document).ready(function(){
+			// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+			$('.modal').modal();
+		});
+	</script>
+	<script type="text/javascript">
+		function resetCheck() {
+  			if (document.getElementById("disklabel1").innerHTML != "No Disk Inserted")
+  				reset();
+  		}
 	</script>
 </body>
 </html>
