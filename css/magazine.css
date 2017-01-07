@@ -36,6 +36,7 @@ p {
 }
 /*==================Games===================*/
 #gameselect {
+	margin-top: 15px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -260,7 +261,7 @@ p {
   background-color: #fafafa;
   padding: 0;
   max-height: 70%;
-  width: 30%;
+  width: 50%;
   margin: auto;
   overflow: hidden;
   border-radius: 2px;
@@ -312,7 +313,6 @@ p {
   position: absolute;
   height: calc(100% - 56px);
   max-height: 100%;
-  width: 100%;
   overflow-y: auto;
 }
 .modal.modal-fixed-footer .modal-footer {
