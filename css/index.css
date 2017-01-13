@@ -5,83 +5,88 @@ html {
   font-family: "Adobe Garamond Pro",Garamond,Times;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.87);
+	background-color: #f9f9f9;
+	z-index: -5;
 }
 body {
 	padding: 0px;
 	margin: 0px;
-	background-color: #fcfcfc;
-	display: flex;
-	flex-direction: column;
 }
-p {
-	margin: 0;
-	padding: 0;
-}
-h1 {
-	padding: 0px;
-	margin-top: 14px;
-	margin-bottom: 10px;
-	font-size: 2rem;
-}
-#sectiontop {
-	padding-bottom: 5px;
-}
-
 /*===================================================*/
 
 
 /*==================LogoandTagline===================*/
 #topwrap {
+	height: 100vh;
+	margin: 0px;
+	padding: 0px;
+	padding-top: 5px;
 }
 #logowrap {
 	height: 128px;
 }
 #extend {
-	position: absolute;
-	z-index: -5;
 	height: 128px;
 	width: 50%;
 }
 #logo {
 	height: 128px;
+	position: absolute;
 	display: block;
-	margin: auto;
+	margin-left: 45%;
 	border-bottom-right-radius: 20px;
 	border-top-right-radius: 20px;
 }
 #tagline {
-	font-family: 'Libre Franklin', sans-serif;
-	font-size: 1.2rem;
+	font-size: 30px;
 	text-align: center;
 	margin-top: 20px;
 	margin-left: 15%;
 	margin-right: 15%;
 	margin-bottom: 20px;
 }
+#coverimg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	width: 23%;
+}
+#scroll {
+	margin: 0px;
+	padding: 5px 5px 0px 5px;
+	text-align: center;
+}
+#scroll i {
+	font-size: 30px;
+	margin: 0px;
+	padding: 0px;
+}
 /*================================================*/
 
 
 /*==================MainContent===================*/
 #mainwrap {
-	display: flex;
-	margin-left: 5%;
-	margin-right: 5%;
-	height: 100%;
+	padding-top: 20px;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 20px;
+	font-size: 18px;
+	line-height: 30px;
+}
+#mainwrap h1 {
+	font-size: 30px;
 }
 #leftcolumn {
 	flex: 1;
 }
 #middleimg {
-	flex: 2;
+	flex: 1;
 }
 #rightcolumn {
 	flex: 1;
 }
-#coverimg {
-	display: block;
-	margin: auto;
-	width: 80%;
-}
+
 @media only screen and (max-width: 1001px) {
 	#mainwrap {
 		display: flex;
@@ -96,7 +101,6 @@ h1 {
 
 /*==================Signup========================*/
 #sectionbottom {
-	margin-top: 40px;
 	padding-bottom: 5px;
 	margin-left: 5%;
 	margin-right: 5%;
@@ -167,5 +171,3 @@ input[type=text] {
 @media only screen and (min-width: 993px) {
 
 }
-
-
