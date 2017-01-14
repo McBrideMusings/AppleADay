@@ -107,3 +107,8 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 	text-decoration: none;
 	color: black;
 }
+@media only screen and (max-width: 501px) {
+	.breadcrumb{
+		font-size: 20px;
+	}
+}

@@ -28,8 +28,9 @@ p {
 }
 #left {
 	width: 66%;
-	height: 100%;
 	margin: 0;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	overflow-y: auto;
 }
 #right {
@@ -69,7 +70,7 @@ p {
 	margin-top: 15px;
 }
 #right p {
-	font-size: 0.95rem;
+	font-size: 18px;
 }
 #right .image1 {
 	border: 0;
@@ -212,7 +213,7 @@ h1#subtitle {
 	position: relative;
 	margin: auto;
 	position: relative;
-	top: 20px;
+	top: 8px;
 	padding: 8px;
 	width: 560px;
 	height: 384px;
