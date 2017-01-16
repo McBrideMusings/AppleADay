@@ -17,7 +17,7 @@ body {
 
 /*==================LogoandTagline===================*/
 #topwrap {
-	height: 100vh;
+	height: 100%;
 	margin: 0px;
 	padding: 0px;
 	padding-top: 5px;
@@ -94,16 +94,6 @@ body {
 }
 #rightcolumn {
 	flex: 1;
-}
-
-@media only screen and (max-width: 1001px) {
-	#mainwrap {
-		display: flex;
-		flex-direction: column;
-		margin-left: 5%;
-		margin-right: 5%;
-		height: 100%;
-	}
 }
 /*================================================*/
 
