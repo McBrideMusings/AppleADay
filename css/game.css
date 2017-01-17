@@ -22,8 +22,11 @@ p {
 
 /*==================Wrapper=================== */
 #wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-around;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
 	height: 92vh;
 }
 #left {
@@ -85,6 +88,7 @@ p {
 }
 #right .card-panel {
 	font-family: 'Libre Franklin', sans-serif;
+  -webkit-transition: box-shadow .25s;
   transition: box-shadow .25s;
   padding: 20px;
   margin: 0.5rem 0 1rem 0;
@@ -126,10 +130,16 @@ img#badge {
 	cursor: pointer;
 }
 h1#subtitle {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	float: right;
-  justify-content: flex-end;
-  align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 	color: black;
 	font-size: 0.8rem;
 	font-weight: normal;
@@ -137,6 +147,8 @@ h1#subtitle {
 	margin: 0px;
 }
 #left .inset {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	margin-top: 25px;
 	margin-left: 25px;
@@ -376,6 +388,7 @@ h1#subtitle {
   background-color: transparent;
   color: #343434;
   cursor: pointer;
+  -webkit-transition: background-color .2s;
   transition: background-color .2s;
 }
 .btn-flat:focus, .btn-flat:active {

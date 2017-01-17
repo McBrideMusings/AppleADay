@@ -22,8 +22,13 @@ p {
 
 /*==================Content===================*/
 #wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	overflow-y: scroll;
 	height: 101vh;
 	width: 100%;
@@ -37,9 +42,14 @@ p {
 /*==================Games===================*/
 #gameselect {
 	margin-top: 15px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 .game {
 	width: 250px;
@@ -149,6 +159,7 @@ p {
 }
 .collection a.collection-item {
   display: block;
+  -webkit-transition: .25s;
   transition: .25s;
   color: #009ce1;
 }
@@ -224,6 +235,7 @@ p {
   color: #fff;
   text-align: center;
   letter-spacing: .5px;
+  -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
   cursor: pointer;
 }
@@ -235,6 +247,7 @@ p {
   background-color: transparent;
   color: black;
   cursor: pointer;
+  -webkit-transition: background-color .2s;
   transition: background-color .2s;
 }
 .btn-flat:focus, .btn-flat:active {
@@ -372,14 +385,14 @@ p {
   font-size: 1.1rem;
   font-weight: 300;
   color: #fff;
-  display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
+  -ms-flex-align: center;
+      -webkit-box-align: center;
           align-items: center;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
+  -ms-flex-pack: justify;
+      -webkit-box-pack: justify;
           justify-content: space-between;
 }
 .toast .btn, .toast .btn-large, .toast .btn-flat {

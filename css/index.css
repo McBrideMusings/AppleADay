@@ -87,13 +87,19 @@ body {
 	font-size: 30px;
 }
 #leftcolumn {
-	flex: 1;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
 }
 #middleimg {
-	flex: 1;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
 }
 #rightcolumn {
-	flex: 1;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
 }
 /*================================================*/
 
@@ -132,10 +138,12 @@ input[type=text] {
   padding: 0;
   box-shadow: none;
   box-sizing: content-box;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 #cutout button {
-	margin-left: 33.3%;
+	display: block;
+	position: relative;
 }
 @media only screen and (min-width: 601px) {
 
