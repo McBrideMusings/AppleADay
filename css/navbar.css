@@ -28,6 +28,8 @@ nav #extend {
   line-height: 44px;
 }
 nav #rightside {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	float: right;
 }
@@ -67,6 +69,7 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 	color: #0096d3;
 }
 .breadcrumb {
+	-webkit-transition: background-color .3s;
 	transition: background-color .3s;
   font-size: 1.7rem;
 	height: 46px;

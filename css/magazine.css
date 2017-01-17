@@ -2,93 +2,103 @@
 
 /*==================Overall===================*/
 html {
-	font-family: "Adobe Garamond Pro",Garamond,Times;
+  font-family: "Adobe Garamond Pro",Garamond,Times;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.87);
 }
 body {
-	margin: 0px;
-	padding: 0px;
-	background-color: #f9f9f9;
-	overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  background-color: #f9f9f9;
+  overflow: hidden;
 }
 p {
-	display: block;
-	margin: 0;
-	padding: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 /*=========================================== */
 
 
 /*==================Content===================*/
 #wrapper {
-	display: flex;
-	flex-direction: column;
-	overflow-y: scroll;
-	height: 101vh;
-	width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: scroll;
+  height: 101vh;
+  width: 100%;
 }
 /*==================Magazine===================*/
 /*Rest is in turnmagazine.css*/
 #canvas {
-	height: 520vh;
-	overflow: hidden
+  height: 520vh;
+  overflow: hidden
 }
 /*==================Games===================*/
 #gameselect {
-	margin-top: 15px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .game {
-	width: 250px;
-	height: 520px;
-	margin-left: 40px;
-	margin-right: 40px;
+  width: 250px;
+  height: 520px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 .card {
-	width: 230px;
-	height: 336px;
-	cursor: pointer;
+  width: 230px;
+  height: 336px;
+  cursor: pointer;
 }
 .card .cover {
-	height: 100%;
-	width: 100%;
-	border: solid;
-	border-width: 10px;
-	border-color: #EEDDD0;
+  height: 100%;
+  width: 100%;
+  border: solid;
+  border-width: 10px;
+  border-color: #EEDDD0;
 }
 .card .back {
-	border: solid;
-	border-width: 10px;
-	border-color: #EEDDD0;
-	background-color: #EEDDD0;
+  border: solid;
+  border-width: 10px;
+  border-color: #EEDDD0;
+  background-color: #EEDDD0;
 }
 .card .back .title {
-	text-align: center;
-	padding: 0px;
-	margin: 5px 0px 0px 0px;
-	font-size: 1.9rem;
-	font-weight: bold;
+  text-align: center;
+  padding: 0px;
+  margin: 5px 0px 0px 0px;
+  font-size: 1.9rem;
+  font-weight: bold;
 }
 .card .back .author {
-	text-align: center;
-	margin-bottom: 5px;
+  text-align: center;
+  margin-bottom: 5px;
 }
 .card .back .applelogo {
-	display: block;
-	margin: auto;
-	width: 50px;
+  display: block;
+  margin: auto;
+  width: 50px;
 }
 .card .back .backtop {
-	height: 54%;
+  height: 54%;
 }
 .game .btn {
-	display: block;
-	width: 180px;
-	margin: auto;
-	margin-top: 30px;
+  display: block;
+  width: 180px;
+  margin: auto;
+  margin-top: 30px;
 }
 .collection {
   margin: 0.5rem 0 1rem 0;
@@ -103,7 +113,7 @@ p {
   padding: 10px 20px;
   margin: 0;
   border-bottom: 1px solid #e0e0e0;
-	cursor: pointer;
+  cursor: pointer;
 }
 .collection .collection-item.avatar {
   min-height: 84px;
@@ -149,6 +159,7 @@ p {
 }
 .collection a.collection-item {
   display: block;
+  -webkit-transition: .25s;
   transition: .25s;
   color: #009ce1;
 }
@@ -180,7 +191,7 @@ p {
   text-transform: uppercase;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
-	background-color: #c65252;
+  background-color: #c65252;
 }
 .btn.disabled,
 .btn-flat.disabled,
@@ -224,6 +235,7 @@ p {
   color: #fff;
   text-align: center;
   letter-spacing: .5px;
+  -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
   cursor: pointer;
 }
@@ -235,6 +247,7 @@ p {
   background-color: transparent;
   color: black;
   cursor: pointer;
+  -webkit-transition: background-color .2s;
   transition: background-color .2s;
 }
 .btn-flat:focus, .btn-flat:active {
@@ -280,7 +293,7 @@ p {
 }
 .modal .modal-close {
   cursor: pointer;
-	left: -20px;
+  left: -20px;
 }
 .modal .modal-footer {
   border-radius: 0 0 2px 2px;
@@ -372,14 +385,14 @@ p {
   font-size: 1.1rem;
   font-weight: 300;
   color: #fff;
-  display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
+  -ms-flex-align: center;
+      -webkit-box-align: center;
           align-items: center;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
+  -ms-flex-pack: justify;
+      -webkit-box-pack: justify;
           justify-content: space-between;
 }
 .toast .btn, .toast .btn-large, .toast .btn-flat {
