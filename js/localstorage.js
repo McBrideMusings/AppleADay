@@ -1,7 +1,8 @@
-function setStorage(chosenGame, cvalue){
-    localStorage.setItem(chosenGame, cvalue);
+function setStorage(localstoragevar, cvalue){
+    localStorage.setItem(localstoragevar, cvalue);
     //var result = localStorage.getItem("choice");
-    checkCookieStatus(cvalue);
+    checkCookieStatus(localstoragevar);
+    console.log(cvalue);
 }
 
 function getCookie(localstoragevar) {

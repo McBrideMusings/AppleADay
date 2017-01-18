@@ -251,8 +251,10 @@
 					$('#mobilewarn').modal();
 			};
 			function checkCookieStatus(cvalue){
-				console.log("in");
-				if(cvalue===1){
+				var check = getCookie(cvalue);
+                console.log(check);
+                check = Number(check);
+				if(check===1){
 					console.log("case1");
 					var crumb = document.createElement("a");
 					crumb.className = "breadcrumb";
@@ -264,7 +266,7 @@
 					document.getElementById("decision2").setAttribute( "class", "btn disabled");
 					document.getElementById("decision3").setAttribute( "class", "btn disabled");
 				}
-				if(cvalue===2){
+				if(check===2){
 					console.log("case2");
 					var crumb = document.createElement("a");
 					crumb.className = "breadcrumb";
@@ -276,7 +278,7 @@
 					document.getElementById("decision2").href = "../games/dsks/Aztec.dsk";
 					document.getElementById("decision3").setAttribute( "class", "btn disabled" );
 				}
-				if(cvalue===3){
+				if(check===3){
 					console.log("case3");
 					var crumb = document.createElement("a");
 					crumb.className = "breadcrumb";
