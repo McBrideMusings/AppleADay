@@ -144,7 +144,10 @@ input[type=text] {
 }
 #cutout button {
 	display: block;
+<<<<<<< HEAD
 	position: relative;
+=======
+>>>>>>> acef8b2c939ca8669975f4dfcdee1526dca27119
 }
 @media only screen and (min-width: 601px) {
 

@@ -1,0 +1,471 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"flex-",
+				"flex-direction"
+			],
+			[
+				"space",
+				"space-between"
+			],
+			[
+				"color",
+				"background-color"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"count",
+				"countInjuries"
+			],
+			[
+				"out",
+				"outputString"
+			],
+			[
+				"coun",
+				"countInjuries"
+			],
+			[
+				"cou",
+				"countIncidents"
+			],
+			[
+				"car",
+				"car-dae"
+			],
+			[
+				"inci",
+				"incidentParsed"
+			],
+			[
+				"inc",
+				"incidentParsed"
+			],
+			[
+				"arr",
+				"array2"
+			],
+			[
+				"killed",
+				"killedPeeps"
+			],
+			[
+				"in",
+				"incidentParsed"
+			],
+			[
+				"par",
+				"parseIncident"
+			],
+			[
+				"inju",
+				"Injured"
+			],
+			[
+				"inj",
+				"injuries"
+			],
+			[
+				"pas",
+				"parse"
+			],
+			[
+				"l",
+				"length"
+			],
+			[
+				"injur",
+				"gun-injuries"
+			],
+			[
+				"text",
+				"textTemp"
+			],
+			[
+				"tex",
+				"textTemp"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 14245,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "pico",
+		"selected_items":
+		[
+			[
+				"pico",
+				"PICO-8: Setup PICO-8 Path"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/McBride/Git/AppleADay",
+		"/Users/McBride/Git/AppleADay/magazines"
+	],
+	"file_history":
+	[
+		"/Users/McBride/Git/AppleADay/css/index.css",
+		"/Users/McBride/Git/AppleADay/games/game-alibaba.html",
+		"/Users/McBride/Git/AppleADay/index.html",
+		"/Users/McBride/Git/AppleADay/games/game-zorkII.html",
+		"/Users/McBride/Git/AppleADay/games/game-wizardry.html",
+		"/Users/McBride/Git/AppleADay/games/game-wayout.html",
+		"/Users/McBride/Git/AppleADay/games/game-suspended.html",
+		"/Users/McBride/Git/AppleADay/games/game-aztec.html",
+		"/Users/McBride/Git/AppleADay/games/game-bloodquest.html",
+		"/Users/McBride/Git/AppleADay/games/game-cannonballblitz.html",
+		"/Users/McBride/Git/AppleADay/games/game-crisismountain.html",
+		"/Users/McBride/Git/AppleADay/games/game-crossfire.html",
+		"/Users/McBride/Git/AppleADay/games/game-darkcrystal.html",
+		"/Users/McBride/Git/AppleADay/games/game-darkforest.html",
+		"/Users/McBride/Git/AppleADay/games/game-davidsmidnightmagic.html",
+		"/Users/McBride/Git/AppleADay/games/game-dinoeggs.html",
+		"/Users/McBride/Git/AppleADay/games/game-dnieperriverline.html",
+		"/Users/McBride/Git/AppleADay/games/game-frogger.html",
+		"/Users/McBride/Git/AppleADay/games/game-galacticgladiators.html",
+		"/Users/McBride/Git/AppleADay/games/game-goldrush.html",
+		"/Users/McBride/Git/AppleADay/games/game-hardhatmack.html",
+		"/Users/McBride/Git/AppleADay/games/game-horizonV.html",
+		"/Users/McBride/Git/AppleADay/games/game-jawbreaker.html",
+		"/Users/McBride/Git/AppleADay/games/game-knightsdesert.html",
+		"/Users/McBride/Git/AppleADay/games/game-loderunner.html",
+		"/Users/McBride/Git/AppleADay/games/game-marauder.html",
+		"/Users/McBride/Git/AppleADay/games/game-microwave.html",
+		"/Users/McBride/Git/AppleADay/games/game-miner2049er.html",
+		"/Users/McBride/Git/AppleADay/games/game-minotaur.html",
+		"/Users/McBride/Git/AppleADay/games/game-mrcool.html",
+		"/Users/McBride/Git/AppleADay/games/game-pensate.html",
+		"/Users/McBride/Git/AppleADay/games/game-pursuitgrafspee.html",
+		"/Users/McBride/Git/AppleADay/games/game-repton.html",
+		"/Users/McBride/Git/AppleADay/games/game-russkiduck.html",
+		"/Users/McBride/Git/AppleADay/games/game-seafox.html",
+		"/Users/McBride/Git/AppleADay/games/game-stellar7.html",
+		"/Users/McBride/Git/AppleADay/games/game-serpentine.html",
+		"/Users/McBride/Git/AppleADay/games/game-sherwoodforest.html",
+		"/Users/McBride/Git/AppleADay/games/game-softporn.html",
+		"/Users/McBride/Git/AppleADay/games/game-starcross.html",
+		"/Users/McBride/Git/AppleADay/magazines/allgames.html",
+		"/Users/McBride/Git/AppleADay/magazines/magazine-1-jan1982.html",
+		"/Users/McBride/Git/AppleADay/magazines/magazine-9-may1983.html",
+		"/Users/McBride/Git/AppleADay/magazines/magazine-8-mar1983.html",
+		"/Users/McBride/Git/AppleADay/magazines/magazine-7-jan1983.html",
+		"/Users/McBride/Git/AppleADay/magazines/magazine-6-nov1982.html",
+		"/Users/McBride/Git/AppleADay/magazines/magazine-5-sep1982.html",
+		"/Users/McBride/Git/AppleADay/magazines/magazine-4-july1982.html",
+		"/Users/McBride/Git/AppleADay/magazines/magazine-3-may1982.html",
+		"/Users/McBride/Git/AppleADay/magazines/magazine-10-july1983.html",
+		"/Users/McBride/Git/AppleADay/magazines/magazine-11-sep1983.html",
+		"/Users/McBride/Git/AppleADay/magazines/magazine-12-nov1983.html",
+		"/Users/McBride/Git/AppleADay/magazines/magazine-2-mar1982.html",
+		"/Users/McBride/Git/AppleADay/css/apple2",
+		"/Users/McBride/Git/AppleADay/css/apple2.css",
+		"/Users/McBride/Git/AppleADay/css/game.css",
+		"/Users/McBride/Git/AppleADay/css/game-history.css",
+		"/Users/McBride/Git/AppleADay/css/basic.css",
+		"/Users/McBride/Git/AppleADay/css/navbar.css",
+		"/Users/McBride/Git/AppleADay/css/magazine.css",
+		"/Users/McBride/Dropbox/Development/Pico-8/carts/geo.p8",
+		"/Users/McBride/Library/Application Support/Sublime Text 3/Packages/PICO-8/PICO-8.sublime-settings",
+		"/Users/McBride/Desktop/basicMaterialize.html",
+		"/Users/McBride/Git/template/template.conf",
+		"/Users/McBride/Git/template/site-myoldsite.region",
+		"/Users/McBride/Git/template/site-complex.region",
+		"/Users/McBride/Git/template/site.region",
+		"/Users/McBride/Git/template/site-simple.region",
+		"/Users/McBride/Git/template/collections/blog.item",
+		"/Users/McBride/Git/template/collections/blog.list",
+		"/Users/McBride/Git/template/blocks/navigation.block",
+		"/Users/McBride/template/site.region",
+		"/Users/McBride/Git/AppleADay/magazines/new/pages/3-regions.json",
+		"/Users/McBride/Git/AppleADay/magazines/new/pages/5-regions.json",
+		"/Users/McBride/Git/AppleADay/magazines/new/pages/6-regions.json",
+		"/Users/McBride/Downloads/twitter-streaming_update_nov16/public/index.html",
+		"/Users/McBride/Desktop/The Castle of the Mad King.html",
+		"/Users/McBride/Downloads/Php_database_test/monsters.php",
+		"/Users/McBride/Git/TakeABulletForTheCountry/gundata.json",
+		"/Users/McBride/Git/TakeABulletForTheCountry/public/index.html",
+		"/Users/McBride/Git/TakeABulletForTheCountry/index.js",
+		"/Users/McBride/Dropbox/Development/node_example/public/index.html",
+		"/Users/McBride/Dropbox/Development/node_example/index.js",
+		"/Users/McBride/mytweets/index.js",
+		"/Users/McBride/Downloads/turnjs4/samples/docs/index.html",
+		"/Users/McBride/Dropbox/Development/TakeABulletForTheCountry/index.html",
+		"/Users/McBride/Dropbox/Development/TakeABulletForTheCountry/sceneGenerate.js",
+		"/Users/McBride/Dropbox/Development/Project2-GunViolence/Project2GunViolence.sublime-project",
+		"/Users/McBride/Dropbox/Development/Project2-GunViolence/sceneGenerate.js",
+		"/Users/McBride/Dropbox/Development/Project2-GunViolence/gunViolence.html",
+		"/Users/McBride/Dropbox/Development/GunScrape/guns.rb",
+		"/Users/McBride/Dropbox/Development/GunScrape/incident_store.rb",
+		"/Users/McBride/Dropbox/Development/GunScrape/incident.rb",
+		"/Users/McBride/Dropbox/Development/GunScrape/web_scraper.rb",
+		"/Users/McBride/Dropbox/Development/guns/lib/guns/scraper.rb",
+		"/Users/McBride/Dropbox/Development/GunScraper/scrape.py",
+		"/Users/McBride/Dropbox/Development/VisualizeAnything/RBSawyer copy.js",
+		"/Users/McBride/Dropbox/Development/VisualizeAnything/index copy.html",
+		"/Users/McBride/Dropbox/Development/VisualizeAnything/indexTest.html",
+		"/Users/McBride/Dropbox/Development/VisualizeAnything/data/reference/state-codes.json",
+		"/Users/McBride/Downloads/building.svg",
+		"/Users/McBride/Downloads/silo.svg",
+		"/Users/McBride/Dropbox/Development/VisualizeAnything - Backup/index.html",
+		"/Users/McBride/Downloads/5215cc464cfb9affd283-61bd2efeb92db5de5dedc1ee31f4d81137301400/index.html",
+		"/Users/McBride/Downloads/USStatesSideBySideExample",
+		"/Users/McBride/Dropbox/Development/VisualizeAnything/datamaps/src/js/data/usa.topo.json",
+		"/Users/McBride/Dropbox/Development/VisualizeAnything/datamaps/src/examples/italy.html",
+		"/Users/McBride/Dropbox/Development/VisualizeAnything/us.json",
+		"/Users/McBride/Dropbox/Development/VisualizeAnything/assets/USMap.htm",
+		"/Users/McBride/Dropbox/Development/VisualizeAnything/style.css"
+	],
+	"find":
+	{
+		"height": 70.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"our",
+			"target=\"_blank\"",
+			"_blank",
+			"crumb",
+			"serp",
+			"serpe",
+			"serpen",
+			"softline",
+			"flex",
+			"mget",
+			"spr",
+			"padding-right",
+			"fire",
+			"atlanta",
+			"output",
+			"georgia",
+			"atlantaSideCities",
+			"killedPeeps",
+			"\n    var fullText;\n    var injuries;\n    var deaths;\n    var location;\n    var link;\n\n    //garbage temp shit\n    var array1;\n    var array2;\n    \n    fullText = killedPeeps.data[1].text\n    array1 = fullText.split(\" - \");\n    location = array1[0];\n    array2 = array1[1];\n    array1 = array2.split(\"  \");\n    link = array1[1];\n    array2 = array1[0].split(\", \");\n    deaths = array2[0].substring(8, array2[0].length);\n    injuries = array2[1].substring(9, array2[1].length);\n    injuries = parseInt(injuries);\n    deaths = parseInt(deaths);\n\n    var incidentParsed = {\n    \"location\": location,\n    \"killed\": deaths,\n    \"injured\": injuries,\n    \"link\": buttz,\n    \"fullText\": fullText\n    }\n    return incidentParsed;\n",
+			"deaths",
+			"butztemp",
+			"arrayTemp"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "/Users/McBride/Git/AppleADay"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14245,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1847,
+								1847
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 630.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 65.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 114.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 204.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
